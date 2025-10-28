@@ -87,7 +87,7 @@ export default function ImpactStats() {
         <div className="text-center mb-12">
           <h2 className="section-heading">Our Impact</h2>
           <p className="section-subheading mx-auto">
-            Real numbers, real change. See how we're making a difference in the lives of teen mothers across Kenya.
+            Real numbers, real change. See how we&apos;re making a difference in the lives of teen mothers across Kenya.
           </p>
         </div>
 

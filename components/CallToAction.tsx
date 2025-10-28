@@ -43,7 +43,7 @@ export default function CallToAction() {
             How You Can Help
           </h2>
           <p className="text-lg text-primary-100 max-w-2xl mx-auto">
-            Every action makes a difference. Choose how you'd like to support teen mothers in Kenya.
+            Every action makes a difference. Choose how you&apos;d like to support teen mothers in Kenya.
           </p>
         </div>
 

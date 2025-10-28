@@ -68,7 +68,7 @@ export default function FeaturedStories() {
                 </div>
                 
                 <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">
-                  "{story.excerpt}"
+                  &ldquo;{story.excerpt}&rdquo;
                 </p>
 
                 <div className="pt-4 border-t border-gray-200">

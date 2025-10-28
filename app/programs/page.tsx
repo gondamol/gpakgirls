@@ -173,7 +173,7 @@ export default function ProgramsPage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                 <h3 className="text-2xl font-semibold mb-4">Ready to Join?</h3>
                 <p className="mb-6">
-                  Our programs are free for all eligible participants. We're here to support you every step of the way.
+                  Our programs are free for all eligible participants. We&apos;re here to support you every step of the way.
                 </p>
                 <a
                   href="/contact"

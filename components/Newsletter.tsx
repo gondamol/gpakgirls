@@ -18,7 +18,7 @@ export default function Newsletter() {
       setStatus('success')
       setMessage('Thank you for subscribing! Check your email to confirm.')
       setEmail('')
-    } catch (error) {
+    } catch {
       setStatus('error')
       setMessage('Something went wrong. Please try again.')
     }
