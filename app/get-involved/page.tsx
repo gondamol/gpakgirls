@@ -143,7 +143,7 @@ export default function GetInvolvedPage() {
               Ready to Make a Difference?
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              We're looking for passionate volunteers in the following roles:
+              We&apos;re looking for passionate volunteers in the following roles:
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-12 text-left">

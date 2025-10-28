@@ -1,6 +1,5 @@
 'use client'
 
-import { Metadata } from 'next'
 import { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
 
@@ -57,7 +56,7 @@ export default function ContactPage() {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setStatus('success')
       setFormData({ name: '', email: '', phone: '', inquiryType: '', subject: '', message: '' })
-    } catch (error) {
+    } catch {
       setStatus('error')
     }
   }
@@ -76,7 +75,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-600">
-              Have questions? Need help? Want to get involved? We'd love to hear from you.
+              Have questions? Need help? Want to get involved? We&apos;d love to hear from you.
             </p>
           </div>
         </div>
@@ -110,7 +109,7 @@ export default function ContactPage() {
               🆘 Emergency Helpline
             </h3>
             <p className="text-gray-600 mb-4">
-              If you're a teen mother or pregnant teen in immediate need of help, call us now:
+              If you&apos;re a teen mother or pregnant teen in immediate need of help, call us now:
             </p>
             <p className="text-3xl font-bold text-secondary-700">
               +254 XXX XXX XXX
@@ -131,7 +130,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
                 <p className="text-gray-600">
-                  Thank you for contacting us. We'll get back to you within 24 hours.
+                  Thank you for contacting us. We&apos;ll get back to you within 24 hours.
                 </p>
               </div>
             ) : (
