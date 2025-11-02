@@ -133,6 +133,15 @@
       font-size: inherit;
     }
   }
+  
+  /* Footer link colors - prevent default blue */
+  footer a {
+    @apply no-underline;
+  }
+  
+  footer a:not(.text-white):not(.hover\:text-white) {
+    @apply text-gray-300;
+  }
 }
 
 @layer utilities {

@@ -45,17 +45,17 @@ export default function Footer() {
               Empowering teen mothers and pregnant teens in Kenya through education, vocational training, mentorship, and support.
             </p>
             
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-start gap-2">
-                <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-400" />
                 <span>Homabay Town, Homabay</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-5 w-5 flex-shrink-0" />
+                <Phone className="h-5 w-5 flex-shrink-0 text-gray-400" />
                 <span>0725737867</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="h-5 w-5 flex-shrink-0" />
+                <Mail className="h-5 w-5 flex-shrink-0 text-gray-400" />
                 <span>info@gpakgirls.org</span>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {navigation.about.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="hover:text-white transition-colors">
+                  <Link href={item.href} className="text-gray-300 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -96,7 +96,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {navigation.programs.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="hover:text-white transition-colors">
+                  <Link href={item.href} className="text-gray-300 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -110,7 +110,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {navigation.getInvolved.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="hover:text-white transition-colors">
+                  <Link href={item.href} className="text-gray-300 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -130,7 +130,7 @@ export default function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   {item.name}
                 </Link>
