@@ -48,11 +48,11 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>Nairobi, Kenya</span>
+                <span>Homabay Town, Homabay</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <span>+254 XXX XXX XXX</span>
+                <span>0725737867</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 flex-shrink-0" />

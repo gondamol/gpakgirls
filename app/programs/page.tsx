@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { BookOpen, Scissors, Users, Heart, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ const programs = [
     icon: BookOpen,
     title: 'Educational Support',
     slug: 'education',
+    image: '/images/educational.jpg',
     description: 'We believe education is the key to breaking the cycle of poverty and creating lasting change.',
     features: [
       'School fees assistance for return to formal education',
@@ -27,6 +29,7 @@ const programs = [
     icon: Scissors,
     title: 'Vocational Training',
     slug: 'vocational',
+    image: '/images/vocationl.jpg',
     description: 'Practical skills training that leads to immediate income-generating opportunities.',
     features: [
       'Tailoring & Dressmaking (6-month comprehensive course)',
@@ -43,6 +46,7 @@ const programs = [
     icon: Users,
     title: 'Mentorship Program',
     slug: 'mentorship',
+    image: '/images/mentorship.jpg',
     description: 'Connecting teen mothers with caring mentors who provide guidance and support.',
     features: [
       'One-on-one mentoring relationships',
@@ -59,6 +63,7 @@ const programs = [
     icon: Heart,
     title: 'Counseling & Emotional Support',
     slug: 'counseling',
+    image: '/images/Counseling.jpg',
     description: 'Professional counseling to heal from trauma and build resilience for the future.',
     features: [
       'Individual trauma-informed counseling sessions',
@@ -135,13 +140,16 @@ export default function ProgramsPage() {
                 </div>
               </div>
 
-              {/* Image Placeholder */}
+              {/* Image */}
               <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                <div className={`aspect-[4/3] bg-gradient-to-br ${program.bgColor} rounded-2xl flex items-center justify-center`}>
-                  <p className="text-gray-500 text-center px-8">
-                    {program.title} Image Placeholder<br />
-                    <span className="text-sm">(Add photos of program activities)</span>
-                  </p>
+                <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src={program.image}
+                    alt={`${program.title} - Program activities`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>

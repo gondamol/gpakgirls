@@ -73,7 +73,7 @@ function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: strin
   }, [value, hasAnimated])
 
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-bold">
+    <div ref={ref} className="text-3xl sm:text-4xl md:text-5xl font-bold">
       {count}
       {suffix}
     </div>
@@ -91,21 +91,21 @@ export default function ImpactStats() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-shadow"
+              className="text-center p-4 sm:p-6 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-shadow"
             >
-              <div className="flex justify-center mb-4">
-                <div className={`p-3 rounded-full bg-gradient-to-br from-primary-50 to-secondary-50`}>
-                  <stat.icon className={`h-8 w-8 ${stat.color}`} />
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <div className={`p-2.5 sm:p-3 rounded-full bg-gradient-to-br from-primary-50 to-secondary-50`}>
+                  <stat.icon className={`h-7 w-7 sm:h-8 sm:w-8 ${stat.color}`} />
                 </div>
               </div>
               <div className={`${stat.color} mb-2`}>
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
+              <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
             </div>
           ))}
         </div>

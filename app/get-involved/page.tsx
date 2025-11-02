@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Users, Heart, Share2, Handshake, Calendar, Gift } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -121,10 +122,14 @@ export default function GetInvolvedPage() {
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className={`aspect-[4/3] bg-gradient-to-br ${opp.color} opacity-10 rounded-2xl flex items-center justify-center`}>
-                      <p className="text-gray-500 text-center px-8">
-                        Image placeholder for {opp.title}
-                      </p>
+                    <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-lg">
+                      <Image
+                        src={index === 0 ? '/images/annie-spratt-msrFBd0OaIo-unsplash.jpg' : index === 1 ? '/images/annie-spratt-yrzBgqapG1I-unsplash.jpg' : '/images/black-linear-studios-MqsfK5ZjZ2s-unsplash.jpg'}
+                        alt={`${opp.title} - Get involved`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
                     </div>
                   </div>
                 </div>

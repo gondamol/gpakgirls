@@ -25,9 +25,28 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+.env.*
+!.env.example
 
 # vercel
 .vercel
+
+# sensitive config files
+*.key
+*.pem
+secrets/
+config/secrets.*
+
+# logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
 
 # typescript
 *.tsbuildinfo

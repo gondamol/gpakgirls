@@ -14,26 +14,26 @@ export default function Hero() {
               <span>Registered NGO • Empowering Teen Mothers Since 2018</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 text-balance leading-tight">
               Empowering Teen Mothers to{' '}
               <span className="text-primary-600">Rebuild Their Lives</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Girl Pride Africa Kenya provides comprehensive support to teen mothers and pregnant teens through education, vocational training, mentorship, and counseling—helping them access economic and educational opportunities.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Link
                 href="/donate"
-                className="btn-primary text-lg px-8 py-4 inline-flex items-center justify-center gap-2"
+                className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
               >
                 Donate Now
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
                 href="/programs"
-                className="btn-outline text-lg px-8 py-4 inline-flex items-center justify-center"
+                className="btn-outline text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 inline-flex items-center justify-center w-full sm:w-auto"
               >
                 Our Programs
               </Link>
@@ -60,7 +60,7 @@ export default function Hero() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative">
               <Image
-                src="https://images.unsplash.com/photo-1531498681961-ed665a0c0a8f?w=1200&q=80"
+                src="/images/eibner-saliba-zhWUl24kf5A-unsplash.jpg"
                 alt="Young Black African mother with her child"
                 fill
                 className="object-cover"

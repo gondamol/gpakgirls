@@ -119,7 +119,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-8">
               <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80"
+                  src="/images/annie-spratt-W3WO3QQwAxM-unsplash.jpg"
                   alt="Young Black African mothers in vocational training"
                   fill
                   className="object-cover"

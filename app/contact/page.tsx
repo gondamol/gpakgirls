@@ -7,12 +7,12 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Office Location',
-    details: ['Nairobi, Kenya', '(Specific address to be added)'],
+    details: ['Homabay Town, Homabay', 'Kenya'],
   },
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+254 XXX XXX XXX', 'Mon-Fri: 8:00 AM - 5:00 PM'],
+    details: ['0725737867', 'Mon-Fri: 8:00 AM - 5:00 PM'],
   },
   {
     icon: Mail,
@@ -84,18 +84,18 @@ export default function ContactPage() {
       {/* Contact Info Cards */}
       <section className="section bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 text-center"
+                className="bg-gradient-to-br from-gray-50 to-white p-5 sm:p-6 rounded-xl border border-gray-200 text-center"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-full mb-4">
-                  <info.icon className="h-6 w-6 text-primary-600" />
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-primary-100 rounded-full mb-3 sm:mb-4">
+                  <info.icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{info.title}</h3>
+                <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">{info.title}</h3>
                 {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-sm text-gray-600">
+                  <p key={idx} className="text-sm sm:text-base text-gray-600 mb-1 last:mb-0">
                     {detail}
                   </p>
                 ))}
@@ -112,7 +112,7 @@ export default function ContactPage() {
               If you&apos;re a teen mother or pregnant teen in immediate need of help, call us now:
             </p>
             <p className="text-3xl font-bold text-secondary-700">
-              +254 XXX XXX XXX
+              0725737867
             </p>
             <p className="text-sm text-gray-500 mt-2">Available 24/7 for emergencies</p>
           </div>
@@ -134,8 +134,8 @@ export default function ContactPage() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Your Name *
@@ -147,7 +147,8 @@ export default function ContactPage() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                      className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-base"
+                      autoComplete="name"
                     />
                   </div>
 
@@ -162,12 +163,13 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                      className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-base"
+                      autoComplete="email"
                     />
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number (Optional)
@@ -178,7 +180,8 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                      className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-base"
+                      autoComplete="tel"
                     />
                   </div>
 
@@ -192,7 +195,7 @@ export default function ContactPage() {
                       required
                       value={formData.inquiryType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                      className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-base min-h-[44px]"
                     >
                       <option value="">Select type...</option>
                       {inquiryTypes.map((type) => (
@@ -215,7 +218,8 @@ export default function ContactPage() {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-base"
+                    autoComplete="off"
                   />
                 </div>
 
@@ -230,14 +234,14 @@ export default function ContactPage() {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none"
+                    className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none text-base"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full btn-primary text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full btn-primary text-base sm:text-lg py-3.5 sm:py-4 disabled:opacity-50 disabled:cursor-not-allowed min-h-[50px] sm:min-h-[44px]"
                 >
                   {status === 'loading' ? 'Sending...' : 'Send Message'}
                 </button>
@@ -253,14 +257,20 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="bg-gray-100 h-96">
-        <div className="h-full flex items-center justify-center text-gray-500">
-          <div className="text-center">
-            <MapPin className="h-16 w-16 mx-auto mb-4 text-gray-400" />
-            <p className="text-lg">Google Maps Integration</p>
-            <p className="text-sm">(Add map embed with office location)</p>
-          </div>
+      {/* Map */}
+      <section className="bg-gray-100">
+        <div className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.813!2d34.758!3d-0.535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b7c9b8e0a0a0a%3A0x0!2zArujoLCBIb21hYmF5LCDQmtCw0L3QtNCw0LvQuNC90LA!5e0!3m2!1sru!2ske!4v1234567890123!5m2!1sru!2ske"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full"
+            title="GPAK Girls Office Location - Arujo, Homabay"
+          />
         </div>
       </section>
     </main>

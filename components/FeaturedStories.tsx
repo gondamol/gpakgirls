@@ -8,7 +8,7 @@ const stories = [
     age: 19,
     title: 'From Teen Mother to Tailor',
     excerpt: 'After giving birth at 16, I thought my dreams were over. GPAK Girls helped me return to school and trained me in tailoring. Now I run my own small business and support my daughter.',
-    image: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=600&q=80',
+    image: '/images/eibner-saliba-zhWUl24kf5A-unsplash.jpg',
     impact: 'Completed tailoring training, runs own business',
   },
   {
@@ -16,7 +16,7 @@ const stories = [
     age: 18,
     title: 'Back to School and Thriving',
     excerpt: 'The counseling and mentorship I received gave me the confidence to go back to school. I\'m now in Form 4 and planning to study nursing to help other young mothers.',
-    image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&q=80',
+    image: '/images/annie-spratt-0cgpyigyIkM-unsplash.jpg',
     impact: 'Returned to school, aspires to be a nurse',
   },
   {
@@ -24,7 +24,7 @@ const stories = [
     age: 20,
     title: 'Hairdressing Success Story',
     excerpt: 'GPAK Girls\' hairdressing program changed my life. I learned professional skills and started my own salon. I\'m now financially independent and providing for my son.',
-    image: 'https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?w=600&q=80',
+    image: '/images/annie-spratt-1YnBzhJISg4-unsplash.jpg',
     impact: 'Owns a salon, financially independent',
   },
 ]
@@ -40,7 +40,7 @@ export default function FeaturedStories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {stories.map((story, index) => (
             <article
               key={index}
@@ -53,21 +53,21 @@ export default function FeaturedStories() {
                   alt={`${story.name} - ${story.title}`}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="flex items-start gap-2 mb-3">
                   <Quote className="h-5 w-5 text-primary-400 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">{story.name}</h3>
-                    <p className="text-sm text-gray-500">{story.title}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">{story.name}</h3>
+                    <p className="text-xs sm:text-sm text-gray-500">{story.title}</p>
                   </div>
                 </div>
                 
-                <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 italic">
                   &ldquo;{story.excerpt}&rdquo;
                 </p>
 
