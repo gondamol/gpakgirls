@@ -12,6 +12,9 @@ const nextConfig = {
       },
     ],
   },
+  // Vercel optimizations
+  poweredByHeader: false,
+  compress: true,
 }
 
 module.exports = nextConfig
