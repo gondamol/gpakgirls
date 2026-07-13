@@ -53,16 +53,11 @@ const leadership: TeamMember[] = [
     focus: ['Financial management', 'Budgeting', 'Accountability'],
   },
   {
-    name: 'Nichodemus Amollo',
-    role: 'Operations & Partnerships',
-    bio: 'Nichodemus coordinates operations, communications, and partnership development. He manages the organization’s digital presence and information systems, supports due diligence and donor relations, and keeps the administrative backbone of GPAK Girls running so the programme team can focus on the girls we serve.',
-    focus: ['Operations', 'Donor relations', 'Digital systems'],
-  },
-  {
     name: 'Maryline Grace',
     role: 'Administrative Assistant',
-    bio: 'Maryline provides administrative support across the organization — coordinating logistics, records, and office operations that keep our programmes running smoothly for the girls and families we serve.',
-    focus: ['Administration', 'Logistics', 'Records'],
+    image: '/images/team/maryline-grace.jpg',
+    bio: 'Maryline’s journey with GPAK Girls began on the other side of the desk — she came to us as a young mother and completed our programme. Determined to keep going, she returned to college and earned a Diploma in Social Work with IT, then came back to join the team. Today she runs the administrative heart of the organization — records, logistics, and office operations — and her own experience shapes how warmly every girl is received when she first walks through our door.',
+    focus: ['Administration', 'Social work', 'Programme graduate'],
   },
 ]
 
