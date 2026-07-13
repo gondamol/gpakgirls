@@ -1,39 +1,42 @@
 'use client'
 
 import { useState } from 'react'
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import Link from 'next/link'
+import { MapPin, Phone, Mail, Clock, Send, ShieldCheck } from 'lucide-react'
 
 const contactInfo = [
   {
     icon: MapPin,
     title: 'Office Location',
-    details: ['Homabay Town, Homabay', 'Kenya'],
+    details: ['Homa Bay Town, Homa Bay County', 'Kenya'],
   },
   {
     icon: Phone,
-    title: 'Phone',
-    details: ['0725737867', 'Mon-Fri: 8:00 AM - 5:00 PM'],
+    title: 'Phone / WhatsApp',
+    details: ['+254 725 737 867', 'Mon–Fri: 8:00 AM – 5:00 PM'],
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@gpakgirls.org', 'We respond within 24 hours'],
+    details: ['info@gpakgirls.org', 'We aim to respond within 24 hours'],
   },
   {
     icon: Clock,
     title: 'Office Hours',
-    details: ['Monday - Friday: 8:00 AM - 5:00 PM', 'Saturday: 9:00 AM - 1:00 PM'],
+    details: ['Monday – Friday: 8:00 AM – 5:00 PM', 'Saturday: 9:00 AM – 1:00 PM'],
   },
 ]
 
 const inquiryTypes = [
   'General Inquiry',
+  'Partnership / Funding',
+  'Due Diligence Request',
   'Program Information',
   'Volunteer Opportunity',
-  'Partnership Proposal',
   'Donation Question',
   'Media/Press Request',
-  'Help Request (Teen Mother/Pregnant Teen)',
+  'Help Request (Teen Mother/Pregnant Girl)',
+  'Safeguarding Concern',
 ]
 
 export default function ContactPage() {
@@ -45,23 +48,29 @@ export default function ContactPage() {
     subject: '',
     message: '',
   })
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setStatus('loading')
-
-    try {
-      // TODO: Implement actual form submission API
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      setStatus('success')
-      setFormData({ name: '', email: '', phone: '', inquiryType: '', subject: '', message: '' })
-    } catch {
-      setStatus('error')
-    }
+    const subject = `[${formData.inquiryType || 'Website'}] ${formData.subject}`
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      formData.phone ? `Phone: ${formData.phone}` : '',
+      '',
+      formData.message,
+    ]
+      .filter(Boolean)
+      .join('\n')
+    window.location.href = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`
+    setSubmitted(true)
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -75,7 +84,8 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-600">
-              Have questions? Need help? Want to get involved? We&apos;d love to hear from you.
+              Questions about our work, partnership enquiries, due diligence requests, or a girl
+              who needs support — we&apos;d love to hear from you.
             </p>
           </div>
         </div>
@@ -93,7 +103,9 @@ export default function ContactPage() {
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-primary-100 rounded-full mb-3 sm:mb-4">
                   <info.icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">{info.title}</h3>
+                <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
+                  {info.title}
+                </h3>
                 {info.details.map((detail, idx) => (
                   <p key={idx} className="text-sm sm:text-base text-gray-600 mb-1 last:mb-0">
                     {detail}
@@ -103,34 +115,49 @@ export default function ContactPage() {
             ))}
           </div>
 
-          {/* Emergency Helpline */}
-          <div className="max-w-4xl mx-auto mb-16 bg-gradient-to-br from-secondary-50 to-secondary-100 border-2 border-secondary-300 rounded-xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              🆘 Emergency Helpline
-            </h3>
+          {/* Urgent help */}
+          <div className="max-w-4xl mx-auto mb-8 bg-gradient-to-br from-secondary-50 to-secondary-100 border-2 border-secondary-300 rounded-xl p-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Need Help Urgently?</h3>
             <p className="text-gray-600 mb-4">
-              If you&apos;re a teen mother or pregnant teen in immediate need of help, call us now:
+              If you are a teen mother or pregnant girl who needs support — or you know one — call
+              or WhatsApp us. If we cannot answer immediately, we will call you back.
             </p>
-            <p className="text-3xl font-bold text-secondary-700">
-              0725737867
+            <p className="text-3xl font-bold text-secondary-700">+254 725 737 867</p>
+          </div>
+
+          {/* Safeguarding note */}
+          <div className="max-w-4xl mx-auto mb-16 flex items-start gap-3 text-sm text-gray-600 bg-gray-50 border border-gray-200 rounded-xl p-5">
+            <ShieldCheck className="h-5 w-5 text-primary-600 flex-shrink-0 mt-0.5" />
+            <p>
+              <strong>Safeguarding concerns</strong> about our work or anyone associated with GPAK
+              Girls are handled confidentially and taken seriously.{' '}
+              <Link href="/accountability#complaints" className="text-primary-600 hover:underline">
+                See how to raise a concern
+              </Link>
+              .
             </p>
-            <p className="text-sm text-gray-500 mt-2">Available 24/7 for emergencies</p>
           </div>
 
           {/* Contact Form */}
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Send Us a Message
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-3 text-center">Send Us a Message</h2>
+            <p className="text-center text-gray-500 text-sm mb-8">
+              This form opens your email app with the message ready to send to info@gpakgirls.org.
+            </p>
 
-            {status === 'success' ? (
+            {submitted ? (
               <div className="bg-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Send className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Almost there!</h3>
                 <p className="text-gray-600">
-                  Thank you for contacting us. We&apos;ll get back to you within 24 hours.
+                  Your email app should have opened with your message. If it didn&apos;t, please
+                  email us directly at{' '}
+                  <a href="mailto:info@gpakgirls.org" className="text-primary-600 hover:underline">
+                    info@gpakgirls.org
+                  </a>
+                  .
                 </p>
               </div>
             ) : (
@@ -186,7 +213,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="inquiryType"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Inquiry Type *
                     </label>
                     <select
@@ -240,17 +270,10 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  disabled={status === 'loading'}
-                  className="w-full btn-primary text-base sm:text-lg py-3.5 sm:py-4 disabled:opacity-50 disabled:cursor-not-allowed min-h-[50px] sm:min-h-[44px]"
+                  className="w-full btn-primary text-base sm:text-lg py-3.5 sm:py-4 min-h-[50px] sm:min-h-[44px]"
                 >
-                  {status === 'loading' ? 'Sending...' : 'Send Message'}
+                  Send Message
                 </button>
-
-                {status === 'error' && (
-                  <p className="text-red-600 text-center">
-                    Something went wrong. Please try again or email us directly.
-                  </p>
-                )}
               </form>
             )}
           </div>
@@ -259,9 +282,9 @@ export default function ContactPage() {
 
       {/* Map */}
       <section className="bg-gray-100">
-        <div className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+        <div className="w-full h-[350px] sm:h-[400px] md:h-[500px]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.813!2d34.758!3d-0.535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b7c9b8e0a0a0a%3A0x0!2zArujoLCBIb21hYmF5LCDQmtCw0L3QtNCw0LvQuNC90LA!5e0!3m2!1sru!2ske!4v1234567890123!5m2!1sru!2ske"
+            src="https://maps.google.com/maps?q=Homa+Bay+Town,+Kenya&z=13&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -269,11 +292,10 @@ export default function ContactPage() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-full"
-            title="GPAK Girls Office Location - Arujo, Homabay"
+            title="GPAK Girls Office Location — Homa Bay Town, Kenya"
           />
         </div>
       </section>
     </main>
   )
 }
-

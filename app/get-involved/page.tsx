@@ -27,13 +27,13 @@ const opportunities = [
   {
     icon: Handshake,
     title: 'Partner With Us',
-    description: 'Organizations, businesses, and institutions can create lasting impact through strategic partnerships.',
+    description: 'Funders, NGOs, businesses, and institutions can create lasting impact through strategic partnerships. Programme documentation, results data, and our due diligence pack are available on request.',
     actions: [
+      'Project partnerships and programme funding',
+      'Technical collaboration with NGOs and health partners',
       'Corporate social responsibility programs',
-      'Educational institution collaborations',
-      'NGO partnerships for joint programs',
-      'Skills training partnerships',
-      'Employment opportunities for graduates',
+      'Skills training and employment pathways for graduates',
+      'Research and learning collaborations',
     ],
     cta: 'Explore Partnerships',
     href: '#partner',

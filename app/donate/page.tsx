@@ -1,77 +1,67 @@
-'use client'
+import { Metadata } from 'next'
+import Link from 'next/link'
+import {
+  Heart,
+  Shield,
+  CheckCircle,
+  Smartphone,
+  Landmark,
+  Gift,
+  Handshake,
+  ArrowRight,
+} from 'lucide-react'
 
-import { useState } from 'react'
-import { Heart, Shield, CheckCircle, CreditCard, Smartphone } from 'lucide-react'
+export const metadata: Metadata = {
+  title: 'Donate - Support a Young Mother’s Future',
+  description:
+    'Support adolescent mothers and pregnant girls in western Kenya. Your donation funds counselling, school re-entry, health referrals, and livelihood training.',
+}
 
 const impactLevels = [
   {
-    amount: 25,
-    currency: 'USD',
-    title: 'Basic Support',
-    impact: 'Provides school supplies for 2 girls for one term',
+    amount: '$25',
+    title: 'School Supplies',
+    impact: 'Provides school supplies and materials for two girls returning to class',
   },
   {
-    amount: 50,
-    currency: 'USD',
-    title: 'Educational Boost',
-    impact: 'Covers school fees for one girl for one month',
+    amount: '$50',
+    title: 'A Month in School',
+    impact: 'Covers one month of school fees and childcare so a young mother can attend class',
   },
   {
-    amount: 100,
-    currency: 'USD',
-    title: 'Skills Training',
-    impact: 'Provides tailoring training materials for one girl',
+    amount: '$100',
+    title: 'Health & Counselling',
+    impact: 'Supports counselling sessions and accompanied health referrals for a girl and her baby',
   },
   {
-    amount: 250,
-    currency: 'USD',
-    title: 'Full Program Support',
-    impact: 'Supports one teen mother through complete 6-month vocational program',
+    amount: '$250',
+    title: 'A Trade of Her Own',
+    impact: 'Takes one young mother through vocational training with a starter kit at graduation',
   },
 ]
 
-const paymentMethods = [
+const givingChannels = [
   {
-    name: 'Credit/Debit Card',
-    icon: CreditCard,
-    provider: 'Stripe',
-    description: 'Secure international payments',
-    available: false,
-  },
-  {
-    name: 'M-Pesa',
     icon: Smartphone,
-    provider: 'Safaricom',
-    description: 'For Kenyan donors',
-    available: false,
+    name: 'M-Pesa',
+    description:
+      'For donors in Kenya, we accept M-Pesa. Contact us and we will share the official payment details directly.',
   },
   {
-    name: 'PayPal',
-    icon: CreditCard,
-    provider: 'PayPal',
-    description: 'Easy online payments',
-    available: false,
+    icon: Landmark,
+    name: 'Bank Transfer',
+    description:
+      'Donations are received into the organization’s bank account — never personal accounts. Contact us for transfer details and a receipt.',
+  },
+  {
+    icon: Gift,
+    name: 'In-Kind Support',
+    description:
+      'Sewing machines, hairdressing equipment, school supplies, and baby essentials go straight into our programs.',
   },
 ]
 
 export default function DonatePage() {
-  const [amount, setAmount] = useState(50)
-  const [customAmount, setCustomAmount] = useState('')
-  const [isRecurring, setIsRecurring] = useState(false)
-  const [selectedMethod, setSelectedMethod] = useState<string | null>(null)
-
-  const handleAmountSelect = (value: number) => {
-    setAmount(value)
-    setCustomAmount('')
-  }
-
-  const handleCustomAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCustomAmount(e.target.value)
-    if (e.target.value) {
-      setAmount(parseFloat(e.target.value) || 0)
-    }
-  }
-
   return (
     <main>
       {/* Hero */}
@@ -80,10 +70,11 @@ export default function DonatePage() {
           <div className="max-w-3xl mx-auto text-center">
             <Heart className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Make a Difference Today
+              Invest in a Young Mother’s Future
             </h1>
             <p className="text-xl text-primary-100">
-              Your donation directly supports teen mothers in Kenya, helping them access education, training, and a brighter future.
+              Every shilling goes toward counselling, health referrals, school re-entry,
+              livelihoods, and family support for adolescent mothers in western Kenya.
             </p>
           </div>
         </div>
@@ -95,246 +86,120 @@ export default function DonatePage() {
             {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center gap-8 mb-12 text-sm text-gray-600">
               <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-green-600" />
+                <span>Registered organization</span>
+              </div>
+              <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-green-600" />
-                <span>Secure Payment</span>
+                <span>CPA-led financial management</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-600" />
-                <span>Registered NGO</span>
+                <span>Receipt for every donation</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-600" />
-                <span>Tax Deductible</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-600" />
-                <span>100% Transparent</span>
+                <span>Financial records shared with partners</span>
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
-              {/* Donation Form */}
-              <div className="lg:col-span-2">
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Choose Your Impact</h2>
-
-                  {/* Amount Selection */}
-                  <div className="mb-6">
-                    <label className="block text-sm font-medium text-gray-700 mb-3">
-                      Select Amount (USD)
-                    </label>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                      {impactLevels.map((level) => (
-                        <button
-                          key={level.amount}
-                          onClick={() => handleAmountSelect(level.amount)}
-                          className={`p-4 rounded-lg border-2 transition-all ${
-                            amount === level.amount && !customAmount
-                              ? 'border-primary-600 bg-primary-50'
-                              : 'border-gray-200 hover:border-primary-300'
-                          }`}
-                        >
-                          <div className="text-2xl font-bold text-gray-900">${level.amount}</div>
-                          <div className="text-xs text-gray-600 mt-1">{level.title}</div>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Custom Amount */}
-                  <div className="mb-6">
-                    <label htmlFor="customAmount" className="block text-sm font-medium text-gray-700 mb-2">
-                      Or Enter Custom Amount
-                    </label>
-                    <div className="relative">
-                      <span className="absolute left-4 top-3 text-gray-500 text-lg">$</span>
-                      <input
-                        type="number"
-                        id="customAmount"
-                        value={customAmount}
-                        onChange={handleCustomAmountChange}
-                        placeholder="Enter amount"
-                        className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-lg"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Recurring Donation */}
-                  <div className="mb-8">
-                    <label className="flex items-center gap-3 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={isRecurring}
-                        onChange={(e) => setIsRecurring(e.target.checked)}
-                        className="w-5 h-5 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
-                      />
-                      <span className="text-gray-700">
-                        Make this a <strong>monthly donation</strong>
-                        <span className="text-sm text-gray-500 block">
-                          Sustain our programs with ongoing support
-                        </span>
-                      </span>
-                    </label>
-                  </div>
-
-                  {/* Payment Methods */}
-                  <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Payment Method</h3>
-                    <div className="space-y-3">
-                      {paymentMethods.map((method) => (
-                        <button
-                          key={method.name}
-                          onClick={() => setSelectedMethod(method.name)}
-                          disabled={!method.available}
-                          className={`w-full p-4 rounded-lg border-2 transition-all text-left ${
-                            selectedMethod === method.name
-                              ? 'border-primary-600 bg-primary-50'
-                              : 'border-gray-200 hover:border-primary-300'
-                          } ${!method.available ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
-                        >
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-3">
-                              <method.icon className="h-6 w-6 text-gray-600" />
-                              <div>
-                                <div className="font-semibold text-gray-900">{method.name}</div>
-                                <div className="text-sm text-gray-600">{method.description}</div>
-                              </div>
-                            </div>
-                            {!method.available && (
-                              <span className="text-xs bg-gray-200 text-gray-600 px-3 py-1 rounded-full">
-                                Coming Soon
-                              </span>
-                            )}
-                          </div>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Donate Button */}
-                  <button
-                    disabled
-                    className="w-full btn-primary text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    Payment Integration Coming Soon
-                  </button>
-
-                  <p className="text-center text-sm text-gray-500 mt-4">
-                    Secure checkout powered by Stripe, PayPal, and M-Pesa
-                  </p>
+            {/* What your gift does */}
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+              What Your Gift Does
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {impactLevels.map((level) => (
+                <div
+                  key={level.amount}
+                  className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm text-center"
+                >
+                  <div className="text-3xl font-bold text-primary-600 mb-1">{level.amount}</div>
+                  <div className="font-semibold text-gray-900 mb-3">{level.title}</div>
+                  <p className="text-gray-600 text-sm leading-relaxed">{level.impact}</p>
                 </div>
-              </div>
-
-              {/* Impact Sidebar */}
-              <div className="lg:col-span-1">
-                <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 rounded-2xl p-6 border-2 border-secondary-200 sticky top-24">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Your Impact</h3>
-                  
-                  <div className="mb-6">
-                    <div className="text-4xl font-bold text-secondary-700 mb-2">
-                      ${customAmount || amount}
-                    </div>
-                    <p className="text-gray-700">
-                      {impactLevels.find(l => l.amount === amount)?.impact || 'Will make a real difference'}
-                    </p>
-                  </div>
-
-                  <div className="space-y-4 mb-6">
-                    <h4 className="font-semibold text-gray-900">How We Use Your Donation:</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-gray-700">Programs</span>
-                        <span className="font-semibold">70%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-secondary-600 h-2 rounded-full" style={{ width: '70%' }}></div>
-                      </div>
-
-                      <div className="flex justify-between">
-                        <span className="text-gray-700">Operations</span>
-                        <span className="font-semibold">20%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-secondary-500 h-2 rounded-full" style={{ width: '20%' }}></div>
-                      </div>
-
-                      <div className="flex justify-between">
-                        <span className="text-gray-700">Fundraising</span>
-                        <span className="font-semibold">10%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-secondary-400 h-2 rounded-full" style={{ width: '10%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="text-xs text-gray-600 border-t border-secondary-200 pt-4">
-                    <p className="mb-2">✓ Tax-deductible donation receipt provided</p>
-                    <p className="mb-2">✓ 100% secure encrypted transaction</p>
-                    <p>✓ Cancel recurring donations anytime</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
 
-            {/* Impact Stories */}
-            <div className="mt-16">
-              <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-                See How Donations Make a Difference
-              </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {['School fees helped Grace return to Form 4', 'Tailoring kit enabled Faith to start her business', 'Counseling sessions gave Joy hope for the future'].map((story, index) => (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-                    <div className="h-40 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg mb-4"></div>
-                    <p className="text-gray-700 font-medium">{story}</p>
+            {/* How to give */}
+            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-8 md:p-12 mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 text-center mb-3">How to Give</h2>
+              <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+                We are finalizing secure online card payments. In the meantime, giving is simple
+                and direct — and you will always receive confirmation and a receipt.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                {givingChannels.map((channel) => (
+                  <div key={channel.name} className="bg-white rounded-xl p-6 border border-gray-200">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-50 rounded-lg mb-4">
+                      <channel.icon className="h-6 w-6 text-primary-600" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{channel.name}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{channel.description}</p>
                   </div>
                 ))}
+              </div>
+              <div className="text-center">
+                <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
+                  Contact Us to Give
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+                <p className="text-sm text-gray-500 mt-4">
+                  Email{' '}
+                  <a href="mailto:info@gpakgirls.org" className="text-primary-600 hover:underline">
+                    info@gpakgirls.org
+                  </a>{' '}
+                  or call/WhatsApp +254 725 737 867
+                </p>
+              </div>
+            </div>
+
+            {/* Accountability strip */}
+            <div className="flex flex-col md:flex-row items-center gap-6 bg-white rounded-2xl border border-gray-200 p-8">
+              <Shield className="h-14 w-14 text-primary-600 flex-shrink-0" />
+              <div>
+                <h2 className="text-xl font-bold text-gray-900 mb-2">
+                  Where the money goes
+                </h2>
+                <p className="text-gray-600 leading-relaxed">
+                  Donations fund direct program delivery first: counselling, school fees,
+                  referrals, training, and family support. Funds are received into the
+                  organization’s account, managed under documented financial procedures by our
+                  CPA-led finance function, and accounted for to every partner.{' '}
+                  <Link
+                    href="/accountability#financial"
+                    className="text-primary-600 font-medium hover:underline"
+                  >
+                    Read about our financial accountability →
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Alternative Ways to Give */}
+      {/* Partner CTA */}
       <section className="section bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Other Ways to Give
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200">
-              <h3 className="text-xl font-semibold mb-3">Bank Transfer</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                For large donations, contact us for bank transfer details.
-              </p>
-              <a href="/contact" className="text-primary-600 font-medium hover:underline">
-                Get Details →
-              </a>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200">
-              <h3 className="text-xl font-semibold mb-3">Corporate Sponsorship</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Partner with us through corporate social responsibility programs.
-              </p>
-              <a href="/contact" className="text-primary-600 font-medium hover:underline">
-                Learn More →
-              </a>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200">
-              <h3 className="text-xl font-semibold mb-3">In-Kind Donations</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Donate materials, equipment, or services directly to our programs.
-              </p>
-              <a href="/contact" className="text-primary-600 font-medium hover:underline">
-                Contact Us →
-              </a>
-            </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <Handshake className="h-12 w-12 text-primary-600 mx-auto mb-4" />
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Funding at Scale?
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              If you represent a foundation, NGO, or institutional funder, we would be glad to
+              share our programme documentation, results data, budgets, and due diligence pack.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+            >
+              Start a partnership conversation
+              <ArrowRight className="h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>
     </main>
   )
 }
-
