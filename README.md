@@ -2,7 +2,7 @@
 
 The official website of **Girl Pride Africa Kenya (GPAK)**, a registered NGO dedicated to ending teenage pregnancy and sexual abuse among teenage girls in Kenya. GPAK empowers teen mothers and pregnant teens through education, vocational training, mentorship, and support — helping them rebuild their lives with dignity and hope.
 
-🌐 **Live site:** [www.gpakgirls.com](https://www.gpakgirls.com)
+🌐 **Live site:** [www.gpakgirls.org](https://www.gpakgirls.org)
 
 ## About the Website
 
@@ -55,7 +55,7 @@ public/         Static assets
 ## Contact
 
 - Email: [info@gpakgirls.org](mailto:info@gpakgirls.org)
-- Website: [www.gpakgirls.com](https://www.gpakgirls.com)
+- Website: [www.gpakgirls.org](https://www.gpakgirls.org)
 
 ## License
 

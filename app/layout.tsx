@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Girl Pride Africa Kenya' }],
   creator: 'Girl Pride Africa Kenya',
   publisher: 'Girl Pride Africa Kenya',
-  metadataBase: new URL('https://www.gpakgirls.com'),
+  metadataBase: new URL('https://www.gpakgirls.org'),
   openGraph: {
     type: 'website',
     locale: 'en_KE',
-    url: 'https://www.gpakgirls.com',
+    url: 'https://www.gpakgirls.org',
     siteName: 'Girl Pride Africa Kenya',
     title: 'Girl Pride Africa Kenya - Empowering Teen Mothers',
     description: 'Supporting teen mothers and pregnant teens through education, vocational training, and mentorship in Kenya.',
