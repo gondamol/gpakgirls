@@ -15,6 +15,7 @@ const navigation = {
     { name: 'Education Support', href: '/programs#education' },
     { name: 'Livelihoods & FAHARI', href: '/programs#livelihoods' },
     { name: 'Family Strengthening', href: '/programs#family' },
+    { name: 'How We Use Technology', href: '/programs#technology' },
   ],
   getInvolved: [
     { name: 'Donate', href: '/donate' },

@@ -10,6 +10,10 @@ import {
   CheckCircle,
   ShieldCheck,
   ArrowRight,
+  Smartphone,
+  MessageCircle,
+  Database,
+  Banknote,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -217,6 +221,65 @@ export default function ProgramsPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology */}
+      <section id="technology" className="section bg-gray-900 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Simple Technology, Human Touch
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Most of the girls we serve do not own a smartphone — so our technology meets them
+                where they are, and keeps our work traceable for partners.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: Smartphone,
+                  title: 'No smartphone needed',
+                  text: 'Girls stay connected through SMS, voice calls, and WhatsApp on basic or shared phones. Appointment and follow-up reminders reach them the same way — and our mentors carry the technology to girls who have none.',
+                },
+                {
+                  icon: MessageCircle,
+                  title: 'WhatsApp peer circles',
+                  text: 'Moderated WhatsApp groups keep peer support alive between meetings, connect mentors to the girls they walk with, and give a young mother somewhere to turn at 9pm, not just on group day.',
+                },
+                {
+                  icon: Database,
+                  title: 'Digital case records',
+                  text: 'Every girl’s journey — needs, referrals, follow-ups, milestones — is tracked in digital registers, so no one falls through the cracks and our results can be verified against records, not memory.',
+                },
+                {
+                  icon: Banknote,
+                  title: 'M-Pesa, not cash',
+                  text: 'School fees support, clinic transport, and stipends move through M-Pesa and the organization’s accounts — every shilling traceable, every transfer auditable.',
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-8"
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-500/20 rounded-lg mb-4">
+                    <item.icon className="h-6 w-6 text-primary-300" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-sm text-gray-400 mt-10 max-w-2xl mx-auto">
+              As we scale, we are investing in stronger digital case management that links every
+              referral to a tracked outcome — bringing the discipline of digital-first health
+              platforms to a deeply community-rooted model.
+            </p>
           </div>
         </div>
       </section>

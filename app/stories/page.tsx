@@ -8,6 +8,7 @@ import {
   Heart,
   Home,
   ShieldCheck,
+  Sparkles,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -63,6 +64,36 @@ const stories = [
     icon: Heart,
   },
   {
+    name: 'Akoth',
+    county: 'Homa Bay',
+    title: 'From our first circle',
+    image: '/images/annie-spratt-msrFBd0OaIo-unsplash.jpg',
+    quote:
+      'That circle was the first place nobody asked me how I got pregnant. They asked me what I wanted to do next. Nobody had ever asked me that.',
+    context:
+      'Akoth joined one of our very first weekly life-skills circles, back when GPAK Girls was a handful of teenage mothers meeting in Homa Bay to learn budgeting, nutrition, and job skills — and to be welcomed instead of judged.',
+    support:
+      'Through the circle she built savings habits and confidence, then trained in hairdressing and received a starter kit. She stayed on as a peer mentor as the programme grew.',
+    now: 'Years later, she runs her own salon — and hosts a weekly circle for a new generation of girls, in the same town where she once sat in the newcomers’ seat.',
+    tag: 'Early Years',
+    icon: Sparkles,
+  },
+  {
+    name: 'Maryline',
+    county: 'Homa Bay',
+    title: 'Full circle: from participant to staff',
+    image: '/images/team/maryline-grace.jpg',
+    quote:
+      'I know what it costs a girl to walk through that door the first time. I walked through it myself. Now I am the one who welcomes her.',
+    context:
+      'Maryline came to GPAK Girls as a young mother and completed the programme. She refused to stop there — she returned to college and earned a Diploma in Social Work with IT.',
+    support:
+      'The programme supported her through counselling, peer mentorship, and her return to education — and when she graduated, she came back to join the team.',
+    now: 'She is our Administrative Assistant, running the organization’s records and logistics. Her story is on our team page — with her name, because she chose to tell it.',
+    tag: 'Full Circle',
+    icon: GraduationCap,
+  },
+  {
     name: 'Akinyi',
     county: 'Migori',
     title: 'A family rebuilt',
@@ -109,9 +140,10 @@ export default function StoriesPage() {
             <ShieldCheck className="h-5 w-5 text-primary-600 flex-shrink-0 mt-0.5" />
             <p>
               <strong>How we tell stories:</strong> every story is shared with the informed consent
-              of the young woman involved. Names are changed, identifying details are removed, and
-              photographs are representative images — because a girl’s privacy matters more than
-              our storytelling. Consent can be withdrawn at any time.
+              of the young woman involved. Unless a woman chooses to be identified — as Maryline,
+              now on our staff, has — names are changed, identifying details are removed, and
+              photographs are representative images. A girl’s privacy matters more than our
+              storytelling, and consent can be withdrawn at any time.
             </p>
           </div>
         </div>
@@ -130,7 +162,7 @@ export default function StoriesPage() {
                   <div className="lg:col-span-2 relative h-64 lg:h-auto min-h-[16rem]">
                     <Image
                       src={story.image}
-                      alt={`Representative image — ${story.title}`}
+                      alt={`${story.title} — a GPAK Girls story`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 40vw"
