@@ -5,7 +5,6 @@ import {
   Heart,
   Target,
   Eye,
-  Award,
   CheckCircle,
   Users,
   MapPin,
