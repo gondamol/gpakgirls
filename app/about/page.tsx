@@ -251,8 +251,11 @@ export default function AboutPage() {
               <p>
                 We started small — weekly life-skills circles in Homa Bay and Siaya where a
                 handful of teenage mothers learned budgeting, nutrition, and job skills, and
-                found something rarer: a place where they were welcomed instead of judged. As
-                trust grew, so did we. Today those circles have grown into integrated programmes
+                found something rarer: a place where they were welcomed instead of judged. Our
+                team visited girls where they lived — bringing food and baby items, negotiating
+                with parents and schools, one household at a time — and by 2019 the work was being
+                featured on Radio Maisha and Siaya’s Radio Mikayi. As trust grew, so did we. Today
+                those circles have grown into integrated programmes
                 that connect psychosocial support, health referrals, school re-entry, vocational
                 training, and family strengthening, and we have supported hundreds of adolescent
                 mothers and pregnant girls across four counties.

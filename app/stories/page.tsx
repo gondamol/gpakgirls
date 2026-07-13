@@ -17,6 +17,45 @@ export const metadata: Metadata = {
     'Stories of adolescent mothers in western Kenya rebuilding their lives with GPAK Girls — shared with consent, told with dignity.',
 }
 
+const earlyStories = [
+  {
+    name: 'Rose, 16',
+    year: '2019',
+    quote:
+      '“Erokamano, ukonya, awinjo kategno, Nyasaye ogwedhu — thank you very much, you have helped me, I feel strong again, God bless you.”',
+    story:
+      'Two weeks after giving birth, Rose was living alone in her late grandmother’s house — sent away by her family, washing her own clothes, sometimes going a full day without food. Our team visited with food and baby items, kept coming back, and sat down with her parents until they agreed to take her home.',
+    legacy:
+      'Rose is why family strengthening is a core pillar today. No girl should have to choose between her baby and her family.',
+    pillar: 'Family Strengthening',
+    href: '/programs#family',
+  },
+  {
+    name: 'Phoebe, 22',
+    year: '2019',
+    quote:
+      '“I feel I have hope and a future for my kids. I can now laugh and feel happiness. The first thing I will buy is a mattress.”',
+    story:
+      'Phoebe was raising two children alone in an unsafe home, surviving on casual farm work that barely fed them. What she needed first was not a course — it was a safe place to sleep. We helped her rent a room of her own; from that stability she began planning a small business and training in catering.',
+    legacy:
+      'Phoebe is why housing and asset support came first in what became Project FAHARI. Safety before skills.',
+    pillar: 'Livelihoods & FAHARI',
+    href: '/programs#livelihoods',
+  },
+  {
+    name: 'Patricia, 14',
+    year: '2019',
+    quote:
+      '“Rejected by peers, despised by parents, she lost hope in life — then she heard of GPAK and contacted us. She dreams of becoming a nurse.”',
+    story:
+      'Patricia could not continue with school after giving birth to her daughter. When she reached out to us, our team negotiated her return to the classroom and walked with her through it — one of the first girls we ever supported back into education.',
+    legacy:
+      'Patricia is why school re-entry is a pillar today — and why we never treat a girl’s ambition as over.',
+    pillar: 'Education & School Re-entry',
+    href: '/programs#education',
+  },
+]
+
 const stories = [
   {
     name: 'Achieng',
@@ -62,21 +101,6 @@ const stories = [
     now: 'She is healthy and in care, and her daughter was born HIV-free.',
     tag: 'Health & HIV',
     icon: Heart,
-  },
-  {
-    name: 'Akoth',
-    county: 'Homa Bay',
-    title: 'From our first circle',
-    image: '/images/annie-spratt-msrFBd0OaIo-unsplash.jpg',
-    quote:
-      'That circle was the first place nobody asked me how I got pregnant. They asked me what I wanted to do next. Nobody had ever asked me that.',
-    context:
-      'Akoth joined one of our very first weekly life-skills circles, back when GPAK Girls was a handful of teenage mothers meeting in Homa Bay to learn budgeting, nutrition, and job skills — and to be welcomed instead of judged.',
-    support:
-      'Through the circle she built savings habits and confidence, then trained in hairdressing and received a starter kit. She stayed on as a peer mentor as the programme grew.',
-    now: 'Years later, she runs her own salon — and hosts a weekly circle for a new generation of girls, in the same town where she once sat in the newcomers’ seat.',
-    tag: 'Early Years',
-    icon: Sparkles,
   },
   {
     name: 'Maryline',
@@ -142,9 +166,56 @@ export default function StoriesPage() {
               <strong>How we tell stories:</strong> every story is shared with the informed consent
               of the young woman involved. Unless a woman chooses to be identified — as Maryline,
               now on our staff, has — names are changed, identifying details are removed, and
-              photographs are representative images. A girl’s privacy matters more than our
+              photographs are representative images. Quotes from our early years are reproduced as
+              the girls shared them with us at the time. A girl’s privacy matters more than our
               storytelling, and consent can be withdrawn at any time.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Where it began */}
+      <section className="section bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-100 text-accent-700 rounded-full text-sm font-medium mb-6">
+                <Sparkles className="h-4 w-4" />
+                <span>From Our Field Notes, 2019</span>
+              </div>
+              <h2 className="section-heading">Where It Began</h2>
+              <p className="section-subheading mx-auto">
+                The first girls we walked with shaped everything we do today. These are their
+                words, as we recorded them at the time — and what each of them changed in us.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {earlyStories.map((item) => (
+                <article
+                  key={item.name}
+                  className="bg-white rounded-2xl border border-gray-200 p-7 flex flex-col"
+                >
+                  <div className="flex items-baseline justify-between mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">{item.name}</h3>
+                    <span className="text-xs font-semibold text-gray-400 tracking-wide">
+                      {item.year}
+                    </span>
+                  </div>
+                  <p className="text-gray-800 italic leading-relaxed mb-4">{item.quote}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-5">{item.story}</p>
+                  <div className="mt-auto pt-4 border-t border-gray-100">
+                    <p className="text-sm text-gray-700 mb-3">{item.legacy}</p>
+                    <Link
+                      href={item.href}
+                      className="inline-flex items-center gap-1.5 text-sm text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                    >
+                      {item.pillar} today →
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
