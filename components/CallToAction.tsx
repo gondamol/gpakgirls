@@ -1,30 +1,32 @@
 import Link from 'next/link'
-import { Heart, Users, Share2 } from 'lucide-react'
+import { Heart, Users, Handshake } from 'lucide-react'
 
 const actions = [
   {
     icon: Heart,
     title: 'Donate',
-    description: 'Your contribution helps provide education, training, and support to teen mothers',
+    description:
+      'Your contribution funds counselling, school re-entry, health referrals, and livelihood training for young mothers',
     href: '/donate',
     color: 'bg-primary-500',
     textColor: 'text-primary-600',
   },
   {
+    icon: Handshake,
+    title: 'Partner With Us',
+    description:
+      'Funders and organizations: explore our programs, evidence, and due diligence — we are ready for the conversation',
+    href: '/get-involved#partner',
+    color: 'bg-accent-500',
+    textColor: 'text-accent-600',
+  },
+  {
     icon: Users,
     title: 'Volunteer',
-    description: 'Share your time and skills to mentor and empower young mothers',
+    description: 'Share your time and skills to mentor and support young mothers in western Kenya',
     href: '/get-involved#volunteer',
     color: 'bg-secondary-500',
     textColor: 'text-secondary-600',
-  },
-  {
-    icon: Share2,
-    title: 'Spread Awareness',
-    description: 'Help us reach more people by sharing our mission on social media',
-    href: '/get-involved#awareness',
-    color: 'bg-accent-500',
-    textColor: 'text-accent-600',
   },
 ]
 
@@ -69,7 +71,7 @@ export default function CallToAction() {
 
         <div className="text-center mt-12">
           <p className="text-primary-100 text-sm">
-            Together, we can end teenage pregnancy and empower young mothers to achieve their dreams.
+            Together, we can make sure no girl’s future ends with an early pregnancy.
           </p>
         </div>
       </div>

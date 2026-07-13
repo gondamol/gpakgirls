@@ -8,28 +8,28 @@ const stats = [
     icon: Users,
     value: 500,
     suffix: '+',
-    label: 'Teen Mothers Empowered',
+    label: 'Adolescent mothers and pregnant girls supported since 2018',
     color: 'text-primary-600',
   },
   {
     icon: GraduationCap,
     value: 85,
     suffix: '%',
-    label: 'Returned to School',
+    label: 'Of the girls we support for school re-entry return to class',
     color: 'text-secondary-600',
   },
   {
     icon: Award,
-    value: 50,
-    suffix: '+',
-    label: 'Girls Trained in Vocational Skills',
+    value: 4,
+    suffix: '',
+    label: 'Counties in western Kenya: Homa Bay, Siaya, Kisumu, Migori',
     color: 'text-accent-600',
   },
   {
     icon: Heart,
-    value: 100,
-    suffix: '%',
-    label: 'Committed to Our Mission',
+    value: 5,
+    suffix: '',
+    label: 'Connected program areas, from counselling to livelihoods',
     color: 'text-primary-600',
   },
 ]
@@ -87,7 +87,8 @@ export default function ImpactStats() {
         <div className="text-center mb-12">
           <h2 className="section-heading">Our Impact</h2>
           <p className="section-subheading mx-auto">
-            Real numbers, real change. See how we&apos;re making a difference in the lives of teen mothers across Kenya.
+            Honest numbers from our programme records — and behind each one, a girl rebuilding her
+            future in western Kenya.
           </p>
         </div>
 
