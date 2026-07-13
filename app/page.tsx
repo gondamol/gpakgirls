@@ -31,8 +31,9 @@ function WhyHere() {
             <div className="flex items-baseline gap-4 border-l-4 border-primary-400 pl-4">
               <span className="text-4xl font-bold text-primary-300">1 in 4</span>
               <span className="text-gray-300 text-sm leading-snug">
-                teenage girls in Homa Bay County has begun childbearing — nearly twice the
-                national rate (Kenya Demographic and Health Survey, 2022)
+                teenage girls in Homa Bay County has begun childbearing — one of the highest
+                rates in Kenya, well above the national average of 15% (Kenya Demographic and
+                Health Survey, 2022)
               </span>
             </div>
           </div>
