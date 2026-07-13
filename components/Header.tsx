@@ -5,10 +5,11 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
+  { name: 'About', href: '/about' },
   { name: 'Programs', href: '/programs' },
+  { name: 'Impact', href: '/impact' },
   { name: 'Stories', href: '/stories' },
+  { name: 'Team', href: '/team' },
   { name: 'Get Involved', href: '/get-involved' },
   { name: 'Contact', href: '/contact' },
 ]

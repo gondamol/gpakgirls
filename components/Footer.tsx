@@ -3,27 +3,28 @@ import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react'
 
 const navigation = {
   about: [
-    { name: 'Our Story', href: '/about' },
-    { name: 'Our Team', href: '/about#team' },
-    { name: 'Annual Reports', href: '/reports' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Impact & Learning', href: '/impact' },
+    { name: 'Accountability', href: '/accountability' },
     { name: 'Contact Us', href: '/contact' },
   ],
   programs: [
-    { name: 'Educational Support', href: '/programs#education' },
-    { name: 'Vocational Training', href: '/programs#vocational' },
-    { name: 'Mentorship', href: '/programs#mentorship' },
-    { name: 'Counseling', href: '/programs#counseling' },
+    { name: 'Psychosocial Support', href: '/programs#psychosocial' },
+    { name: 'Health & HIV Referrals', href: '/programs#health' },
+    { name: 'Education Support', href: '/programs#education' },
+    { name: 'Livelihoods & FAHARI', href: '/programs#livelihoods' },
+    { name: 'Family Strengthening', href: '/programs#family' },
   ],
   getInvolved: [
     { name: 'Donate', href: '/donate' },
     { name: 'Volunteer', href: '/get-involved#volunteer' },
     { name: 'Partner With Us', href: '/get-involved#partner' },
-    { name: 'Spread Awareness', href: '/get-involved#awareness' },
+    { name: 'Stories', href: '/stories' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Refund Policy', href: '/refund-policy' },
+    { name: 'Safeguarding', href: '/accountability#safeguarding' },
   ],
 }
 
@@ -42,17 +43,19 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-white text-2xl font-bold mb-4">GPAK Girls</h3>
             <p className="text-sm mb-6">
-              Empowering teen mothers and pregnant teens in Kenya through education, vocational training, mentorship, and support.
+              Girl Pride Africa Kenya walks alongside adolescent mothers and pregnant girls in
+              western Kenya — with psychosocial support, health referrals, education, livelihoods,
+              and family strengthening.
             </p>
-            
+
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-400" />
-                <span>Homabay Town, Homabay</span>
+                <span>Homa Bay Town, Homa Bay County, Kenya</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-5 w-5 flex-shrink-0 text-gray-400" />
-                <span>0725737867</span>
+                <span>+254 725 737 867</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 flex-shrink-0 text-gray-400" />
@@ -123,7 +126,8 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm">
-              © {new Date().getFullYear()} Girl Pride Africa Kenya. All rights reserved. Registered NGO.
+              © {new Date().getFullYear()} Girl Pride Africa Kenya (GPAK Girls). A registered
+              organization working in Homa Bay, Siaya, Kisumu, and Migori counties.
             </p>
             <div className="flex gap-6 text-sm">
               {navigation.legal.map((item) => (
