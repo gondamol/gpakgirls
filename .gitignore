@@ -31,6 +31,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# internal docs (never committed)
+/internal-docs/
+
 # sensitive config files
 *.key
 *.pem
