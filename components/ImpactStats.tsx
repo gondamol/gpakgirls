@@ -87,8 +87,8 @@ export default function ImpactStats() {
         <div className="text-center mb-12">
           <h2 className="section-heading">Our Impact</h2>
           <p className="section-subheading mx-auto">
-            Honest numbers from our programme records — and behind each one, a girl rebuilding her
-            future in western Kenya.
+            Every figure comes from our programme records — and behind each one is a girl
+            rebuilding her future in western Kenya.
           </p>
         </div>
 

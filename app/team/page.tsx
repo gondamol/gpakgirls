@@ -204,8 +204,7 @@ export default function TeamPage() {
           <div className="max-w-5xl mx-auto">
             <h2 className="section-heading text-center mb-4">As We Grow</h2>
             <p className="section-subheading text-center mx-auto mb-12">
-              We are honest about where we are on our journey. These are roles we are working to
-              establish as our programmes and funding grow.
+              These are roles we are working to establish as our programmes and funding grow.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {growingRoles.map((role) => (

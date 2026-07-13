@@ -83,8 +83,8 @@ export default function ImpactPage() {
               Impact & Learning
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              We would rather share honest numbers than impressive ones. Here is what we have
-              done, how we measure it, and what we are still learning.
+              What we have achieved, how we measure it, and what we are still learning — grounded
+              in our programme records and the experiences of the girls we serve.
             </p>
           </div>
         </div>
