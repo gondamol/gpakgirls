@@ -43,7 +43,7 @@ export default function Footer() {
             <h3 className="text-white text-2xl font-bold mb-4">GPAK Girls</h3>
             <p className="text-sm mb-6">
               Girl Pride Africa Kenya walks alongside adolescent mothers and pregnant girls in
-              western Kenya — with psychosocial support, health referrals, education, livelihoods,
+              western Kenya, with psychosocial support, health referrals, education, livelihoods,
               and family strengthening.
             </p>
 

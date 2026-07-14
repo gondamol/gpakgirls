@@ -15,7 +15,7 @@ const actions = [
     icon: Handshake,
     title: 'Partner With Us',
     description:
-      'Funders and organizations: explore our programs, evidence, and due diligence — we are ready for the conversation',
+      'Funders and organizations: explore our programs, evidence, and due diligence; we are ready for the conversation',
     href: '/get-involved#partner',
     color: 'bg-accent-500',
     textColor: 'text-accent-600',

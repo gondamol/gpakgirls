@@ -85,7 +85,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-xl text-gray-600">
               Questions about our work, partnership enquiries, due diligence requests, or a girl
-              who needs support — we&apos;d love to hear from you.
+              who needs support; we&apos;d love to hear from you.
             </p>
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto mb-8 bg-gradient-to-br from-secondary-50 to-secondary-100 border-2 border-secondary-300 rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Need Help Urgently?</h3>
             <p className="text-gray-600 mb-4">
-              If you are a teen mother or pregnant girl who needs support — or you know one — call
+              If you are a teen mother or pregnant girl who needs support, or you know one, call
               or WhatsApp us. If we cannot answer immediately, we will call you back.
             </p>
             <p className="text-3xl font-bold text-secondary-700">+254 725 737 867</p>
@@ -292,7 +292,7 @@ export default function ContactPage() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-full"
-            title="GPAK Girls Office Location — Homa Bay Town, Kenya"
+            title="GPAK Girls Office Location - Homa Bay Town, Kenya"
           />
         </div>
       </section>

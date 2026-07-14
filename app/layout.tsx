@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: '/images/eibner-saliba-zhWUl24kf5A-unsplash.jpg',
         width: 1200,
         height: 900,
-        alt: 'A young mother holding her child — Girl Pride Africa Kenya',
+        alt: 'A young mother holding her child - Girl Pride Africa Kenya',
       },
     ],
   },

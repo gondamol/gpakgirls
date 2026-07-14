@@ -22,41 +22,41 @@ const leadership: TeamMember[] = [
     name: 'Leah Otieno',
     role: 'Director',
     image: '/images/team/leah-otieno.jpg',
-    bio: 'Leah leads GPAK Girls’ strategy, programme development, partnerships, and community engagement. She brings over ten years of experience in youth empowerment, livelihoods, child protection, positive parenting, and community development, and has led programmes that help adolescent girls, young mothers, and vulnerable families access education, health services, protection, psychosocial support, and economic opportunities. Leah is committed to integrated, community-based solutions that respond to HIV vulnerability, maternal and child wellbeing, gender-based violence, stigma, and poverty — working closely with communities, service providers, and partners to strengthen referral systems and build sustainable pathways for girls and young mothers.',
+    bio: 'Leah leads GPAK Girls’ strategy, programme development, partnerships, and community engagement. She brings over ten years of experience in youth empowerment, livelihoods, child protection, positive parenting, and community development, and has led programmes that help adolescent girls, young mothers, and vulnerable families access education, health services, protection, psychosocial support, and economic opportunities. Leah is committed to integrated, community-based solutions that respond to HIV vulnerability, maternal and child wellbeing, gender-based violence, stigma, and poverty, working closely with communities, service providers, and partners to strengthen referral systems and build sustainable pathways for girls and young mothers.',
     focus: ['Strategic leadership', 'Partnerships', 'Child protection', 'Community engagement'],
   },
   {
     name: 'Quinter Onanda',
     role: 'Programs Officer',
     image: '/images/team/quinter-onanda.jpg',
-    bio: 'Quinter designs, implements, and supports GPAK Girls’ core programmes for adolescent mothers and their families. She is a certified Trainer of Trainers in psychosocial counselling, case management for orphans and vulnerable children, positive parenting skills, and HIV/AIDS literacy. Quinter builds the capacity of staff, volunteers, and caregivers through training, mentorship, and evidence-based approaches that strengthen families — experience that directly underpins our psychosocial support and family strengthening work.',
+    bio: 'Quinter designs, implements, and supports GPAK Girls’ core programmes for adolescent mothers and their families. She is a certified Trainer of Trainers in psychosocial counselling, case management for orphans and vulnerable children, positive parenting skills, and HIV/AIDS literacy. Quinter builds the capacity of staff, volunteers, and caregivers through training, mentorship, and evidence-based approaches that strengthen families, experience that directly underpins our psychosocial support and family strengthening work.',
     focus: ['Psychosocial support', 'OVC case management', 'Positive parenting', 'HIV literacy'],
   },
   {
     name: "Nellicent Achieng' Opondo",
     role: 'Public Health & Research Officer',
     image: '/images/team/nellicent-achieng.jpg',
-    bio: 'Nellicent is a public health professional and epidemiologist who leads our health-focused programming and evidence work. Currently pursuing a Master’s degree in Epidemiology and Disease Control, she has experience in public health research, disease surveillance, and community health programmes. At GPAK Girls she strengthens the link between our services and the health system — supporting referrals, health education, mentorship for teenage girls and young mothers, and the data we use to understand and improve our results.',
+    bio: 'Nellicent is a public health professional and epidemiologist who leads our health-focused programming and evidence work. Currently pursuing a Master’s degree in Epidemiology and Disease Control, she has experience in public health research, disease surveillance, and community health programmes. At GPAK Girls she strengthens the link between our services and the health system: supporting referrals, health education, mentorship for teenage girls and young mothers, and the data we use to understand and improve our results.',
     focus: ['Public health', 'Epidemiology', 'Health referrals', 'Evidence & data'],
   },
   {
     name: 'Mercy Abelle',
     role: 'Community Engagement Officer',
     image: '/images/team/mercy-abelle.jpg',
-    bio: 'Mercy supports outreach and day-to-day engagement with the girls, families, and community structures we serve in Homa Bay. She helps identify girls who need support, accompanies them through our programmes, and maintains the trusted local relationships — with households, schools, and community leaders — that make our community-rooted model work.',
+    bio: 'Mercy supports outreach and day-to-day engagement with the girls, families, and community structures we serve in Homa Bay. She helps identify girls who need support, accompanies them through our programmes, and maintains the trusted local relationships, with households, schools, and community leaders, that make our community-rooted model work.',
     focus: ['Community outreach', 'Beneficiary support', 'Local partnerships'],
   },
   {
     name: 'Denis Omogi',
     role: 'Finance Officer',
-    bio: 'Denis is a Certified Public Accountant, CPA(K), responsible for GPAK Girls’ financial management. He oversees budgeting, financial records, and controls, ensuring that funds are managed transparently and accounted for accurately — and that our financial systems meet the standards partners and donors expect.',
+    bio: 'Denis is a Certified Public Accountant, CPA(K), responsible for GPAK Girls’ financial management. He oversees budgeting, financial records, and controls, ensuring that funds are managed transparently and accounted for accurately, and that our financial systems meet the standards partners and donors expect.',
     focus: ['Financial management', 'Budgeting', 'Accountability'],
   },
   {
     name: 'Maryline Grace',
     role: 'Administrative Assistant',
     image: '/images/team/maryline-grace.jpg',
-    bio: 'Maryline’s journey with GPAK Girls began on the other side of the desk — she came to us as a young mother and completed our programme. Determined to keep going, she returned to college and earned a Diploma in Social Work with IT, then came back to join the team. Today she runs the administrative heart of the organization — records, logistics, and office operations — and her own experience shapes how warmly every girl is received when she first walks through our door.',
+    bio: 'Maryline’s journey with GPAK Girls began on the other side of the desk: she came to us as a young mother and completed our programme. Determined to keep going, she returned to college and earned a Diploma in Social Work with IT, then came back to join the team. Today she runs the administrative heart of the organization (records, logistics, and office operations), and her own experience shapes how warmly every girl is received when she first walks through our door.',
     focus: ['Administration', 'Social work', 'Programme graduate'],
   },
 ]
@@ -78,7 +78,7 @@ const growingRoles = [
     icon: Megaphone,
     title: 'Communications Officer',
     description:
-      'A dedicated communications role to share our work, results, and the voices of the young mothers we serve — always with consent and dignity at the centre.',
+      'A dedicated communications role to share our work, results, and the voices of the young mothers we serve, always with consent and dignity at the centre.',
   },
 ]
 

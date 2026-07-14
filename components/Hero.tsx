@@ -21,7 +21,7 @@ export default function Hero() {
 
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Girl Pride Africa Kenya walks alongside adolescent mothers and pregnant girls aged
-              13–23 around Lake Victoria — connecting psychosocial support, HIV and maternal
+              13–23 around Lake Victoria, connecting psychosocial support, HIV and maternal
               health care, education, livelihoods, and family strengthening into one plan for each
               girl.
             </p>

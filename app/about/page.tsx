@@ -24,7 +24,7 @@ const values = [
     icon: Heart,
     title: 'Dignity First',
     description:
-      'Every girl is met with empathy and respect — never judgment. Her story belongs to her, and her consent guides how we work and what we share.',
+      'Every girl is met with empathy and respect, never judgment. Her story belongs to her, and her consent guides how we work and what we share.',
   },
   {
     icon: Users,
@@ -42,7 +42,7 @@ const values = [
     icon: HandHeart,
     title: 'Whole-Person Support',
     description:
-      'Teenage motherhood, HIV risk, poverty, and exclusion are connected — so our response connects health, education, livelihoods, and family.',
+      'Teenage motherhood, HIV risk, poverty, and exclusion are connected, so our response connects health, education, livelihoods, and family.',
   },
 ]
 
@@ -70,7 +70,7 @@ const tocSteps = [
   {
     step: '03',
     title: 'Build a future',
-    text: 'School re-entry, vocational training, and livelihood support — including our Project FAHARI housing and asset-building model — give each mother a realistic path to income and independence.',
+    text: 'School re-entry, vocational training, and livelihood support, including our Project FAHARI housing and asset-building model, give each mother a realistic path to income and independence.',
   },
   {
     step: '04',
@@ -117,7 +117,7 @@ export default function AboutPage() {
                   Many of the girls we support are living with HIV themselves, or are raising
                   children at high risk of exposure. When a girl becomes a mother at fourteen or
                   sixteen here, she usually loses school, family support, and safety at the same
-                  time — so responding to teenage motherhood in this region means responding to
+                  time, so responding to teenage motherhood in this region means responding to
                   HIV prevention, care, and stigma at the same time.
                 </p>
                 <p>
@@ -151,7 +151,7 @@ export default function AboutPage() {
               </div>
               <p className="text-gray-600 leading-relaxed">
                 To support adolescent mothers and pregnant girls in western Kenya to heal, return
-                to learning, earn a dignified living, and raise healthy children — through
+                to learning, earn a dignified living, and raise healthy children, through
                 psychosocial care, health referrals, education, livelihoods, and family
                 strengthening.
               </p>
@@ -164,7 +164,7 @@ export default function AboutPage() {
               </div>
               <p className="text-gray-600 leading-relaxed">
                 Communities around Lake Victoria where no girl’s future ends with an early
-                pregnancy — where every young mother and her child can be healthy, educated,
+                pregnancy, where every young mother and her child can be healthy, educated,
                 economically secure, and free from stigma.
               </p>
             </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <p className="section-subheading text-center mx-auto mb-12">
               Our theory of change is simple: when a young mother is emotionally supported,
               connected to health care, back in education or earning, and backed by her family,
-              she and her child thrive — and the cycle of early pregnancy and HIV vulnerability
+              she and her child thrive, and the cycle of early pregnancy and HIV vulnerability
               weakens with her.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
@@ -249,11 +249,11 @@ export default function AboutPage() {
                 to.
               </p>
               <p>
-                We started small — weekly life-skills circles in Homa Bay and Siaya where a
+                We started small: weekly life-skills circles in Homa Bay and Siaya where a
                 handful of teenage mothers learned budgeting, nutrition, and job skills, and
                 found something rarer: a place where they were welcomed instead of judged. Our
-                team visited girls where they lived — bringing food and baby items, negotiating
-                with parents and schools, one household at a time — and by 2019 the work was being
+                team visited girls where they lived, bringing food and baby items, negotiating
+                with parents and schools, one household at a time, and by 2019 the work was being
                 featured on Radio Maisha and Siaya’s Radio Mikayi. As trust grew, so did we. Today
                 those circles have grown into integrated programmes
                 that connect psychosocial support, health referrals, school re-entry, vocational

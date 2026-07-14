@@ -46,7 +46,7 @@ const programs = [
     slug: 'health',
     image: '/images/julie-pittevils-UvOFhuDk5k0-unsplash.jpg',
     intro:
-      'We are not a clinic — and we do not pretend to be. Our strength is making sure every girl actually reaches the health services she and her baby need, and stays in care.',
+      'We are not a clinic, and we do not pretend to be. Our strength is making sure every girl actually reaches the health services she and her baby need, and stays in care.',
     features: [
       'Referral and accompaniment to adolescent-friendly HIV testing, counselling, and treatment',
       'Linkage to prevention of mother-to-child transmission (PMTCT) services',
@@ -55,7 +55,7 @@ const programs = [
       'HIV prevention education and sexual and reproductive health information',
     ],
     monitoring:
-      'We track referral completion, retention in care, and clinic attendance — in coordination with local health facilities and with strict confidentiality.',
+      'We track referral completion, retention in care, and clinic attendance, in coordination with local health facilities and with strict confidentiality.',
   },
   {
     icon: BookOpen,
@@ -63,7 +63,7 @@ const programs = [
     slug: 'education',
     image: '/images/educational.jpg',
     intro:
-      'Pregnancy ends too many school journeys in western Kenya. We help girls go back — and stay.',
+      'Pregnancy ends too many school journeys in western Kenya. We help girls go back, and stay.',
     features: [
       'School re-entry negotiation with schools and families',
       'School fees assistance, supplies, and uniforms',
@@ -96,7 +96,7 @@ const programs = [
     slug: 'family',
     image: '/images/mentorship.jpg',
     intro:
-      'A girl’s recovery lasts when her family stands behind her. We work with caregivers and households — not just the girl alone.',
+      'A girl’s recovery lasts when her family stands behind her. We work with caregivers and households, not just the girl alone.',
     features: [
       'Positive parenting support informed by evidence-based approaches such as the Sinovuyo parenting programme',
       'Caregiver dialogue to rebuild communication and reduce conflict at home',
@@ -113,12 +113,12 @@ const journey = [
   {
     step: '1',
     title: 'Identification',
-    text: 'Community volunteers, schools, health workers, and local leaders refer girls to us — or girls come themselves.',
+    text: 'Community volunteers, schools, health workers, and local leaders refer girls to us, or girls come themselves.',
   },
   {
     step: '2',
     title: 'Assessment & Consent',
-    text: 'Together with each girl we assess her needs — safety, health, schooling, income, family — and agree on a plan. Nothing happens without her consent.',
+    text: 'Together with each girl we assess her needs (safety, health, schooling, income, family) and agree on a plan. Nothing happens without her consent.',
   },
   {
     step: '3',
@@ -128,7 +128,7 @@ const journey = [
   {
     step: '4',
     title: 'Follow-up & Graduation',
-    text: 'Case follow-up continues until she is stable — in school or earning, in care if HIV-positive, and supported at home. Graduation is planned, not abrupt.',
+    text: 'Case follow-up continues until she is stable: in school or earning, in care if HIV-positive, and supported at home. Graduation is planned, not abrupt.',
   },
 ]
 
@@ -144,7 +144,7 @@ export default function ProgramsPage() {
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               One girl, one plan, five connected areas of support. Because teenage motherhood, HIV
-              vulnerability, school dropout, and poverty arrive together — our response does too.
+              vulnerability, school dropout, and poverty arrive together; our response does too.
             </p>
           </div>
         </div>
@@ -189,7 +189,7 @@ export default function ProgramsPage() {
                 <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src={program.image}
-                    alt={`${program.title} — GPAK Girls program activities`}
+                    alt={`${program.title} - GPAK Girls program activities`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -234,7 +234,7 @@ export default function ProgramsPage() {
                 Simple Technology, Human Touch
               </h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Most of the girls we serve do not own a smartphone — so our technology meets them
+                Most of the girls we serve do not own a smartphone, so our technology meets them
                 where they are, and keeps our work traceable for partners.
               </p>
             </div>
@@ -244,7 +244,7 @@ export default function ProgramsPage() {
                 {
                   icon: Smartphone,
                   title: 'No smartphone needed',
-                  text: 'Girls stay connected through SMS, voice calls, and WhatsApp on basic or shared phones. Appointment and follow-up reminders reach them the same way — and our mentors carry the technology to girls who have none.',
+                  text: 'Girls stay connected through SMS, voice calls, and WhatsApp on basic or shared phones. Appointment and follow-up reminders reach them the same way, and our mentors carry the technology to girls who have none.',
                 },
                 {
                   icon: MessageCircle,
@@ -254,12 +254,12 @@ export default function ProgramsPage() {
                 {
                   icon: Database,
                   title: 'Digital case records',
-                  text: 'Every girl’s journey — needs, referrals, follow-ups, milestones — is tracked in digital registers, so no one falls through the cracks and our results can be verified against records, not memory.',
+                  text: 'Every girl’s journey (needs, referrals, follow-ups, milestones) is tracked in digital registers, so no one falls through the cracks and our results can be verified against records, not memory.',
                 },
                 {
                   icon: Banknote,
                   title: 'M-Pesa, not cash',
-                  text: 'School fees support, clinic transport, and stipends move through M-Pesa and the organization’s accounts — every shilling traceable, every transfer auditable.',
+                  text: 'School fees support, clinic transport, and stipends move through M-Pesa and the organization’s accounts: every shilling traceable, every transfer auditable.',
                 },
               ].map((item) => (
                 <div
@@ -277,7 +277,7 @@ export default function ProgramsPage() {
 
             <p className="text-center text-sm text-gray-400 mt-10 max-w-2xl mx-auto">
               As we scale, we are investing in stronger digital case management that links every
-              referral to a tracked outcome — bringing the discipline of digital-first health
+              referral to a tracked outcome, bringing the discipline of digital-first health
               platforms to a deeply community-rooted model.
             </p>
           </div>
@@ -335,7 +335,7 @@ export default function ProgramsPage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                 <h3 className="text-2xl font-semibold mb-4">Need Support?</h3>
                 <p className="mb-6">
-                  If you are a young mother or pregnant girl who needs help — or you know one —
+                  If you are a young mother or pregnant girl who needs help, or you know one,
                   reach out. We will listen first.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">

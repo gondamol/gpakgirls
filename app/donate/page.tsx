@@ -51,7 +51,7 @@ const givingChannels = [
     icon: Landmark,
     name: 'Bank Transfer',
     description:
-      'Donations are received into the organization’s bank account — never personal accounts. Contact us for transfer details and a receipt.',
+      'Donations are received into the organization’s bank account, never personal accounts. Contact us for transfer details and a receipt.',
   },
   {
     icon: Gift,
@@ -125,7 +125,7 @@ export default function DonatePage() {
               <h2 className="text-3xl font-bold text-gray-900 text-center mb-3">How to Give</h2>
               <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
                 We are finalizing secure online card payments. In the meantime, giving is simple
-                and direct — and you will always receive confirmation and a receipt.
+                and direct, and you will always receive confirmation and a receipt.
               </p>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {givingChannels.map((channel) => (

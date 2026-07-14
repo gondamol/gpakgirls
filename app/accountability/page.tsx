@@ -23,7 +23,7 @@ const safeguardingPoints = [
   'Prevention of sexual exploitation and abuse (PSEA): zero tolerance, clear reporting duties, and consequences that apply to staff, volunteers, and partners',
   'Safe recruitment: references and background checks for staff and volunteers who work with children and vulnerable young women',
   'A confidential reporting and referral pathway for disclosures of abuse, violence, or urgent protection needs, connected to local child protection and health services',
-  'Informed consent and assent procedures for participation, photography, and storytelling — a girl’s story is hers, and saying no never affects her support',
+  'Informed consent and assent procedures for participation, photography, and storytelling: a girl’s story is hers, and saying no never affects her support',
 ]
 
 const dataPoints = [
@@ -35,7 +35,7 @@ const dataPoints = [
 
 const financePoints = [
   'Finance is led by a Certified Public Accountant, CPA(K)',
-  'Organizational bank account with dual controls — funds are received and managed by the organization, never by individuals',
+  'Organizational bank account with dual controls: funds are received and managed by the organization, never by individuals',
   'Documented finance and procurement procedures with approval thresholds',
   'Budgets, financial statements, and records are shared with partners and funders as part of due diligence and reporting',
   'We welcome independent review and audit as our funding grows',
@@ -53,7 +53,7 @@ export default function AccountabilityPage() {
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               We work with minors and with sensitive information about pregnancy, HIV, and
-              violence. That is a serious responsibility — here is how we carry it.
+              violence. That is a serious responsibility; here is how we carry it.
             </p>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function AccountabilityPage() {
             <p className="text-lg text-gray-600 leading-relaxed">
               Registration certificates, governing documents, committee records, policies, and
               financial statements are organized in a due diligence pack and shared with partners
-              and funders on request — tell us what you need and we will provide it.
+              and funders on request; tell us what you need and we will provide it.
             </p>
             <div className="mt-6">
               <Link
@@ -190,8 +190,8 @@ export default function AccountabilityPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Raise a Concern</h2>
             </div>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Anyone — a girl in our programmes, a family member, a community member, a partner, or
-              a member of staff — can raise a concern about our work or the conduct of anyone
+              Anyone (a girl in our programmes, a family member, a community member, a partner, or
+              a member of staff) can raise a concern about our work or the conduct of anyone
               associated with GPAK Girls. Concerns are handled confidentially, taken seriously, and
               reported to authorities where required by law. Raising a concern will never affect
               the support a girl receives.

@@ -46,17 +46,17 @@ const monitoring = [
   {
     icon: ClipboardList,
     title: 'Case management at the centre',
-    text: 'Every girl has an individual case record: her needs assessment, support plan, referrals made, and follow-up visits. This is how we know each girl’s journey — not just aggregate numbers.',
+    text: 'Every girl has an individual case record: her needs assessment, support plan, referrals made, and follow-up visits. This is how we know each girl’s journey, not just aggregate numbers.',
   },
   {
     icon: BarChart3,
     title: 'What we track',
-    text: 'School re-entry and retention, referral completion and retention in health care, training completion and income activity, family reunification, and participation in psychosocial support — disaggregated by age, county, and support received.',
+    text: 'School re-entry and retention, referral completion and retention in health care, training completion and income activity, family reunification, and participation in psychosocial support, disaggregated by age, county, and support received.',
   },
   {
     icon: Microscope,
     title: 'In-house public health capacity',
-    text: 'Our team includes a public health professional and epidemiologist, which strengthens how we collect, question, and use data — and connects our indicators to county health data and national statistics.',
+    text: 'Our team includes a public health professional and epidemiologist, which strengthens how we collect, question, and use data, and connects our indicators to county health data and national statistics.',
   },
   {
     icon: LockKeyhole,
@@ -66,7 +66,7 @@ const monitoring = [
 ]
 
 const learning = [
-  'Which combination of supports keeps a young mother in school through the full year — fees alone, or fees plus childcare and mentorship?',
+  'Which combination of supports keeps a young mother in school through the full year: fees alone, or fees plus childcare and mentorship?',
   'What makes health referrals stick, so girls not only reach HIV and maternal health services but stay in care?',
   'How family strengthening approaches such as Sinovuyo-informed parenting change the home environment around adolescent mothers.',
   'How housing and asset support (Project FAHARI) affects long-term household stability compared with livelihood training alone.',
@@ -83,7 +83,7 @@ export default function ImpactPage() {
               Impact & Learning
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              What we have achieved, how we measure it, and what we are still learning — grounded
+              What we have achieved, how we measure it, and what we are still learning, grounded
               in our programme records and the experiences of the girls we serve.
             </p>
           </div>
@@ -123,7 +123,7 @@ export default function ImpactPage() {
           <div className="max-w-5xl mx-auto">
             <h2 className="section-heading text-center mb-4">How We Measure</h2>
             <p className="section-subheading text-center mx-auto mb-12">
-              Monitoring is not paperwork for donors — it is how we know whether a girl is actually
+              Monitoring is not paperwork for donors; it is how we know whether a girl is actually
               safer, healthier, and more secure than when she came to us.
             </p>
             <div className="grid md:grid-cols-2 gap-8">

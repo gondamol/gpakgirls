@@ -26,7 +26,7 @@ const stories = [
     county: 'Kisumu',
     title: 'Healthy mother, healthy baby',
     excerpt:
-      'I was afraid of the clinic — of the questions, of the looks. Having someone walk in with me made it possible. Now I never miss an appointment.',
+      'I was afraid of the clinic: of the questions, of the looks. Having someone walk in with me made it possible. Now I never miss an appointment.',
     image: '/images/annie-spratt-1YnBzhJISg4-unsplash.jpg',
     impact: 'In HIV care; her daughter was born HIV-free',
   },
@@ -54,7 +54,7 @@ export default function FeaturedStories() {
               <div className="aspect-[4/3] relative">
                 <Image
                   src={story.image}
-                  alt={`Representative image — ${story.title}`}
+                  alt={`Representative image - ${story.title}`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

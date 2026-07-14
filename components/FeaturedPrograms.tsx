@@ -30,7 +30,7 @@ const programs = [
     title: 'Education & School Re-entry',
     href: '/programs#education',
     description:
-      'Fees, re-entry negotiation, tutoring, and childcare so young mothers can go back to school — and stay.',
+      'Fees, re-entry negotiation, tutoring, and childcare so young mothers can go back to school, and stay.',
     color: 'bg-indigo-500',
   },
   {
@@ -46,7 +46,7 @@ const programs = [
     title: 'Family Strengthening',
     href: '/programs#family',
     description:
-      'Parenting and caregiver support — informed by approaches like Sinovuyo — that rebuilds the home around each girl.',
+      'Parenting and caregiver support, informed by approaches like Sinovuyo, that rebuilds the home around each girl.',
     color: 'bg-green-500',
   },
 ]
@@ -58,7 +58,7 @@ export default function FeaturedPrograms() {
         <div className="text-center mb-12">
           <h2 className="section-heading">One Girl, One Plan</h2>
           <p className="section-subheading mx-auto">
-            Teenage motherhood, HIV vulnerability, school dropout, and poverty arrive together —
+            Teenage motherhood, HIV vulnerability, school dropout, and poverty arrive together,
             so our five program areas work together around every girl.
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function FeaturedPrograms() {
           <div className="bg-primary-600 rounded-xl p-6 shadow-sm border border-primary-600 flex flex-col justify-center text-white">
             <h3 className="text-xl font-semibold mb-3">How it fits together</h3>
             <p className="text-primary-100 text-sm leading-relaxed mb-4">
-              See the full journey — from the day a girl is referred to us to the day she
+              See the full journey: from the day a girl is referred to us to the day she
               graduates, stable and independent.
             </p>
             <Link
