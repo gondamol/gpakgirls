@@ -19,38 +19,41 @@ export const metadata: Metadata = {
 
 const earlyStories = [
   {
-    name: 'Rose, 16',
+    name: 'Anyango, 16',
     year: '2019',
     quote:
       '“Erokamano, ukonya, awinjo kategno, Nyasaye ogwedhu — thank you very much, you have helped me, I feel strong again, God bless you.”',
     story:
-      'Two weeks after giving birth, Rose was living alone in her late grandmother’s house — sent away by her family, washing her own clothes, sometimes going a full day without food. Our team visited with food and baby items, kept coming back, and sat down with her parents until they agreed to take her home.',
+      'Two weeks after giving birth, Anyango was living alone in her late grandmother’s house — sent away by her family, washing her own clothes, sometimes going a full day without food. Our team visited with food and baby items, kept coming back, and sat down with her parents until they agreed to take her home. School was no longer realistic for her, but she told us she could do tailoring.',
+    now: 'Today she works as a tailor, supporting herself and her child with her own hands.',
     legacy:
-      'Rose is why family strengthening is a core pillar today. No girl should have to choose between her baby and her family.',
+      'Anyango is why family strengthening is a core pillar today. No girl should have to choose between her baby and her family.',
     pillar: 'Family Strengthening',
     href: '/programs#family',
   },
   {
-    name: 'Phoebe, 22',
+    name: 'Auma, 22',
     year: '2019',
     quote:
       '“I feel I have hope and a future for my kids. I can now laugh and feel happiness. The first thing I will buy is a mattress.”',
     story:
-      'Phoebe was raising two children alone in an unsafe home, surviving on casual farm work that barely fed them. What she needed first was not a course — it was a safe place to sleep. We helped her rent a room of her own; from that stability she began planning a small business and training in catering.',
+      'Auma was raising two children alone in an unsafe home, surviving on casual farm work that barely fed them. What she needed first was not a course — it was a safe place to sleep. We helped her rent a room of her own; from that stability she began building the skills to earn.',
+    now: 'Today she runs her own salon — and trains young mothers from our programmes in it.',
     legacy:
-      'Phoebe is why housing and asset support came first in what became Project FAHARI. Safety before skills.',
+      'Auma is why housing and asset support came first in what became Project FAHARI. Safety before skills.',
     pillar: 'Livelihoods & FAHARI',
     href: '/programs#livelihoods',
   },
   {
-    name: 'Patricia, 14',
+    name: 'Apiyo, 14',
     year: '2019',
     quote:
       '“Rejected by peers, despised by parents, she lost hope in life — then she heard of GPAK and contacted us. She dreams of becoming a nurse.”',
     story:
-      'Patricia could not continue with school after giving birth to her daughter. When she reached out to us, our team negotiated her return to the classroom and walked with her through it — one of the first girls we ever supported back into education.',
+      'Apiyo could not continue with school after giving birth to her daughter. When she reached out to us, our team negotiated her return to the classroom and walked with her through it — one of the first girls we ever supported back into education.',
+    now: 'Today she has completed her schooling and mentors girls arriving where she once stood.',
     legacy:
-      'Patricia is why school re-entry is a pillar today — and why we never treat a girl’s ambition as over.',
+      'Apiyo is why school re-entry is a pillar today — and why we never treat a girl’s ambition as over.',
     pillar: 'Education & School Re-entry',
     href: '/programs#education',
   },
@@ -186,7 +189,8 @@ export default function StoriesPage() {
               <h2 className="section-heading">Where It Began</h2>
               <p className="section-subheading mx-auto">
                 The first girls we walked with shaped everything we do today. These are their
-                words, as we recorded them at the time — and what each of them changed in us.
+                words as we recorded them at the time — names changed to protect them — and what
+                each of them changed in us.
               </p>
             </div>
 
@@ -203,7 +207,8 @@ export default function StoriesPage() {
                     </span>
                   </div>
                   <p className="text-gray-800 italic leading-relaxed mb-4">{item.quote}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-5">{item.story}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.story}</p>
+                  <p className="text-sm font-semibold text-secondary-700 mb-5">{item.now}</p>
                   <div className="mt-auto pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-700 mb-3">{item.legacy}</p>
                     <Link
