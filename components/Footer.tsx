@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react'
+import { Facebook, Mail, Phone, MapPin } from 'lucide-react'
 
 const navigation = {
   about: [
@@ -30,9 +30,7 @@ const navigation = {
 }
 
 const socialMedia = [
-  { name: 'Facebook', href: '#', icon: Facebook },
-  { name: 'Instagram', href: '#', icon: Instagram },
-  { name: 'Twitter', href: '#', icon: Twitter },
+  { name: 'Facebook', href: 'https://www.facebook.com/girlpridekenya', icon: Facebook },
 ]
 
 export default function Footer() {
