@@ -19,6 +19,7 @@ const navigation = {
   ],
   getInvolved: [
     { name: 'Donate', href: '/donate' },
+    { name: 'Walk With Her (Monthly)', href: '/walk-with-her' },
     { name: 'Volunteer', href: '/get-involved#volunteer' },
     { name: 'Partner With Us', href: '/get-involved#partner' },
     { name: 'Stories', href: '/stories' },

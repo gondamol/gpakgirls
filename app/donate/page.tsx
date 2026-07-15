@@ -153,6 +153,27 @@ export default function DonatePage() {
               </div>
             </div>
 
+            {/* Walk With Her promo */}
+            <div className="bg-gradient-to-br from-primary-600 to-primary-700 text-white rounded-2xl p-8 md:p-10 mb-16 flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-1">
+                <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                  Rather walk the whole journey with her?
+                </h2>
+                <p className="text-primary-100 leading-relaxed">
+                  Join Walk With Her, our monthly giving circle. From KES 1,000 / EUR 10 a month,
+                  you fund the steady support that carries a young mother from her first day with
+                  us to graduation, with a quarterly letter from the field.
+                </p>
+              </div>
+              <Link
+                href="/walk-with-her"
+                className="inline-flex items-center gap-2 bg-white text-primary-600 font-semibold px-8 py-3.5 rounded-lg hover:bg-gray-100 transition-colors flex-shrink-0"
+              >
+                Join the Circle
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+
             {/* Accountability strip */}
             <div className="flex flex-col md:flex-row items-center gap-6 bg-white rounded-2xl border border-gray-200 p-8">
               <Shield className="h-14 w-14 text-primary-600 flex-shrink-0" />

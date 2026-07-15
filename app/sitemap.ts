@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/accountability', priority: 0.8 },
     { path: '/get-involved', priority: 0.7 },
     { path: '/donate', priority: 0.8 },
+    { path: '/walk-with-her', priority: 0.8 },
     { path: '/contact', priority: 0.7 },
     { path: '/privacy', priority: 0.3 },
   ]
