@@ -316,9 +316,11 @@ export default function AboutPage() {
               Governance & Registration
             </h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Girl Pride Africa Kenya is a registered organization in Kenya. An advisory committee
-              provides oversight of strategy, finances, and safeguarding, and our finance function
-              is led by a Certified Public Accountant.
+              Girl Pride Africa Kenya is registered with the NGOs Co-ordination Board of Kenya
+              under Section 10 of the NGO Co-ordination Act (Reg. No. OP.218/051/19-189/11666,
+              registered 30 April 2020; community work since 2018). An advisory committee provides
+              oversight of strategy, finances, and safeguarding, and our finance function is led
+              by a Certified Public Accountant.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Registration documents, governance records, policies, and financial information are

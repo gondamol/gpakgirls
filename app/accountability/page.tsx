@@ -10,6 +10,8 @@ import {
   ArrowRight,
   Mail,
   Phone,
+  BadgeCheck,
+  PieChart,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -59,8 +61,101 @@ export default function AccountabilityPage() {
         </div>
       </section>
 
+      {/* Registration & budgeting at a glance */}
+      <section id="registration" className="section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            {/* Registration card */}
+            <div className="bg-white rounded-2xl border-t-4 border-primary-600 shadow-lg p-8">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="inline-flex items-center justify-center w-11 h-11 bg-primary-50 rounded-xl">
+                  <BadgeCheck className="h-6 w-6 text-primary-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Registration & Legal Status
+                </h2>
+              </div>
+              <p className="text-sm text-gray-500 mb-6">
+                A duly registered NGO operating under Kenyan law.
+              </p>
+              <dl className="text-sm">
+                {[
+                  ['Organization', 'Girl Pride Africa Kenya (GPAK Girls)'],
+                  ['Registration No.', 'OP.218/051/19-189/11666'],
+                  ['Registered with', 'NGOs Co-ordination Board, Kenya'],
+                  ['Legal basis', 'Section 10, NGO Co-ordination Act'],
+                  ['Registered since', '30 April 2020'],
+                  ['Community work since', '2018'],
+                  ['Headquarters', 'Homa Bay Town, Homa Bay County'],
+                ].map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex justify-between gap-4 py-2.5 border-b border-gray-100 last:border-b-0"
+                  >
+                    <dt className="text-gray-500">{label}</dt>
+                    <dd className="font-semibold text-gray-900 text-right">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="text-xs text-gray-500 mt-4">
+                The registration certificate is shared with partners and funders as part of due
+                diligence.
+              </p>
+            </div>
+
+            {/* Budgeting card */}
+            <div className="bg-white rounded-2xl border-t-4 border-secondary-600 shadow-lg p-8">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="inline-flex items-center justify-center w-11 h-11 bg-secondary-50 rounded-xl">
+                  <PieChart className="h-6 w-6 text-secondary-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900">Programme-First Budgeting</h2>
+              </div>
+              <p className="text-sm text-gray-500 mb-6">
+                How our current programme budgets are structured.
+              </p>
+              <div className="flex items-center gap-8">
+                <div
+                  className="relative w-36 h-36 rounded-full flex-shrink-0"
+                  style={{
+                    background:
+                      'conic-gradient(#d1253d 0% 85%, #f59e0b 85% 93%, #d1d5db 93% 100%)',
+                  }}
+                  role="img"
+                  aria-label="Budget structure: 85 percent programme delivery, 8 percent operations, 7 percent administration"
+                >
+                  <div className="absolute inset-4 bg-white rounded-full flex flex-col items-center justify-center">
+                    <span className="text-2xl font-bold text-primary-600">85%</span>
+                    <span className="text-[11px] text-gray-500">Programmes</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 text-sm">
+                  {[
+                    ['bg-primary-600', '85%', 'Programme delivery'],
+                    ['bg-accent-500', '8%', 'Operations'],
+                    ['bg-gray-300', '7%', 'Administration & indirect (capped)'],
+                  ].map(([dot, pct, label]) => (
+                    <li key={label} className="flex items-start gap-2.5">
+                      <span className={`w-3 h-3 rounded-sm mt-1 flex-shrink-0 ${dot}`}></span>
+                      <span>
+                        <span className="font-bold text-gray-900">{pct}</span>{' '}
+                        <span className="text-gray-600">{label}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="text-xs text-gray-500 mt-6">
+                Every programme budget includes an independent audit line, and financial reports
+                are shared with every funding partner.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Safeguarding */}
-      <section id="safeguarding" className="section">
+      <section id="safeguarding" className="section bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
@@ -88,7 +183,7 @@ export default function AccountabilityPage() {
       </section>
 
       {/* Data protection */}
-      <section id="data-protection" className="section bg-gray-50">
+      <section id="data-protection" className="section">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
@@ -119,7 +214,7 @@ export default function AccountabilityPage() {
       </section>
 
       {/* Financial accountability */}
-      <section id="financial" className="section">
+      <section id="financial" className="section bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
@@ -146,7 +241,7 @@ export default function AccountabilityPage() {
       </section>
 
       {/* Governance */}
-      <section id="governance" className="section bg-gray-50">
+      <section id="governance" className="section">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-6">

@@ -42,9 +42,9 @@ function WhyHere() {
               <ShieldCheck className="h-10 w-10 text-primary-300 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Built for partnership</h3>
               <p className="text-gray-300 text-sm leading-relaxed mb-5">
-                Registered organization · advisory committee oversight · CPA-led finances · child
-                safeguarding and PSEA commitments · case-managed programmes with tracked results.
-                Due diligence documents are available to partners on request.
+                NGO Board-registered since 2020 · advisory committee oversight · CPA-led finances
+                · child safeguarding and PSEA commitments · case-managed programmes with tracked
+                results. Due diligence documents are available to partners on request.
               </p>
               <Link
                 href="/accountability"
