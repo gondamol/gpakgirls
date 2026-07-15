@@ -6,7 +6,6 @@ import {
   CheckCircle,
   Smartphone,
   Landmark,
-  CreditCard,
   Handshake,
   ArrowRight,
   Mail,
@@ -16,18 +15,8 @@ import {
 export const metadata: Metadata = {
   title: 'Donate - Support a Young Mother’s Future',
   description:
-    'Donate to GPAK Girls by card, PayPal, M-Pesa, or bank transfer. Your gift funds counselling, school re-entry, health referrals, and livelihood training for adolescent mothers in western Kenya.',
+    'Donate to GPAK Girls by M-Pesa or bank transfer. Your gift funds counselling, school re-entry, health referrals, and livelihood training for adolescent mothers in western Kenya.',
 }
-
-const PAYPAL_BASE =
-  'https://www.paypal.com/donate/?business=nichodemuswerre%40gmail.com&item_name=Donation%20to%20Girl%20Pride%20Africa%20Kenya%20(GPAK%20Girls)&currency_code=USD'
-
-const paypalAmounts = [
-  { amount: 25, note: 'School supplies for two girls' },
-  { amount: 50, note: 'A month of school fees and childcare' },
-  { amount: 100, note: 'Counselling and clinic referrals' },
-  { amount: 250, note: 'Vocational training with starter kit' },
-]
 
 const impactLevels = [
   {
@@ -64,9 +53,9 @@ export default function DonatePage() {
               Invest in a Young Mother’s Future
             </h1>
             <p className="text-xl text-primary-100">
-              Give by card, PayPal, M-Pesa, or bank transfer. Every shilling goes toward
-              counselling, health referrals, school re-entry, livelihoods, and family support for
-              adolescent mothers in western Kenya.
+              Give by M-Pesa or bank transfer, from Kenya or anywhere in the world. Every shilling
+              goes toward counselling, health referrals, school re-entry, livelihoods, and family
+              support for adolescent mothers in western Kenya.
             </p>
           </div>
         </div>
@@ -98,57 +87,11 @@ export default function DonatePage() {
             {/* Ways to give */}
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-3">Give Now</h2>
             <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
-              Three ways, all direct. Whichever you choose, you will receive confirmation and a
-              receipt.
+              Direct and simple, from Kenya or abroad. Whichever you choose, you will receive
+              confirmation and a receipt. Secure online card payments are on the way.
             </p>
 
-            <div className="grid lg:grid-cols-3 gap-6 mb-16">
-              {/* Card / PayPal */}
-              <div className="bg-white rounded-2xl border-t-4 border-primary-600 shadow-lg p-7 flex flex-col">
-                <div className="flex items-center gap-3 mb-1">
-                  <div className="inline-flex items-center justify-center w-11 h-11 bg-primary-50 rounded-xl">
-                    <CreditCard className="h-6 w-6 text-primary-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Card or PayPal</h3>
-                </div>
-                <p className="text-sm text-gray-500 mb-5">
-                  For international donors. No PayPal account needed; cards work as guest checkout.
-                </p>
-                <div className="grid grid-cols-2 gap-2 mb-3">
-                  {paypalAmounts.map((option) => (
-                    <a
-                      key={option.amount}
-                      href={`${PAYPAL_BASE}&amount=${option.amount}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-2 border-gray-200 hover:border-primary-500 hover:bg-primary-50 rounded-lg p-3 text-center transition-colors"
-                    >
-                      <span className="block text-lg font-bold text-gray-900">
-                        ${option.amount}
-                      </span>
-                      <span className="block text-[11px] text-gray-500 leading-tight">
-                        {option.note}
-                      </span>
-                    </a>
-                  ))}
-                </div>
-                <a
-                  href={PAYPAL_BASE}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary w-full text-center mb-3"
-                >
-                  Donate Any Amount
-                </a>
-                <p className="text-xs text-gray-500 mt-auto">
-                  Tick “Make this a monthly donation” on the PayPal page to give monthly, or join{' '}
-                  <Link href="/walk-with-her" className="text-primary-600 hover:underline">
-                    Walk With Her
-                  </Link>
-                  .
-                </p>
-              </div>
-
+            <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
               {/* M-Pesa */}
               <div className="bg-white rounded-2xl border-t-4 border-secondary-600 shadow-lg p-7 flex flex-col">
                 <div className="flex items-center gap-3 mb-1">
