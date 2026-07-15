@@ -195,24 +195,33 @@ export default function WalkWithHerPage() {
             <Users className="h-12 w-12 text-primary-600 mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Join the Circle</h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Tell us the level you have chosen and we will set up your M-Pesa standing order or
-              monthly transfer within a day, and welcome you with your first field letter.
+              Give monthly by card or PayPal right now (tick “Make this a monthly donation” on the
+              PayPal page), or message us and we set up your M-Pesa standing order within a day.
+              Either way, we welcome you with your first field letter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <a
-                href="mailto:info@gpakgirls.org?subject=Join%20Walk%20With%20Her&body=Hello%20GPAK%20Girls%2C%0A%0AI%20would%20like%20to%20join%20the%20Walk%20With%20Her%20circle%20at%20the%20following%20monthly%20level%3A%20%0A%0AMy%20name%3A%20%0AMy%20country%3A%20%0APreferred%20payment%20method%20(M-Pesa%20%2F%20bank%20transfer)%3A%20"
+                href="https://www.paypal.com/donate/?business=nichodemuswerre%40gmail.com&item_name=Walk%20With%20Her%20monthly%20circle%20-%20GPAK%20Girls&currency_code=USD&amount=12"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center justify-center gap-2"
               >
-                <Mail className="h-5 w-5" />
-                Email to Join
+                Join by Card / PayPal
               </a>
               <a
-                href="https://wa.me/254725737867?text=Hello%20GPAK%20Girls%2C%20I%20would%20like%20to%20join%20the%20Walk%20With%20Her%20monthly%20circle."
+                href="https://wa.me/254725737867?text=Hello%20GPAK%20Girls%2C%20I%20would%20like%20to%20join%20the%20Walk%20With%20Her%20monthly%20circle%20by%20M-Pesa."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline inline-flex items-center justify-center gap-2"
               >
-                WhatsApp Us
+                Join by M-Pesa (WhatsApp)
+              </a>
+              <a
+                href="mailto:info@gpakgirls.org?subject=Join%20Walk%20With%20Her&body=Hello%20GPAK%20Girls%2C%0A%0AI%20would%20like%20to%20join%20the%20Walk%20With%20Her%20circle%20at%20the%20following%20monthly%20level%3A%20%0A%0AMy%20name%3A%20%0AMy%20country%3A%20%0APreferred%20payment%20method%20(M-Pesa%20%2F%20bank%20transfer%20%2F%20PayPal)%3A%20"
+                className="btn-outline inline-flex items-center justify-center gap-2"
+              >
+                <Mail className="h-5 w-5" />
+                Email Us
               </a>
             </div>
             <p className="text-sm text-gray-500">

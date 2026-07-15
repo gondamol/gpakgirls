@@ -6,16 +6,28 @@ import {
   CheckCircle,
   Smartphone,
   Landmark,
-  Gift,
+  CreditCard,
   Handshake,
   ArrowRight,
+  Mail,
+  Globe,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Donate - Support a Young Mother’s Future',
   description:
-    'Support adolescent mothers and pregnant girls in western Kenya. Your donation funds counselling, school re-entry, health referrals, and livelihood training.',
+    'Donate to GPAK Girls by card, PayPal, M-Pesa, or bank transfer. Your gift funds counselling, school re-entry, health referrals, and livelihood training for adolescent mothers in western Kenya.',
 }
+
+const PAYPAL_BASE =
+  'https://www.paypal.com/donate/?business=nichodemuswerre%40gmail.com&item_name=Donation%20to%20Girl%20Pride%20Africa%20Kenya%20(GPAK%20Girls)&currency_code=USD'
+
+const paypalAmounts = [
+  { amount: 25, note: 'School supplies for two girls' },
+  { amount: 50, note: 'A month of school fees and childcare' },
+  { amount: 100, note: 'Counselling and clinic referrals' },
+  { amount: 250, note: 'Vocational training with starter kit' },
+]
 
 const impactLevels = [
   {
@@ -40,27 +52,6 @@ const impactLevels = [
   },
 ]
 
-const givingChannels = [
-  {
-    icon: Smartphone,
-    name: 'M-Pesa',
-    description:
-      'For donors in Kenya, we accept M-Pesa. Contact us and we will share the official payment details directly.',
-  },
-  {
-    icon: Landmark,
-    name: 'Bank Transfer',
-    description:
-      'Donations are received into the organization’s bank account, never personal accounts. Contact us for transfer details and a receipt.',
-  },
-  {
-    icon: Gift,
-    name: 'In-Kind Support',
-    description:
-      'Sewing machines, hairdressing equipment, school supplies, and baby essentials go straight into our programs.',
-  },
-]
-
 export default function DonatePage() {
   return (
     <main>
@@ -73,8 +64,9 @@ export default function DonatePage() {
               Invest in a Young Mother’s Future
             </h1>
             <p className="text-xl text-primary-100">
-              Every shilling goes toward counselling, health referrals, school re-entry,
-              livelihoods, and family support for adolescent mothers in western Kenya.
+              Give by card, PayPal, M-Pesa, or bank transfer. Every shilling goes toward
+              counselling, health referrals, school re-entry, livelihoods, and family support for
+              adolescent mothers in western Kenya.
             </p>
           </div>
         </div>
@@ -103,6 +95,137 @@ export default function DonatePage() {
               </div>
             </div>
 
+            {/* Ways to give */}
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-3">Give Now</h2>
+            <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+              Three ways, all direct. Whichever you choose, you will receive confirmation and a
+              receipt.
+            </p>
+
+            <div className="grid lg:grid-cols-3 gap-6 mb-16">
+              {/* Card / PayPal */}
+              <div className="bg-white rounded-2xl border-t-4 border-primary-600 shadow-lg p-7 flex flex-col">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="inline-flex items-center justify-center w-11 h-11 bg-primary-50 rounded-xl">
+                    <CreditCard className="h-6 w-6 text-primary-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Card or PayPal</h3>
+                </div>
+                <p className="text-sm text-gray-500 mb-5">
+                  For international donors. No PayPal account needed; cards work as guest checkout.
+                </p>
+                <div className="grid grid-cols-2 gap-2 mb-3">
+                  {paypalAmounts.map((option) => (
+                    <a
+                      key={option.amount}
+                      href={`${PAYPAL_BASE}&amount=${option.amount}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-gray-200 hover:border-primary-500 hover:bg-primary-50 rounded-lg p-3 text-center transition-colors"
+                    >
+                      <span className="block text-lg font-bold text-gray-900">
+                        ${option.amount}
+                      </span>
+                      <span className="block text-[11px] text-gray-500 leading-tight">
+                        {option.note}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+                <a
+                  href={PAYPAL_BASE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary w-full text-center mb-3"
+                >
+                  Donate Any Amount
+                </a>
+                <p className="text-xs text-gray-500 mt-auto">
+                  Tick “Make this a monthly donation” on the PayPal page to give monthly, or join{' '}
+                  <Link href="/walk-with-her" className="text-primary-600 hover:underline">
+                    Walk With Her
+                  </Link>
+                  .
+                </p>
+              </div>
+
+              {/* M-Pesa */}
+              <div className="bg-white rounded-2xl border-t-4 border-secondary-600 shadow-lg p-7 flex flex-col">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="inline-flex items-center justify-center w-11 h-11 bg-secondary-50 rounded-xl">
+                    <Smartphone className="h-6 w-6 text-secondary-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">M-Pesa</h3>
+                </div>
+                <p className="text-sm text-gray-500 mb-5">For donors in Kenya. Takes a minute.</p>
+                <ol className="space-y-2.5 text-sm text-gray-700 mb-5">
+                  {[
+                    'Open M-Pesa and choose Send Money',
+                    'Enter 0725 737 867',
+                    'Enter your amount and send',
+                    'You receive an M-Pesa confirmation instantly',
+                  ].map((step, index) => (
+                    <li key={step} className="flex items-start gap-2.5">
+                      <span className="w-5 h-5 rounded-full bg-secondary-100 text-secondary-700 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                        {index + 1}
+                      </span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ol>
+                <div className="bg-secondary-50 rounded-xl p-4 text-center mb-3">
+                  <div className="text-2xl font-bold text-secondary-700 tracking-wide">
+                    0725 737 867
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    Girl Pride Africa Kenya donations line
+                  </div>
+                </div>
+                <p className="text-xs text-gray-500 mt-auto">
+                  <Globe className="h-3.5 w-3.5 inline mr-1" />
+                  In the diaspora? WorldRemit, Sendwave, and Taptap Send deliver straight to this
+                  M-Pesa number.
+                </p>
+              </div>
+
+              {/* Bank */}
+              <div className="bg-white rounded-2xl border-t-4 border-accent-500 shadow-lg p-7 flex flex-col">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="inline-flex items-center justify-center w-11 h-11 bg-accent-50 rounded-xl">
+                    <Landmark className="h-6 w-6 text-accent-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Bank Transfer</h3>
+                </div>
+                <p className="text-sm text-gray-500 mb-5">
+                  Best for larger gifts. Funds go to the organization’s account, never personal
+                  accounts.
+                </p>
+                <p className="text-sm text-gray-700 mb-5">
+                  Message us and we send the account details right back, then confirm your transfer
+                  with a receipt.
+                </p>
+                <a
+                  href="https://wa.me/254725737867?text=Hello%20GPAK%20Girls%2C%20please%20send%20me%20the%20bank%20transfer%20details%20for%20a%20donation."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary w-full text-center mb-2"
+                >
+                  WhatsApp for Details
+                </a>
+                <a
+                  href="mailto:info@gpakgirls.org?subject=Bank%20transfer%20donation&body=Hello%20GPAK%20Girls%2C%0A%0APlease%20send%20me%20the%20bank%20transfer%20details%20for%20a%20donation.%0A%0AName%3A%20%0ACountry%3A%20"
+                  className="btn-outline w-full text-center inline-flex items-center justify-center gap-2"
+                >
+                  <Mail className="h-4 w-4" />
+                  Email for Details
+                </a>
+                <p className="text-xs text-gray-500 mt-auto pt-3">
+                  In-kind gifts (sewing machines, supplies, baby essentials) are welcome through
+                  the same channels.
+                </p>
+              </div>
+            </div>
+
             {/* What your gift does */}
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
               What Your Gift Does
@@ -118,39 +241,6 @@ export default function DonatePage() {
                   <p className="text-gray-600 text-sm leading-relaxed">{level.impact}</p>
                 </div>
               ))}
-            </div>
-
-            {/* How to give */}
-            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-8 md:p-12 mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 text-center mb-3">How to Give</h2>
-              <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
-                We are finalizing secure online card payments. In the meantime, giving is simple
-                and direct, and you will always receive confirmation and a receipt.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                {givingChannels.map((channel) => (
-                  <div key={channel.name} className="bg-white rounded-xl p-6 border border-gray-200">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-50 rounded-lg mb-4">
-                      <channel.icon className="h-6 w-6 text-primary-600" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{channel.name}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{channel.description}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="text-center">
-                <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
-                  Contact Us to Give
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-                <p className="text-sm text-gray-500 mt-4">
-                  Email{' '}
-                  <a href="mailto:info@gpakgirls.org" className="text-primary-600 hover:underline">
-                    info@gpakgirls.org
-                  </a>{' '}
-                  or call/WhatsApp +254 725 737 867
-                </p>
-              </div>
             </div>
 
             {/* Walk With Her promo */}
@@ -178,14 +268,12 @@ export default function DonatePage() {
             <div className="flex flex-col md:flex-row items-center gap-6 bg-white rounded-2xl border border-gray-200 p-8">
               <Shield className="h-14 w-14 text-primary-600 flex-shrink-0" />
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-2">
-                  Where the money goes
-                </h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-2">Where the money goes</h2>
                 <p className="text-gray-600 leading-relaxed">
                   Donations fund direct program delivery first: counselling, school fees,
-                  referrals, training, and family support. Funds are received into the
-                  organization’s account, managed under documented financial procedures by our
-                  CPA-led finance function, and accounted for to every partner.{' '}
+                  referrals, training, and family support. Funds are managed under documented
+                  financial procedures by our CPA-led finance function, and accounted for to every
+                  partner.{' '}
                   <Link
                     href="/accountability#financial"
                     className="text-primary-600 font-medium hover:underline"
