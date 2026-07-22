@@ -127,8 +127,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm">
-              © {new Date().getFullYear()} Girl Pride Africa Kenya (GPAK Girls). Registered NGO,
-              Reg. No. OP.218/051/19-189/11666, NGOs Co-ordination Board, Kenya. Working in Homa
+              © {new Date().getFullYear()} Girl Pride Africa Kenya (GPAK Girls). Working in Homa
               Bay, Siaya, Kisumu, and Migori counties.
             </p>
             <div className="flex gap-6 text-sm">
