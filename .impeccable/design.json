@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-22T00:00:00.000Z",
+  "title": "Design System: GPAK Girls",
+  "extensions": {
+    "colorMeta": {
+      "signal-rose": {
+        "role": "primary",
+        "displayName": "Signal Rose",
+        "canonical": "oklch(58% 0.19 16)",
+        "tonalRamp": ["#7c172a", "#93182d", "#b01a30", "#d1253d", "#e63950", "#f27a8a", "#f7aab2", "#fbd0d5"]
+      },
+      "hope-green": {
+        "role": "secondary",
+        "displayName": "Hope Green",
+        "canonical": "oklch(69% 0.19 149)",
+        "tonalRamp": ["#14532d", "#166534", "#15803d", "#16a34a", "#22c55e", "#4ade80", "#86efac", "#bbf7d0"]
+      },
+      "warm-gold": {
+        "role": "tertiary",
+        "displayName": "Warm Gold",
+        "canonical": "oklch(76% 0.16 70)",
+        "tonalRamp": ["#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fcd34d", "#fde68a"]
+      },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "oklch(21% 0.02 265)", "tonalRamp": [] },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "oklch(100% 0 0)", "tonalRamp": [] }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Headline", "purpose": "Hero H1s and major section H2s." },
+      "title": { "displayName": "Title", "purpose": "Card headings and sub-section H3s." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy, max 65-75ch measure." }
+    },
+    "shadows": [
+      { "name": "card-rest", "value": "0 1px 2px rgba(0,0,0,0.05)", "purpose": "Default resting state for cards and panels." },
+      { "name": "image-lifted", "value": "0 10px 15px -3px rgba(0,0,0,0.1)", "purpose": "Feature imagery only, not cards or buttons." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default transition easing (buttons, hovers)." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA (Donate Now, Give Monthly).",
+      "html": "<button class=\"ds-btn-primary\">Donate Now</button>",
+      "css": ".ds-btn-primary { background: #d1253d; color: #fff; padding: 12px 32px; border-radius: 8px; font-weight: 500; border: none; min-height: 44px; transition: background 0.2s, transform 0.1s; } .ds-btn-primary:hover { background: #b01a30; } .ds-btn-primary:focus-visible { outline: 2px solid #e63950; outline-offset: 2px; } .ds-btn-primary:active { transform: scale(0.95); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary/lower-stakes action, transparent fill.",
+      "html": "<button class=\"ds-btn-outline\">Learn More</button>",
+      "css": ".ds-btn-outline { background: transparent; color: #d1253d; padding: 12px 32px; border-radius: 8px; border: 2px solid #d1253d; font-weight: 500; min-height: 44px; transition: background 0.2s; } .ds-btn-outline:hover { background: #fef2f3; }"
+    },
+    {
+      "name": "Themed Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Mission/Vision-style panel with section-tinted border.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Our Mission</h3><p class=\"ds-card-body\">Card body copy.</p></div>",
+      "css": ".ds-card { background: #fff; border-radius: 16px; border: 1px solid #fbd0d5; box-shadow: 0 1px 2px rgba(0,0,0,0.05); padding: 32px; } .ds-card-title { font-size: 1.5rem; font-weight: 600; color: #111827; margin-bottom: 8px; } .ds-card-body { color: #4b5563; line-height: 1.65; }"
+    },
+    {
+      "name": "Step Card",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Numbered pathway step (used in Theory of Change / How Change Happens).",
+      "html": "<div class=\"ds-step\"><div class=\"ds-step-num\">01</div><div><h3 class=\"ds-step-title\">Reach girls where they are</h3><p class=\"ds-step-body\">Step description.</p></div></div>",
+      "css": ".ds-step { background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); padding: 24px; display: flex; gap: 20px; } .ds-step-num { font-size: 1.875rem; font-weight: 700; color: #fbd0d5; flex-shrink: 0; } .ds-step-title { font-size: 1.125rem; font-weight: 600; color: #111827; margin-bottom: 8px; } .ds-step-body { color: #4b5563; font-size: 0.875rem; line-height: 1.65; }"
+    },
+    {
+      "name": "Primary Nav",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Sticky top navigation.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#\">About</a><a class=\"ds-nav-link ds-nav-link--active\" href=\"#\">Programs</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 32px; background: #fff; padding: 16px 24px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); } .ds-nav-link { font-size: 0.875rem; font-weight: 500; color: #374151; text-decoration: none; transition: color 0.2s; } .ds-nav-link:hover, .ds-nav-link--active { color: #e63950; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Field Report",
+    "overview": "GPAK's site reads like a well-run organization's field report to a funder doing due diligence, not a plea for sympathy. Every section leads with mechanism and evidence: what happens, to whom, measured how, with a Registration link never more than a click away. Density is moderate: enough white space to feel unhurried and credible, not so much that it feels like a thin marketing site with little behind it. The system explicitly rejects the generic-charity-stock-photo aesthetic: no 'sad African child' imagery, no poverty framing, no passive-victim language. Girls served are shown as agents building a future. It also rejects unsupported virtue claims; every impact statement is traceable to a source or a program page, never asserted as a bare adjective about itself.",
+    "keyCharacteristics": [
+      "Evidence-led: mechanism and sourcing before sentiment.",
+      "Warm but restrained: one saturated brand color (Signal Rose) used deliberately, not drenched.",
+      "Dignity-first imagery and copy; girls as agents, not subjects.",
+      "Donor-grade findability: registration, accountability, and financials never buried."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Signal Rose is the only color allowed to carry primary-action weight on any given screen. Hope Green and Warm Gold support; they never compete with Rose for the visitor's first click.", "section": "colors" },
+      { "name": "The No Second Voice Rule", "body": "Don't introduce a serif or second sans 'for warmth.' The one-family system is deliberate; personality comes from color and copy, not font pairing.", "section": "typography" },
+      { "name": "The Border-Before-Shadow Rule", "body": "A card's depth reads primarily from its Hairline border (tinted to its section's hue where relevant) and only secondarily from card-rest shadow. Never stack a heavy shadow onto a card that already has a colored border.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do lead every claim of impact with a source or a link to the program/page that substantiates it.",
+      "Do keep Signal Rose to CTA-weight uses only; Hope Green and Warm Gold support, never compete.",
+      "Do show girls served as agents, consistent with PRODUCT.md's dignity-over-pity principle.",
+      "Do keep the Registration/accountability link visible near any legal or trust-relevant copy, not buried."
+    ],
+    "donts": [
+      "Don't use 'sad African child' or poverty-porn stock imagery, or frame anyone served as a passive victim.",
+      "Don't write self-labelling copy ('our honest numbers', 'we're transparent about...'); state the data and its source.",
+      "Don't stack a heavy shadow and a colored border on the same card; pick one depth signal.",
+      "Don't introduce a second display/serif typeface for warmth; the unused --font-display token is dead code, not an invitation.",
+      "Don't use a border-left/border-right colored stripe as a card accent."
+    ]
+  }
+}

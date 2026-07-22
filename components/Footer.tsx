@@ -4,6 +4,7 @@ import { Facebook, Mail, Phone, MapPin } from 'lucide-react'
 const navigation = {
   about: [
     { name: 'About Us', href: '/about' },
+    { name: 'Theory of Change', href: '/theory-of-change' },
     { name: 'Our Team', href: '/team' },
     { name: 'Impact & Learning', href: '/impact' },
     { name: 'Accountability', href: '/accountability' },

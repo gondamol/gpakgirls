@@ -201,10 +201,10 @@ export default function AboutPage() {
             </div>
             <div className="text-center mt-10">
               <Link
-                href="/programs"
+                href="/theory-of-change"
                 className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
               >
-                See how this works in our programs
+                See the full theory of change
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
