@@ -49,6 +49,7 @@ const leadership: TeamMember[] = [
   {
     name: 'Denis Omogi',
     role: 'Finance Officer',
+    image: '/images/team/denis-omogi.jpg',
     bio: 'Denis is a Certified Public Accountant, CPA(K), responsible for GPAK Girls’ financial management. He oversees budgeting, financial records, and controls, ensuring that funds are managed transparently and accounted for accurately, and that our financial systems meet the standards partners and donors expect.',
     focus: ['Financial management', 'Budgeting', 'Accountability'],
   },
