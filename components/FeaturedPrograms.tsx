@@ -53,7 +53,7 @@ const programs = [
 
 export default function FeaturedPrograms() {
   return (
-    <section className="section bg-gradient-to-br from-gray-50 to-white">
+    <section className="section bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="section-heading">One Girl, One Plan</h2>
@@ -68,7 +68,7 @@ export default function FeaturedPrograms() {
             <Link
               key={program.title}
               href={program.href}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 block"
+              className="bg-white rounded-lg p-6 border border-gray-100 hover:border-primary-300 transition-colors block"
             >
               <div className={`${program.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
                 <program.icon className="h-6 w-6 text-white" />
@@ -78,7 +78,7 @@ export default function FeaturedPrograms() {
             </Link>
           ))}
 
-          <div className="bg-primary-600 rounded-xl p-6 shadow-sm border border-primary-600 flex flex-col justify-center text-white">
+          <div className="bg-primary-600 rounded-lg p-6 border border-primary-600 flex flex-col justify-center text-white">
             <h3 className="text-xl font-semibold mb-3">How it fits together</h3>
             <p className="text-primary-100 text-sm leading-relaxed mb-4">
               See the full journey: from the day a girl is referred to us to the day she
@@ -86,7 +86,7 @@ export default function FeaturedPrograms() {
             </p>
             <Link
               href="/programs"
-              className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 font-semibold hover:text-primary-100 transition-colors"
             >
               Explore Our Programs
               <ArrowRight className="h-5 w-5" />

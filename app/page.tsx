@@ -4,7 +4,6 @@ import Hero from '@/components/Hero'
 import ImpactStats from '@/components/ImpactStats'
 import FeaturedPrograms from '@/components/FeaturedPrograms'
 import FeaturedStories from '@/components/FeaturedStories'
-import CallToAction from '@/components/CallToAction'
 import Newsletter from '@/components/Newsletter'
 
 function WhyHere() {
@@ -38,7 +37,7 @@ function WhyHere() {
             </div>
           </div>
           <div className="space-y-6">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div className="bg-white/5 border border-white/10 rounded-lg p-8">
               <ShieldCheck className="h-10 w-10 text-primary-300 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Built for partnership</h3>
               <p className="text-gray-300 text-sm leading-relaxed mb-5">
@@ -54,7 +53,7 @@ function WhyHere() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div className="bg-white/5 border border-white/10 rounded-lg p-8">
               <Smartphone className="h-10 w-10 text-primary-300 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Simple technology, human touch</h3>
               <p className="text-gray-300 text-sm leading-relaxed mb-5">
@@ -85,7 +84,6 @@ export default function Home() {
       <FeaturedPrograms />
       <WhyHere />
       <FeaturedStories />
-      <CallToAction />
       <Newsletter />
     </main>
   )

@@ -32,14 +32,8 @@ const actions = [
 
 export default function CallToAction() {
   return (
-    <section className="section bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full translate-y-1/2 -translate-x-1/2"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="section bg-primary-700 text-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             How You Can Help
@@ -54,10 +48,10 @@ export default function CallToAction() {
             <Link
               key={index}
               href={action.href}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 group"
+              className="bg-white/10 rounded-lg p-8 hover:bg-white/20 transition-colors border border-white/20"
             >
               <div className="flex flex-col items-center text-center">
-                <div className={`${action.color} w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <div className={`${action.color} w-16 h-16 rounded-full flex items-center justify-center mb-4`}>
                   <action.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{action.title}</h3>

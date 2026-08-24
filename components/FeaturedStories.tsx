@@ -48,7 +48,7 @@ export default function FeaturedStories() {
           {stories.map((story) => (
             <article
               key={story.name}
-              className="bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+              className="bg-gray-50 rounded-lg overflow-hidden border border-gray-100 hover:border-primary-300 transition-colors"
             >
               {/* Image */}
               <div className="aspect-[4/3] relative">

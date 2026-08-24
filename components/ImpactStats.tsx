@@ -1,6 +1,3 @@
-'use client'
-
-import { useEffect, useRef, useState } from 'react'
 import { GraduationCap, Users, Award, Heart } from 'lucide-react'
 
 const stats = [
@@ -34,52 +31,6 @@ const stats = [
   },
 ]
 
-function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
-  const [count, setCount] = useState(0)
-  const [hasAnimated, setHasAnimated] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true)
-          const duration = 2000
-          const steps = 60
-          const stepValue = value / steps
-          let current = 0
-
-          const timer = setInterval(() => {
-            current += stepValue
-            if (current >= value) {
-              setCount(value)
-              clearInterval(timer)
-            } else {
-              setCount(Math.floor(current))
-            }
-          }, duration / steps)
-
-          return () => clearInterval(timer)
-        }
-      },
-      { threshold: 0.5 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [value, hasAnimated])
-
-  return (
-    <div ref={ref} className="text-3xl sm:text-4xl md:text-5xl font-bold">
-      {count}
-      {suffix}
-    </div>
-  )
-}
-
 export default function ImpactStats() {
   return (
     <section className="section bg-white">
@@ -96,15 +47,18 @@ export default function ImpactStats() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-4 sm:p-6 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-shadow"
+              className="text-center p-4 sm:p-6 rounded-lg bg-gray-50 border border-gray-100"
             >
               <div className="flex justify-center mb-3 sm:mb-4">
-                <div className={`p-2.5 sm:p-3 rounded-full bg-gradient-to-br from-primary-50 to-secondary-50`}>
+                <div className="p-2.5 sm:p-3 rounded-full bg-gray-50">
                   <stat.icon className={`h-7 w-7 sm:h-8 sm:w-8 ${stat.color}`} />
                 </div>
               </div>
               <div className={`${stat.color} mb-2`}>
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold">
+                  {stat.value}
+                  {stat.suffix}
+                </div>
               </div>
               <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
             </div>
@@ -114,4 +68,3 @@ export default function ImpactStats() {
     </section>
   )
 }
-

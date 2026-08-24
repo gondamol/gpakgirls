@@ -4,7 +4,7 @@ import { ArrowRight, Heart } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-primary-50 via-white to-secondary-50 overflow-hidden">
+    <section className="relative bg-primary-50 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -61,7 +61,7 @@ export default function Hero() {
 
           {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-sm relative">
               <Image
                 src="/images/eibner-saliba-zhWUl24kf5A-unsplash.jpg"
                 alt="A young mother holding her child"
@@ -70,12 +70,6 @@ export default function Hero() {
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-            </div>
-
-            {/* Floating Stats Card */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden md:block">
-              <div className="text-3xl font-bold text-primary-600 mb-1">5</div>
-              <div className="text-sm text-gray-600">Connected areas of support<br />around every girl</div>
             </div>
           </div>
         </div>

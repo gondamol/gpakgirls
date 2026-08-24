@@ -25,7 +25,7 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="section bg-gradient-to-br from-gray-50 to-white border-t border-gray-100">
+    <section className="section bg-gray-50 border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-6">
