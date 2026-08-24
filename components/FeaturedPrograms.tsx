@@ -35,10 +35,10 @@ const programs = [
   },
   {
     icon: Briefcase,
-    title: 'Livelihoods & FAHARI',
+    title: 'Livelihoods & Agriculture',
     href: '/programs#livelihoods',
     description:
-      'Vocational training, savings, and our Project FAHARI housing and asset-building model for economic independence.',
+      'Vocational training, kitchen gardens and agribusiness, savings, and our Project FAHARI housing and asset-building model for economic independence.',
     color: 'bg-purple-500',
   },
   {

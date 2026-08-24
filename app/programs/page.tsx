@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: 'Our Programs - Integrated Support for Adolescent Mothers',
   description:
-    'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care and mental health, HIV and maternal health referrals, education and school re-entry, livelihoods (Project FAHARI), and family strengthening.',
+    'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care and mental health, HIV and maternal health referrals, education and school re-entry, agriculture and livelihoods (Project FAHARI), and family strengthening.',
 }
 
 const programs = [
@@ -78,13 +78,15 @@ const programs = [
   },
   {
     icon: Briefcase,
-    title: 'Livelihoods & Economic Strengthening',
+    title: 'Livelihoods & Agriculture',
     slug: 'livelihoods',
     image: '/images/vocationl.jpg',
     intro:
-      'For mothers who cannot return to school, income is protection. Economic independence reduces the transactional relationships that drive both repeat pregnancy and HIV risk.',
+      'For mothers who cannot return to school, income is protection. Vocational training and agriculture-based livelihoods reduce the transactional relationships that drive both repeat pregnancy and HIV risk.',
     features: [
       'Vocational training, including tailoring and hairdressing, with starter kits on graduation',
+      'Kitchen gardens that improve household food security for young mothers and their children',
+      'Agribusiness training and group or cooperative farming that let young mothers pool land, labour, and harvests for income',
       'Business skills, financial literacy, and savings groups',
       'Project FAHARI: our housing, asset-building, and livelihood model that helps young mothers move from crisis to stability',
       'Mentorship from local businesswomen and job placement support',
