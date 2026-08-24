@@ -30,7 +30,7 @@ const programs = [
     title: 'Education & School Re-entry',
     href: '/programs#education',
     description:
-      'Fees, re-entry negotiation, tutoring, and childcare so young mothers can go back to school, and stay.',
+      'Fees, re-entry negotiation, tutoring, and literacy and life-skills classes so every young mother keeps learning, in school or out.',
     color: 'bg-indigo-500',
   },
   {

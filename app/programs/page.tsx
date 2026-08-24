@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: 'Our Programs - Integrated Support for Adolescent Mothers',
   description:
-    'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care and mental health, HIV and maternal health referrals, school re-entry, livelihoods (Project FAHARI), and family strengthening.',
+    'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care and mental health, HIV and maternal health referrals, education and school re-entry, livelihoods (Project FAHARI), and family strengthening.',
 }
 
 const programs = [
@@ -69,6 +69,7 @@ const programs = [
       'School re-entry negotiation with schools and families',
       'School fees assistance, supplies, and uniforms',
       'Tutoring and exam preparation to catch up on lost time',
+      'Literacy and life-skills classes for young mothers not returning to formal school',
       'Childcare support so mothers can attend class',
       'Career guidance toward further education and training',
     ],
