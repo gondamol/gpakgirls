@@ -11,10 +11,10 @@ const navigation = {
     { name: 'Contact Us', href: '/contact' },
   ],
   programs: [
-    { name: 'Psychosocial Support', href: '/programs#psychosocial' },
+    { name: 'Psychosocial Support & Mental Health', href: '/programs#psychosocial' },
     { name: 'Health & HIV Referrals', href: '/programs#health' },
     { name: 'Education Support', href: '/programs#education' },
-    { name: 'Livelihoods & FAHARI', href: '/programs#livelihoods' },
+    { name: 'Livelihoods & Agriculture', href: '/programs#livelihoods' },
     { name: 'Family Strengthening', href: '/programs#family' },
     { name: 'How We Use Technology', href: '/programs#technology' },
   ],
@@ -46,8 +46,8 @@ export default function Footer() {
             <h3 className="text-white text-2xl font-bold mb-4">GPAK Girls</h3>
             <p className="text-sm mb-6">
               Girl Pride Africa Kenya walks alongside adolescent mothers and pregnant girls in
-              western Kenya, with psychosocial support, health referrals, education, livelihoods,
-              and family strengthening.
+              western Kenya, with psychosocial and mental health support, health referrals,
+              education, agriculture and livelihoods, and family strengthening.
             </p>
 
             <div className="space-y-3 text-sm text-gray-300">
@@ -129,7 +129,8 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm">
               © {new Date().getFullYear()} Girl Pride Africa Kenya (GPAK Girls). Working in Homa
-              Bay, Siaya, Kisumu, and Migori counties.
+              Bay, Siaya, Kisumu, and Migori counties, with early community engagement in South
+              Sudan.
             </p>
             <div className="flex gap-6 text-sm">
               {navigation.legal.map((item) => (
