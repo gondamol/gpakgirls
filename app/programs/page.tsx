@@ -19,26 +19,27 @@ import {
 export const metadata: Metadata = {
   title: 'Our Programs - Integrated Support for Adolescent Mothers',
   description:
-    'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care, HIV and maternal health referrals, school re-entry, livelihoods (Project FAHARI), and family strengthening.',
+    'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care and mental health, HIV and maternal health referrals, school re-entry, livelihoods (Project FAHARI), and family strengthening.',
 }
 
 const programs = [
   {
     icon: HeartHandshake,
-    title: 'Psychosocial Support & Mentorship',
+    title: 'Psychosocial Support & Mental Health',
     slug: 'psychosocial',
     image: '/images/Counseling.jpg',
     intro:
       'Healing comes first. A girl who has been rejected by her family and pushed out of school cannot plan a future until she feels safe, heard, and valued.',
     features: [
       'One-on-one counselling with trained counsellors, using trauma-informed approaches',
+      'Screening for depression, anxiety, and other mental health concerns, with referral to a mental health professional for girls who need clinical care',
       'Peer support groups where young mothers share experiences and reduce isolation',
       'Mentorship from trained women mentors in each community',
       'Stigma-reduction work with families and communities',
       'Crisis support and safe referral for girls facing violence or abuse',
     ],
     monitoring:
-      'We track participation, wellbeing changes reported by girls, and safe resolution of protection concerns.',
+      'We track participation, wellbeing changes reported by girls, mental health referrals completed, and safe resolution of protection concerns.',
   },
   {
     icon: Stethoscope,

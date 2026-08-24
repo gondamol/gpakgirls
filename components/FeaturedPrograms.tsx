@@ -11,10 +11,10 @@ import {
 const programs = [
   {
     icon: HeartHandshake,
-    title: 'Psychosocial Support',
+    title: 'Psychosocial Support & Mental Health',
     href: '/programs#psychosocial',
     description:
-      'Counselling, peer groups, and mentorship that help girls heal from trauma and stigma before anything else.',
+      'Counselling, mental health screening and referral, peer groups, and mentorship that help girls heal from trauma and stigma before anything else.',
     color: 'bg-pink-500',
   },
   {
