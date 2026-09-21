@@ -178,46 +178,35 @@ export default function TeamPage() {
                   <div className="space-y-4 text-gray-600 leading-relaxed text-sm sm:text-base">
                     <p>
                       Nic started GPAK Girls in 2018, while serving as a volunteer local missionary
-                      with CGEC in the villages of western Kenya. Going from homestead to homestead,
+                      with CGEC. Going from homestead to homestead in the villages of western Kenya,
                       he kept meeting girls whose problems the policies on paper had supposedly
-                      already solved: school re-entry, stigma, access to care. In practice these
-                      girls had no route back into a classroom, no one to talk to, and no income,
-                      and the obstacles in front of them were far larger than a policy document
-                      suggested.
+                      solved: school re-entry, stigma, access to care. In practice they had no route
+                      back into a classroom, no one to talk to, and no income. He began paying for
+                      what he could out of his own earnings, and the first volunteers gathered
+                      around that work.
                     </p>
                     <p>
-                      He began paying for what he could out of his own earnings, transport to a
-                      clinic, a term of school fees, baby items, and a first group of volunteers
-                      formed around that work. From 2018 to 2020 the work ran largely on personal
-                      contributions while the team built the structure needed to operate legally.
-                      Well-wishers joined along the way, LARCOD became our first partner
-                      organization and gave the young initiative considerable support, and in April
-                      2020 Girl Pride Africa Kenya was registered with the NGOs Co-ordination Board
-                      of Kenya.
-                    </p>
-                    <p>
-                      Nic is not involved in the daily running of the organization; that is led by
-                      our Director and programme team. Alongside a full-time research career he
-                      works with GPAK Girls part time, building the data and technology the
-                      organization needs, developing our monitoring and evaluation systems,
-                      supporting leadership and fundraising, and continuing to contribute to costs
-                      from his own pocket as he did at the beginning.
+                      From 2018 to 2020 it ran largely on personal contributions while the team
+                      built the structure needed to operate legally. Well-wishers joined, LARCOD
+                      came alongside as our first partner organization, and in April 2020 Girl Pride
+                      Africa Kenya was registered with the NGOs Co-ordination Board of Kenya.
                     </p>
                     <p>
                       He is a statistician and epidemiologist: a BSc in Statistics (Honours) from
                       the University of Nairobi and an MSc in Epidemiology and Biostatistics from
-                      Jaramogi Oginga Odinga University of Science and Technology, with certificate
-                      training in monitoring and evaluation for global health (University of
-                      Washington), economic evaluation, biomedical research ethics and human
-                      subjects protection (CITI), and data analytics. Professionally he leads
-                      research data systems for Georgetown University’s gui²de East Africa,
-                      currently on a longitudinal study of how Kenyan households pay for health
-                      care, and he has previously managed research data at KEMRI and for a
-                      VLIR-UOS programme at JOOUST.
+                      Jaramogi Oginga Odinga University of Science and Technology, with training in
+                      monitoring and evaluation for global health (University of Washington),
+                      economic evaluation, and research ethics and human subjects protection (CITI).
+                      He leads research data systems for Georgetown University’s gui²de East Africa,
+                      and has previously managed research data at KEMRI and for a VLIR-UOS programme
+                      at JOOUST.
                     </p>
                     <p>
-                      Now a family man, he still spends time in the village communities where this
-                      began, mentoring young people and sitting with the families GPAK Girls serves.
+                      Today Nic is not involved in the daily running of the organization; that is
+                      led by our Director and programme team. Alongside his research career he works
+                      with GPAK Girls part time on data and technology, our monitoring and
+                      evaluation systems, leadership, and fundraising, and still contributes to
+                      costs from his own pocket, as he did at the start.
                     </p>
                   </div>
                 </div>
