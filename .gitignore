@@ -62,3 +62,6 @@ next-env.d.ts
 
 # raw source materials (photos, internal text) — processed copies live in public/
 /res/
+
+# WSL / Windows download metadata
+*:Zone.Identifier
