@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Users, ShieldCheck, LineChart, Megaphone, ArrowRight } from 'lucide-react'
+import { Users, ShieldCheck, LineChart, Megaphone, ArrowRight, ExternalLink } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Our Team - Leadership & Staff',
   description:
-    'Meet the team behind Girl Pride Africa Kenya: experienced leadership in programme management, public health, psychosocial support, finance, and community engagement in western Kenya.',
+    'Meet the team behind Girl Pride Africa Kenya: our founder and a staff team with experience in programme management, public health, psychosocial support, finance, and community engagement in western Kenya.',
 }
 
 type TeamMember = {
@@ -15,6 +15,17 @@ type TeamMember = {
   image?: string
   bio: string
   focus: string[]
+}
+
+const founder = {
+  name: 'Nichodemus Amollo',
+  role: 'Founder',
+  image: '/images/team/nichodemus-amollo.avif',
+  focus: ['Founding vision', 'Monitoring & evaluation', 'Data systems', 'Epidemiology & biostatistics'],
+  links: [
+    { label: 'Georgetown gui\u00b2de profile', href: 'https://gui2de.georgetown.edu/profiles/nichodemus-amollo/' },
+    { label: 'Personal site', href: 'https://gondamol.github.io/' },
+  ],
 }
 
 const leadership: TeamMember[] = [
@@ -73,7 +84,7 @@ const growingRoles = [
     icon: LineChart,
     title: 'Monitoring, Evaluation & Learning Officer',
     description:
-      'A dedicated MEAL role to deepen our results measurement, data quality, and learning as our programmes grow. This work is currently led by our public health and programme staff.',
+      'A dedicated MEAL role to deepen our results measurement, data quality, and learning as our programmes grow. This work is currently carried by our public health and programme staff, with part-time technical support from our founder.',
   },
   {
     icon: Megaphone,
@@ -108,15 +119,123 @@ export default function TeamPage() {
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               A multidisciplinary team combining programme leadership, public health expertise,
-              psychosocial counselling, finance, and deep community roots in western Kenya.
+              psychosocial counselling, finance, and deep community roots in western Kenya, and a
+              founder who started this work in the villages where we still work.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Team Grid */}
+      {/* Founder */}
       <section className="section">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <article className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+              <div className="grid md:grid-cols-[280px_1fr] gap-8 p-6 sm:p-8 md:p-10">
+                <div>
+                  <div className="relative w-40 h-40 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden ring-4 ring-primary-50">
+                    <Image
+                      src={founder.image}
+                      alt={`${founder.name}, Founder of Girl Pride Africa Kenya`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 160px, 280px"
+                      priority
+                    />
+                  </div>
+                  <div className="mt-5 flex flex-col gap-2">
+                    {founder.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                      >
+                        {link.label}
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <span className="inline-block text-xs font-semibold tracking-wide uppercase text-secondary-600 mb-2">
+                    How it started
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{founder.name}</h2>
+                  <p className="text-primary-600 font-semibold mb-4">{founder.role}</p>
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {founder.focus.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs bg-gray-100 text-gray-700 px-2.5 py-1 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="space-y-4 text-gray-600 leading-relaxed text-sm sm:text-base">
+                    <p>
+                      Nic started GPAK Girls in 2018, while serving as a volunteer local missionary
+                      with CGEC in the villages of western Kenya. Going from homestead to homestead,
+                      he kept meeting girls whose problems the policies on paper had supposedly
+                      already solved: school re-entry, stigma, access to care. In practice these
+                      girls had no route back into a classroom, no one to talk to, and no income,
+                      and the obstacles in front of them were far larger than a policy document
+                      suggested.
+                    </p>
+                    <p>
+                      He began paying for what he could out of his own earnings, transport to a
+                      clinic, a term of school fees, baby items, and a first group of volunteers
+                      formed around that work. From 2018 to 2020 the work ran largely on personal
+                      contributions while the team built the structure needed to operate legally.
+                      Well-wishers joined along the way, LARCOD became our first partner
+                      organization and gave the young initiative considerable support, and in April
+                      2020 Girl Pride Africa Kenya was registered with the NGOs Co-ordination Board
+                      of Kenya.
+                    </p>
+                    <p>
+                      Nic is not involved in the daily running of the organization; that is led by
+                      our Director and programme team. Alongside a full-time research career he
+                      works with GPAK Girls part time, building the data and technology the
+                      organization needs, developing our monitoring and evaluation systems,
+                      supporting leadership and fundraising, and continuing to contribute to costs
+                      from his own pocket as he did at the beginning.
+                    </p>
+                    <p>
+                      He is a statistician and epidemiologist: a BSc in Statistics (Honours) from
+                      the University of Nairobi and an MSc in Epidemiology and Biostatistics from
+                      Jaramogi Oginga Odinga University of Science and Technology, with certificate
+                      training in monitoring and evaluation for global health (University of
+                      Washington), economic evaluation, biomedical research ethics and human
+                      subjects protection (CITI), and data analytics. Professionally he leads
+                      research data systems for Georgetown University’s gui²de East Africa,
+                      currently on a longitudinal study of how Kenyan households pay for health
+                      care, and he has previously managed research data at KEMRI and for a
+                      VLIR-UOS programme at JOOUST.
+                    </p>
+                    <p>
+                      Now a family man, he still spends time in the village communities where this
+                      began, mentoring young people and sitting with the families GPAK Girls serves.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Grid */}
+      <section className="section bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="section-heading text-center mb-4">Leadership & Staff</h2>
+            <p className="section-subheading text-center mx-auto mb-12">
+              The team that runs our programmes day to day, from Homa Bay.
+            </p>
+          </div>
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
             {leadership.map((member) => (
               <article
@@ -169,7 +288,7 @@ export default function TeamPage() {
       </section>
 
       {/* Governance note */}
-      <section className="section bg-gray-50">
+      <section className="section">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <ShieldCheck className="h-12 w-12 text-primary-600 mx-auto mb-4" />
@@ -195,7 +314,7 @@ export default function TeamPage() {
       </section>
 
       {/* Growing the team */}
-      <section className="section">
+      <section className="section bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-heading text-center mb-4">As We Grow</h2>
