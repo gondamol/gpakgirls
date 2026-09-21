@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Users, ShieldCheck, LineChart, Megaphone, ArrowRight, ExternalLink } from 'lucide-react'
+import { Users, ShieldCheck, LineChart, Megaphone, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Our Team - Leadership & Staff',
@@ -22,10 +22,6 @@ const founder = {
   role: 'Founder',
   image: '/images/team/nichodemus-amollo.avif',
   focus: ['Founding vision', 'Monitoring & evaluation', 'Data systems', 'Epidemiology & biostatistics'],
-  links: [
-    { label: 'Georgetown gui\u00b2de profile', href: 'https://gui2de.georgetown.edu/profiles/nichodemus-amollo/' },
-    { label: 'Personal site', href: 'https://gondamol.github.io/' },
-  ],
 }
 
 const leadership: TeamMember[] = [
@@ -142,20 +138,6 @@ export default function TeamPage() {
                       sizes="(max-width: 768px) 160px, 280px"
                       priority
                     />
-                  </div>
-                  <div className="mt-5 flex flex-col gap-2">
-                    {founder.links.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-primary-600 font-medium hover:text-primary-700 transition-colors"
-                      >
-                        {link.label}
-                        <ExternalLink className="h-3.5 w-3.5" />
-                      </a>
-                    ))}
                   </div>
                 </div>
 
