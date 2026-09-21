@@ -243,28 +243,47 @@ export default function AboutPage() {
             <h2 className="section-heading text-center mb-8">Our Story</h2>
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                GPAK Girls began in 2018, when there was no dedicated support for teenage mothers
-                in our community. Girls who became pregnant were routinely sent away from home,
-                pushed out of school, and left to raise children with no income and no one to talk
-                to.
+                GPAK Girls began in 2018, in the villages around Homa Bay and Siaya, while our
+                founder was serving there as a volunteer local missionary with CGEC. What he found
+                was the distance between policy and daily life: Kenya had school re-entry
+                guidelines and campaigns against stigma, and yet the girls in front of him had been
+                sent away from home, pushed out of school, and left to raise children with no
+                income and no one to talk to. There was no dedicated support for teenage mothers
+                anywhere near them.
               </p>
               <p>
-                We started small: weekly life-skills circles in Homa Bay and Siaya where a
+                So we started small: weekly life-skills circles in Homa Bay and Siaya where a
                 handful of teenage mothers learned budgeting, nutrition, and job skills, and
-                found something rarer: a place where they were welcomed instead of judged. Our
+                found something rarer, a place where they were welcomed instead of judged. Our
                 team visited girls where they lived, bringing food and baby items, negotiating
                 with parents and schools, one household at a time, and by 2019 the work was being
-                featured on Radio Maisha and Siaya’s Radio Mikayi. As trust grew, so did we. Today
-                those circles have grown into integrated programmes
-                that connect psychosocial support, health referrals, school re-entry, vocational
-                training, and family strengthening, and we have supported hundreds of adolescent
-                mothers and pregnant girls across four counties.
+                featured on Radio Maisha and Siaya’s Radio Mikayi.
+              </p>
+              <p>
+                Between 2018 and 2020 most of what we spent came from our own pockets, while we
+                built the structure we needed to operate legally. Well-wishers joined the
+                initiative, LARCOD came alongside us as our first partner organization and gave the
+                work a great deal of support, and in April 2020 Girl Pride Africa Kenya was
+                registered with the NGOs Co-ordination Board of Kenya. As trust grew, so did we.
+                Today those circles have grown into integrated programmes that connect psychosocial
+                support, health referrals, school re-entry, vocational training, and family
+                strengthening, and we have supported hundreds of adolescent mothers and pregnant
+                girls across four counties.
               </p>
               <p>
                 We remain deliberately community-rooted. Our staff and volunteers come from the
                 communities we serve, we work in partnership with local health facilities, schools,
                 and county services, and the girls themselves shape how our programmes evolve.
               </p>
+            </div>
+            <div className="text-center mt-10">
+              <Link
+                href="/team"
+                className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+              >
+                Read our founder’s story
+                <ArrowRight className="h-5 w-5" />
+              </Link>
             </div>
           </div>
         </div>
@@ -295,9 +314,10 @@ export default function AboutPage() {
             <Users className="h-12 w-12 text-primary-600 mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
             <p className="text-lg text-gray-600 mb-6">
-              GPAK Girls is led by a multidisciplinary team with experience in programme
+              GPAK Girls is run by a multidisciplinary team with experience in programme
               leadership, public health and epidemiology, psychosocial counselling, finance, and
-              community engagement.
+              community engagement, supported part time by our founder on strategy, data, and
+              monitoring and evaluation.
             </p>
             <Link href="/team" className="btn-primary inline-flex items-center gap-2">
               Our Team
