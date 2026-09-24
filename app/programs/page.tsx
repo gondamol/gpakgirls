@@ -214,7 +214,7 @@ export default function ProgramsPage() {
                 <Home className="h-6 w-6 text-primary-600" />
               </div>
               <span className="inline-flex items-center rounded-full bg-white border border-primary-200 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-700">
-                Planned · not yet running
+                Planned
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -233,7 +233,7 @@ export default function ProgramsPage() {
                 'Short, supported stays in rented safe housing for girls with nowhere safe to go',
                 'Counselling, health referrals, and school or training continue during the stay',
                 'Family tracing, mediation, and reunification as the first goal',
-                'Where home is not safe, help to rent a room and build an income, as we did for one young mother in 2019',
+                'Where home is not safe, help to rent a room and build an income, as we did for about 10 young mothers in Siaya in 2019 and 2020',
                 'Follow-up visits after she moves on, until she is settled',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
