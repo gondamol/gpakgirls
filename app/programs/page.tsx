@@ -34,7 +34,7 @@ const programs = [
       'One-on-one counselling with trained counsellors, using trauma-informed approaches',
       'Screening for depression, anxiety, and other mental health concerns, with referral to a mental health professional for girls who need clinical care',
       'Peer support groups where young mothers share experiences and reduce isolation',
-      'Mentorship from trained women mentors in each community',
+      'Mentorship from trained mentor mothers in each community',
       'Stigma-reduction work with families and communities',
       'Crisis support and safe referral for girls facing violence or abuse',
     ],
@@ -54,6 +54,7 @@ const programs = [
       'Support to attend antenatal and postnatal care appointments',
       'Child health follow-up: immunization, nutrition, and growth monitoring',
       'HIV prevention education and sexual and reproductive health information',
+      'Menstrual health education and sanitary pad distribution, so no girl misses school or a clinic visit for lack of pads',
     ],
     monitoring:
       'We track referral completion, retention in care, and clinic attendance, in coordination with local health facilities and with strict confidentiality.',

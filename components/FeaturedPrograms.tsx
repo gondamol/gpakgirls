@@ -22,7 +22,7 @@ const programs = [
     title: 'Health & HIV Referrals',
     href: '/programs#health',
     description:
-      'Linkage and accompaniment to HIV testing and care, PMTCT, antenatal and postnatal services, and child health.',
+      'Linkage and accompaniment to HIV testing and care, PMTCT, antenatal and postnatal services, child health, and menstrual health.',
     color: 'bg-blue-500',
   },
   {
