@@ -10,7 +10,7 @@ import {
   Users,
   MapPin,
   GraduationCap,
-  Stethoscope,
+  HeartHandshake,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -32,13 +32,13 @@ const headline = [
   },
   {
     icon: GraduationCap,
-    stat: '8 in 10',
-    label: 'Girls we support for school re-entry return to the classroom',
+    stat: '85%',
+    label: 'Of girls we support for school re-entry back in class',
   },
   {
-    icon: Stethoscope,
-    stat: '5',
-    label: 'Connected program areas around each girl, from counselling to livelihoods',
+    icon: HeartHandshake,
+    stat: '50+',
+    label: 'Mentor mothers trained to reach and walk with girls in their communities',
   },
 ]
 

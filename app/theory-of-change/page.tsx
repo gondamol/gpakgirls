@@ -21,17 +21,17 @@ const pathway = [
   {
     icon: Users,
     title: 'Reach girls where they are',
-    text: 'Trusted community members help us identify pregnant girls and adolescent mothers aged 13–23 who have dropped out of school, been rejected by family, or lost access to services.',
+    text: 'Trained mentor mothers in each community, alongside schools and health workers, identify pregnant girls and adolescent mothers aged 13–23 who have dropped out of school, been rejected by family, or lost access to services.',
   },
   {
     icon: HeartHandshake,
     title: 'Stabilize and support',
-    text: 'Psychosocial counselling, peer groups, and case management address trauma and stigma first, while referrals connect each girl to HIV testing and care, antenatal and postnatal services, and child health support.',
+    text: 'Psychosocial counselling, peer groups, and case management address trauma and stigma first, while referrals connect each girl to HIV testing and care, PMTCT, antenatal and postnatal services, child health support, and menstrual health.',
   },
   {
     icon: GraduationCap,
     title: 'Build a future',
-    text: 'School re-entry, vocational training, and livelihood support, including our Project FAHARI housing and asset-building model, give each mother a realistic path to income and independence.',
+    text: 'School re-entry, literacy and life-skills classes, vocational training, and agriculture-based livelihoods give each mother a realistic path to income and independence.',
   },
   {
     icon: Home,
@@ -42,8 +42,9 @@ const pathway = [
 
 const evidence = [
   { icon: Users, stat: '500+', label: 'girls supported since 2018' },
+  { icon: GraduationCap, stat: '85%', label: 'back in class after re-entry support' },
+  { icon: HeartHandshake, stat: '50+', label: 'mentor mothers trained' },
   { icon: MapPin, stat: '4', label: 'counties in western Kenya' },
-  { icon: GraduationCap, stat: '8 in 10', label: 'return to school after re-entry support' },
 ]
 
 export default function TheoryOfChangePage() {
@@ -73,14 +74,16 @@ export default function TheoryOfChangePage() {
             <p className="text-gray-600 leading-relaxed mb-3">
               In the communities around Lake Victoria, teenage pregnancy is closely tied to HIV
               risk, unequal relationships, and limited access to youth-friendly health services.
-              A girl who becomes a mother at fourteen or sixteen here usually loses school, family
-              support, and safety at the same time.
+              Nearly one in four girls aged 15–19 in Homa Bay has begun childbearing, and the four
+              counties where we work carry the highest HIV prevalence in Kenya. A girl who becomes
+              a mother at fourteen or sixteen here usually loses school, family support, and safety
+              at the same time.
             </p>
             <p className="text-gray-600 leading-relaxed">
               That is why our model responds to all of it together, rather than one issue at a
               time.{' '}
-              <Link href="/about" className="text-primary-600 font-medium hover:text-primary-700">
-                Read more about the context we work in
+              <Link href="/challenges" className="text-primary-600 font-medium hover:text-primary-700">
+                See the challenges girls face here
               </Link>
               .
             </p>
