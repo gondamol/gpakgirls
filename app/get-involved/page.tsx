@@ -12,6 +12,8 @@ import {
   Church,
   Briefcase,
   Flower2,
+  MessageCircle,
+  Mail,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -74,6 +76,10 @@ const fundraiserSteps = [
     text: 'We confirm every shilling received, thank your supporters, and send you an update on what your fundraiser paid for.',
   },
 ]
+
+const FUNDRAISER_WHATSAPP = `https://wa.me/254725737867?text=${encodeURIComponent(
+  'Hi GPAK Girls, I would like to start a fundraiser for you. My occasion is: '
+)}`
 
 const volunteerRoles = [
   'Mentors for teen mothers',
@@ -193,6 +199,25 @@ export default function GetInvolvedPage() {
                 </li>
               ))}
             </ol>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={FUNDRAISER_WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Start a fundraiser on WhatsApp
+              </a>
+              <a
+                href={`mailto:info@gpakgirls.org?subject=${encodeURIComponent('I want to start a fundraiser')}`}
+                className="btn-outline inline-flex items-center justify-center gap-2"
+              >
+                <Mail className="h-5 w-5" />
+                Or email us
+              </a>
+            </div>
           </div>
         </div>
       </section>
