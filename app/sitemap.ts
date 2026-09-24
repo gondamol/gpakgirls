@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { challenges } from '@/lib/challenges'
 
 const BASE_URL = 'https://www.gpakgirls.org'
 
@@ -7,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '', priority: 1.0 },
     { path: '/about', priority: 0.9 },
     { path: '/programs', priority: 0.9 },
+    { path: '/challenges', priority: 0.8 },
+    ...challenges.map((c) => ({ path: `/challenges/${c.slug}`, priority: 0.7 })),
     { path: '/impact', priority: 0.9 },
     { path: '/team', priority: 0.8 },
     { path: '/stories', priority: 0.8 },
