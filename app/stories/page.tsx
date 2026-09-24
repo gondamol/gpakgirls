@@ -40,8 +40,8 @@ const earlyStories = [
       'Auma was raising two children alone in an unsafe home, surviving on casual farm work that barely fed them. What she needed first was not a course: it was a safe place to sleep. We helped her rent a room of her own; from that stability she began building the skills to earn.',
     now: 'Today she runs her own salon, and trains young mothers from our programmes in it.',
     legacy:
-      'Auma is why housing and asset support came first in what became Project FAHARI. Safety before skills.',
-    pillar: 'Livelihoods & FAHARI',
+      'Auma is why safe housing sits at the heart of Project FAHARI, the shelter programme we are now planning. Safety before skills.',
+    pillar: 'Livelihoods',
     href: '/programs#livelihoods',
   },
   {

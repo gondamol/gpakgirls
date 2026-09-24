@@ -69,7 +69,7 @@ const learning = [
   'Which combination of supports keeps a young mother in school through the full year: fees alone, or fees plus childcare and mentorship?',
   'What makes health referrals stick, so girls not only reach HIV and maternal health services but stay in care?',
   'How family strengthening approaches such as Sinovuyo-informed parenting change the home environment around adolescent mothers.',
-  'How housing and asset support (Project FAHARI) affects long-term household stability compared with livelihood training alone.',
+  'Once our planned Project FAHARI shelter pilot begins, whether a safe short stay followed by family reunification leads to more stable homes than livelihood support alone.',
 ]
 
 export default function ImpactPage() {

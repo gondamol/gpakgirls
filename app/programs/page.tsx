@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: 'Our Programs - Integrated Support for Adolescent Mothers',
   description:
-    'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care and mental health, HIV and maternal health referrals, education and school re-entry, agriculture and livelihoods (Project FAHARI), and family strengthening.',
+    'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care and mental health, HIV and maternal health referrals, education and school re-entry, agriculture and livelihoods, and family strengthening.',
 }
 
 const programs = [
@@ -89,11 +89,10 @@ const programs = [
       'Kitchen gardens that improve household food security for young mothers and their children',
       'Agribusiness training and group or cooperative farming that let young mothers pool land, labour, and harvests for income',
       'Business skills, financial literacy, and savings groups',
-      'Project FAHARI: our housing, asset-building, and livelihood model that helps young mothers move from crisis to stability',
       'Mentorship from local businesswomen and job placement support',
     ],
     monitoring:
-      'We track training completion, income-generating activity after graduation, and household stability for FAHARI participants.',
+      'We track training completion, income-generating activity after graduation, and household stability.',
   },
   {
     icon: Home,
@@ -205,6 +204,59 @@ export default function ProgramsPage() {
           </div>
         </section>
       ))}
+
+      {/* Planned: Project FAHARI */}
+      <section id="fahari" className="section bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto rounded-2xl border-2 border-dashed border-primary-200 bg-primary-50/40 p-6 sm:p-10">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="bg-white border border-primary-200 w-12 h-12 rounded-xl flex items-center justify-center">
+                <Home className="h-6 w-6 text-primary-600" />
+              </div>
+              <span className="inline-flex items-center rounded-full bg-white border border-primary-200 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-700">
+                Planned · not yet running
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Project FAHARI: a safe place to land
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Some girls are put out of home when they become pregnant. Before counselling, school
+              or training can help, they need somewhere safe to sleep. Project FAHARI is the
+              shelter programme we are planning for them. It would use rented safe housing rather
+              than new buildings, and its first goal is always to get a girl back home to her
+              family, or into a stable room of her own.
+            </p>
+            <p className="font-semibold text-gray-900 mb-3">How it would work</p>
+            <ul className="space-y-3 mb-8">
+              {[
+                'Short, supported stays in rented safe housing for girls with nowhere safe to go',
+                'Counselling, health referrals, and school or training continue during the stay',
+                'Family tracing, mediation, and reunification as the first goal',
+                'Where home is not safe, help to rent a room and build an income, as we did for one young mother in 2019',
+                'Follow-up visits after she moves on, until she is settled',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 border-t border-primary-100 pt-6">
+              <p className="text-gray-700 flex-1">
+                We are looking for partners to fund a first pilot of Project FAHARI.
+              </p>
+              <Link
+                href="/get-involved#partner"
+                className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+              >
+                Partner with us
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Participant Journey */}
       <section className="section bg-white">

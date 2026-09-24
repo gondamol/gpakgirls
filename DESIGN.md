@@ -87,7 +87,7 @@ A single warm, vibrant brand color carries identity; a green and gold pair suppo
 - **Hope Green** (#22c55e): Growth, health, and "this part of the model is working" signals: secondary CTAs, positive metrics, health/wellbeing iconography. Pale tint **Hope Green Pale** (#f0fdf4) is a section background, never a text color.
 
 ### Tertiary
-- **Warm Gold** (#f59e0b): Reserved for a single accent moment per screen: a milestone, an award, a "flagship" tag (e.g. Project FAHARI). Not used at button scale; it is a highlight, not a UI workhorse.
+- **Warm Gold** (#f59e0b): Reserved for a single accent moment per screen: a milestone, an award, a "flagship" tag. Not used at button scale; it is a highlight, not a UI workhorse.
 
 ### Neutral
 - **Ink** (#111827, i.e. Tailwind `gray-900`): Primary text and headlines.

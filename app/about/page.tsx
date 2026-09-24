@@ -70,7 +70,7 @@ const tocSteps = [
   {
     step: '03',
     title: 'Build a future',
-    text: 'School re-entry, vocational training, and livelihood support, including our Project FAHARI housing and asset-building model, give each mother a realistic path to income and independence.',
+    text: 'School re-entry, literacy and life-skills classes, vocational training, and agriculture-based livelihoods give each mother a realistic path to income and independence.',
   },
   {
     step: '04',

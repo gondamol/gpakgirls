@@ -38,7 +38,7 @@ const programs = [
     title: 'Livelihoods & Agriculture',
     href: '/programs#livelihoods',
     description:
-      'Vocational training, kitchen gardens and agribusiness, savings, and our Project FAHARI housing and asset-building model for economic independence.',
+      'Vocational training, kitchen gardens and agribusiness, business skills, and savings groups for economic independence.',
     color: 'bg-purple-500',
   },
   {
