@@ -233,7 +233,7 @@ export default function ProgramsPage() {
                 'Short, supported stays in rented safe housing for girls with nowhere safe to go',
                 'Counselling, health referrals, and school or training continue during the stay',
                 'Family tracing, mediation, and reunification as the first goal',
-                'Where home is not safe, help to rent a room and build an income, as we did for about 10 young mothers in Siaya in 2019 and 2020',
+                'Where home is not safe, help to rent a room and build an income',
                 'Follow-up visits after she moves on, until she is settled',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -244,7 +244,8 @@ export default function ProgramsPage() {
             </ul>
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 border-t border-primary-100 pt-6">
               <p className="text-gray-700 flex-1">
-                We are looking for partners to fund a first pilot of Project FAHARI.
+                We did this for about 10 young mothers in Siaya in 2019 and 2020. Project FAHARI
+                makes it a standing programme, and we are building it with partners.
               </p>
               <Link
                 href="/get-involved#partner"
