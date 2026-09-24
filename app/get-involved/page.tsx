@@ -14,6 +14,7 @@ import {
   Flower2,
   MessageCircle,
   Mail,
+  Facebook,
 } from 'lucide-react'
 import ShareKit from '@/components/ShareKit'
 
@@ -235,6 +236,18 @@ export default function GetInvolvedPage() {
               </p>
             </div>
             <ShareKit />
+            <p className="text-center text-sm text-gray-600 mt-6">
+              <a
+                href="https://www.facebook.com/girlpridekenya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-semibold text-primary-600 hover:text-primary-700"
+              >
+                <Facebook className="h-4 w-4" />
+                Follow GPAK Girls on Facebook
+              </a>
+              <span className="block mt-1">and share our posts when they move you.</span>
+            </p>
           </div>
         </div>
       </section>
