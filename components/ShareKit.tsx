@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import {
+  AtSign,
   Check,
   Copy,
+  Mail,
+  MessageCircle,
+  Send,
+  Twitter,
 } from 'lucide-react'
 
 const SITE = 'https://www.gpakgirls.org'
@@ -35,6 +40,30 @@ const messages = [
   },
 ]
 
+type Platform = {
+  name: string
+  icon: React.ComponentType<{ className?: string }>
+  href: (text: string, url: string) => string
+}
+
+const enc = encodeURIComponent
+
+const platforms: Platform[] = [
+  { name: 'WhatsApp', icon: MessageCircle, href: (t) => `https://wa.me/?text=${enc(t)}` },
+  { name: 'X', icon: Twitter, href: (t) => `https://twitter.com/intent/tweet?text=${enc(t)}` },
+  { name: 'Threads', icon: AtSign, href: (t) => `https://www.threads.net/intent/post?text=${enc(t)}` },
+  {
+    name: 'Telegram',
+    icon: Send,
+    href: (t, u) => `https://t.me/share/url?url=${enc(u)}&text=${enc(t.replace(u, '').trim())}`,
+  },
+  {
+    name: 'Email',
+    icon: Mail,
+    href: (t) => `mailto:?subject=${enc('Have a look at GPAK Girls')}&body=${enc(t)}`,
+  },
+]
+
 export default function ShareKit() {
   const [selected, setSelected] = useState(messages[0])
   const [text, setText] = useState(messages[0].text)
@@ -58,6 +87,10 @@ export default function ShareKit() {
     } catch {
       return false
     }
+  }
+
+  const share = (p: Platform) => {
+    window.open(p.href(text, selected.url), '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -102,6 +135,21 @@ export default function ShareKit() {
           <Copy className="h-4 w-4" />
           Copy message
         </button>
+      </div>
+
+      <p className="text-sm font-semibold text-gray-900 mb-3">3. Share it</p>
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
+        {platforms.map((p) => (
+          <button
+            key={p.name}
+            type="button"
+            onClick={() => share(p)}
+            className="flex flex-col items-center justify-center gap-1.5 min-h-[72px] rounded-xl border border-gray-200 text-gray-700 text-xs font-semibold hover:border-primary-300 hover:text-primary-600 hover:bg-primary-50 transition-colors"
+          >
+            <p.icon className="h-5 w-5" />
+            {p.name}
+          </button>
+        ))}
       </div>
 
       <p
