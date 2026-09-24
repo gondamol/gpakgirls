@@ -5,6 +5,9 @@ import {
   AtSign,
   Check,
   Copy,
+  Facebook,
+  Instagram,
+  Linkedin,
   Mail,
   MessageCircle,
   Send,
@@ -43,15 +46,52 @@ const messages = [
 type Platform = {
   name: string
   icon: React.ComponentType<{ className?: string }>
-  href: (text: string, url: string) => string
+  // Platforms that only accept a link: the message is copied so it can be pasted in
+  copyFirst?: boolean
+  href?: (text: string, url: string) => string
+  hint?: string
+}
+
+function TikTok({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-2.59-2.59c.27 0 .53.04.77.12V9.8a5.7 5.7 0 1 0 4.91 5.64V9.02a7.33 7.33 0 0 0 4.28 1.37V7.3a4.28 4.28 0 0 1-3.22-1.48Z" />
+    </svg>
+  )
 }
 
 const enc = encodeURIComponent
 
 const platforms: Platform[] = [
   { name: 'WhatsApp', icon: MessageCircle, href: (t) => `https://wa.me/?text=${enc(t)}` },
+  {
+    name: 'Facebook',
+    icon: Facebook,
+    copyFirst: true,
+    href: (_t, u) => `https://www.facebook.com/sharer/sharer.php?u=${enc(u)}`,
+    hint: 'Message copied. Paste it into your Facebook post.',
+  },
+  {
+    name: 'Instagram',
+    icon: Instagram,
+    copyFirst: true,
+    hint: 'Message copied. Open Instagram and paste it as your caption or story text.',
+  },
+  {
+    name: 'TikTok',
+    icon: TikTok,
+    copyFirst: true,
+    hint: 'Message copied. Paste it as the caption on your TikTok video.',
+  },
   { name: 'X', icon: Twitter, href: (t) => `https://twitter.com/intent/tweet?text=${enc(t)}` },
   { name: 'Threads', icon: AtSign, href: (t) => `https://www.threads.net/intent/post?text=${enc(t)}` },
+  {
+    name: 'LinkedIn',
+    icon: Linkedin,
+    copyFirst: true,
+    href: (_t, u) => `https://www.linkedin.com/sharing/share-offsite/?url=${enc(u)}`,
+    hint: 'Message copied. Paste it into your LinkedIn post.',
+  },
   {
     name: 'Telegram',
     icon: Send,
@@ -89,8 +129,12 @@ export default function ShareKit() {
     }
   }
 
-  const share = (p: Platform) => {
-    window.open(p.href(text, selected.url), '_blank', 'noopener,noreferrer')
+  const share = async (p: Platform) => {
+    if (p.copyFirst) {
+      const ok = await copy()
+      setNotice(ok ? p.hint ?? 'Message copied.' : 'Select the message above and copy it, then paste it into your post.')
+    }
+    if (p.href) window.open(p.href(text, selected.url), '_blank', 'noopener,noreferrer')
   }
 
   return (
