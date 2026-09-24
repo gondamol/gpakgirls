@@ -7,6 +7,11 @@ import {
   Handshake,
   Calendar,
   Gift,
+  Cake,
+  Footprints,
+  Church,
+  Briefcase,
+  Flower2,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -44,6 +49,29 @@ const opportunities = [
     cta: 'Explore Partnerships',
     href: '#partner',
     color: 'from-secondary-500 to-secondary-600',
+  },
+]
+
+const occasions = [
+  { icon: Cake, label: 'Your birthday' },
+  { icon: Footprints, label: 'A run, walk or cycle' },
+  { icon: Church, label: 'Church, school or chama' },
+  { icon: Briefcase, label: 'Your workplace' },
+  { icon: Flower2, label: 'In memory of someone' },
+]
+
+const fundraiserSteps = [
+  {
+    title: 'Tell us your plan',
+    text: 'Send us a WhatsApp or email with your occasion and dates. We send you photos, a short story about the girls, and a message you can post.',
+  },
+  {
+    title: 'Ask your people',
+    text: 'Friends give straight to GPAK by M-Pesa on 0725 737 867, or your group collects and sends one transfer. Use the share tool below to get the word out.',
+  },
+  {
+    title: 'See what it did',
+    text: 'We confirm every shilling received, thank your supporters, and send you an update on what your fundraiser paid for.',
   },
 ]
 
@@ -126,6 +154,45 @@ export default function GetInvolvedPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Start a Fundraiser */}
+      <section id="fundraise" className="section bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="section-heading">Start a Fundraiser</h2>
+              <p className="section-subheading mx-auto">
+                Turn a birthday, a run or a Sunday collection into school fees, clinic visits and
+                a fresh start for a young mother. You bring the people; we help with the rest.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              {occasions.map((o) => (
+                <span
+                  key={o.label}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-sm font-medium text-gray-700"
+                >
+                  <o.icon className="h-4 w-4 text-primary-600" />
+                  {o.label}
+                </span>
+              ))}
+            </div>
+
+            <ol className="grid md:grid-cols-3 gap-6 mb-10">
+              {fundraiserSteps.map((step, i) => (
+                <li key={step.title} className="bg-white rounded-xl border border-gray-200 p-6">
+                  <span className="inline-flex w-9 h-9 rounded-full bg-primary-600 text-white font-bold items-center justify-center mb-4">
+                    {i + 1}
+                  </span>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{step.text}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
