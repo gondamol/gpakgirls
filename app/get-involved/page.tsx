@@ -15,6 +15,7 @@ import {
   MessageCircle,
   Mail,
 } from 'lucide-react'
+import ShareKit from '@/components/ShareKit'
 
 export const metadata: Metadata = {
   title: 'Get Involved - Volunteer, Partner, Advocate',
@@ -218,6 +219,22 @@ export default function GetInvolvedPage() {
                 Or email us
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Spread the Word */}
+      <section id="awareness" className="section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="section-heading">Spread the Word</h2>
+              <p className="section-subheading mx-auto">
+                Sharing costs nothing and reaches people we never could. Pick a ready-made
+                message, change it if you like, and post it in a tap.
+              </p>
+            </div>
+            <ShareKit />
           </div>
         </div>
       </section>
