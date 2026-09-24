@@ -1,7 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Users, Heart, Share2, Handshake, Calendar, Gift } from 'lucide-react'
+import {
+  Users,
+  Heart,
+  Handshake,
+  Calendar,
+  Gift,
+} from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Get Involved - Volunteer, Partner, Advocate',
@@ -38,21 +44,6 @@ const opportunities = [
     cta: 'Explore Partnerships',
     href: '#partner',
     color: 'from-secondary-500 to-secondary-600',
-  },
-  {
-    icon: Share2,
-    title: 'Spread Awareness',
-    description: 'Use your voice and platforms to help end teenage pregnancy and support young mothers.',
-    actions: [
-      'Share our content on social media',
-      'Write about our mission on your blog',
-      'Invite us to speak at your event',
-      'Organize awareness campaigns in your community',
-      'Start conversations about teen pregnancy prevention',
-    ],
-    cta: 'Get Resources',
-    href: '#awareness',
-    color: 'from-accent-500 to-accent-600',
   },
 ]
 
