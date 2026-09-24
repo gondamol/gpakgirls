@@ -11,6 +11,7 @@ import {
   Mail,
   MessageCircle,
   Send,
+  Share2,
   Twitter,
 } from 'lucide-react'
 
@@ -108,6 +109,11 @@ export default function ShareKit() {
   const [selected, setSelected] = useState(messages[0])
   const [text, setText] = useState(messages[0].text)
   const [notice, setNotice] = useState('')
+  const [canNativeShare, setCanNativeShare] = useState(false)
+
+  useEffect(() => {
+    setCanNativeShare(typeof navigator !== 'undefined' && typeof navigator.share === 'function')
+  }, [])
 
   useEffect(() => {
     if (!notice) return
@@ -135,6 +141,14 @@ export default function ShareKit() {
       setNotice(ok ? p.hint ?? 'Message copied.' : 'Select the message above and copy it, then paste it into your post.')
     }
     if (p.href) window.open(p.href(text, selected.url), '_blank', 'noopener,noreferrer')
+  }
+
+  const nativeShare = async () => {
+    try {
+      await navigator.share({ text })
+    } catch {
+      // Dismissed by the user
+    }
   }
 
   return (
@@ -183,6 +197,16 @@ export default function ShareKit() {
 
       <p className="text-sm font-semibold text-gray-900 mb-3">3. Share it</p>
       <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
+        {canNativeShare && (
+          <button
+            type="button"
+            onClick={nativeShare}
+            className="flex flex-col items-center justify-center gap-1.5 min-h-[72px] rounded-xl bg-primary-600 text-white text-xs font-semibold hover:bg-primary-700 transition-colors"
+          >
+            <Share2 className="h-5 w-5" />
+            Share…
+          </button>
+        )}
         {platforms.map((p) => (
           <button
             key={p.name}
