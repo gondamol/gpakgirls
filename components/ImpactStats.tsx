@@ -1,69 +1,37 @@
-import { GraduationCap, Users, Award, Heart } from 'lucide-react'
-
+// PLACEHOLDERS: the mentor mothers, pads and people-reached figures are estimates
+// awaiting confirmation from programme records. Replace with verified counts
+// before these are presented to partners.
 const stats = [
-  {
-    icon: Users,
-    value: 500,
-    suffix: '+',
-    label: 'Adolescent mothers and pregnant girls supported since 2018',
-    color: 'text-primary-600',
-  },
-  {
-    icon: GraduationCap,
-    value: 85,
-    suffix: '%',
-    label: 'Of the girls we support for school re-entry return to class',
-    color: 'text-secondary-600',
-  },
-  {
-    icon: Award,
-    value: 4,
-    suffix: '',
-    label: 'Counties in western Kenya: Homa Bay, Siaya, Kisumu, Migori',
-    color: 'text-accent-600',
-  },
-  {
-    icon: Heart,
-    value: 5,
-    suffix: '',
-    label: 'Connected program areas, from counselling to livelihoods',
-    color: 'text-primary-600',
-  },
+  { value: '500+', label: 'Adolescent mothers and pregnant girls supported' },
+  { value: '85%', label: 'Of girls supported for school re-entry back in class' },
+  { value: '50+', label: 'Mentor mothers trained' },
+  { value: '30,000+', label: 'Sanitary pads distributed' },
 ]
 
 export default function ImpactStats() {
   return (
-    <section className="section bg-white">
+    <section className="bg-primary-900 text-white py-14 sm:py-16 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="section-heading">Our Impact</h2>
-          <p className="section-subheading mx-auto">
-            Every figure comes from our programme records, and behind each one is a girl
-            rebuilding her future in western Kenya.
-          </p>
-        </div>
+        <h2 className="text-center text-sm font-semibold tracking-[0.2em] uppercase text-primary-200 mb-10 sm:mb-12">
+          Impact
+        </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center p-4 sm:p-6 rounded-lg bg-gray-50 border border-gray-100"
-            >
-              <div className="flex justify-center mb-3 sm:mb-4">
-                <div className="p-2.5 sm:p-3 rounded-full bg-gray-50">
-                  <stat.icon className={`h-7 w-7 sm:h-8 sm:w-8 ${stat.color}`} />
-                </div>
-              </div>
-              <div className={`${stat.color} mb-2`}>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold">
-                  {stat.value}
-                  {stat.suffix}
-                </div>
-              </div>
-              <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+        <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 max-w-6xl mx-auto">
+          {stats.map((stat) => (
+            <div key={stat.label} className="flex flex-col-reverse justify-end items-center text-center">
+              <dt className="mt-2 text-sm sm:text-base text-primary-50 font-medium leading-snug max-w-[16rem]">
+                {stat.label}
+              </dt>
+              <dd className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-accent-300">
+                {stat.value}
+              </dd>
             </div>
           ))}
-        </div>
+        </dl>
+
+        <p className="text-center text-sm text-primary-200 mt-10 sm:mt-12">
+          3,000+ people reached, including girls’ children and families · Homa Bay · Siaya · Kisumu · Migori
+        </p>
       </div>
     </section>
   )
