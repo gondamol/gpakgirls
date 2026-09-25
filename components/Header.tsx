@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ChevronDown, Menu, X } from 'lucide-react'
@@ -50,13 +51,28 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="flex w-full items-center justify-between py-3 sm:py-4 lg:py-6">
+        <div className="flex w-full items-center justify-between py-3 sm:py-3 lg:py-4">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <span className="text-xl sm:text-2xl font-bold text-primary-600">
-                GPAK Girls
-              </span>
+              <Image
+                src="/brand/header-logo-mobile.svg"
+                alt="GPAK Girls, Girl Pride Africa Kenya"
+                width={1040}
+                height={300}
+                priority
+                unoptimized
+                className="h-12 w-auto sm:hidden"
+              />
+              <Image
+                src="/brand/header-logo.svg"
+                alt="GPAK Girls, Girl Pride Africa Kenya. Walk with her."
+                width={1040}
+                height={300}
+                priority
+                unoptimized
+                className="hidden sm:block h-14 lg:h-[72px] w-auto"
+              />
             </Link>
           </div>
 
