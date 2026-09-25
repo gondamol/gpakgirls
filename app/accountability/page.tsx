@@ -119,7 +119,7 @@ export default function AccountabilityPage() {
                   className="relative w-36 h-36 rounded-full flex-shrink-0"
                   style={{
                     background:
-                      'conic-gradient(#d1253d 0% 85%, #f59e0b 85% 93%, #d1d5db 93% 100%)',
+                      'conic-gradient(#d50056 0% 85%, #fba315 85% 93%, #d1d5db 93% 100%)',
                   }}
                   role="img"
                   aria-label="Budget structure: 85 percent programme delivery, 8 percent operations, 7 percent administration"
