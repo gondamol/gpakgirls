@@ -15,7 +15,7 @@ const programs = [
     href: '/programs#psychosocial',
     description:
       'Counselling, mental health screening and referral, peer groups, and mentorship that help girls heal from trauma and stigma before anything else.',
-    color: 'bg-pink-500',
+    color: 'bg-primary-600',
   },
   {
     icon: Stethoscope,
@@ -23,7 +23,7 @@ const programs = [
     href: '/programs#health',
     description:
       'Linkage and accompaniment to HIV testing and care, PMTCT, antenatal and postnatal services, child health, and menstrual health.',
-    color: 'bg-blue-500',
+    color: 'bg-secondary-600',
   },
   {
     icon: BookOpen,
@@ -31,7 +31,7 @@ const programs = [
     href: '/programs#education',
     description:
       'Fees, re-entry negotiation, tutoring, and literacy and life-skills classes so every young mother keeps learning, in school or out.',
-    color: 'bg-indigo-500',
+    color: 'bg-accent-500',
   },
   {
     icon: Briefcase,
@@ -39,7 +39,7 @@ const programs = [
     href: '/programs#livelihoods',
     description:
       'Vocational training, kitchen gardens and agribusiness, business skills, and savings groups for economic independence.',
-    color: 'bg-purple-500',
+    color: 'bg-secondary-400',
   },
   {
     icon: Home,
@@ -47,7 +47,7 @@ const programs = [
     href: '/programs#family',
     description:
       'Parenting and caregiver support, informed by approaches like Sinovuyo, that rebuilds the home around each girl.',
-    color: 'bg-green-500',
+    color: 'bg-earth-600',
   },
 ]
 
