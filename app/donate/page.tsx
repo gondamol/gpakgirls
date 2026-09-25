@@ -67,19 +67,19 @@ export default function DonatePage() {
             {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center gap-8 mb-12 text-sm text-gray-600">
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-600" />
+                <CheckCircle className="h-5 w-5 text-secondary-600" />
                 <span>Registered NGO since 2020</span>
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-green-600" />
+                <Shield className="h-5 w-5 text-secondary-600" />
                 <span>CPA-led financial management</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-600" />
+                <CheckCircle className="h-5 w-5 text-secondary-600" />
                 <span>Receipt for every donation</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-600" />
+                <CheckCircle className="h-5 w-5 text-secondary-600" />
                 <span>Financial records shared with partners</span>
               </div>
             </div>

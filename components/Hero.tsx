@@ -45,15 +45,15 @@ export default function Hero() {
             {/* Trust Indicators */}
             <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 justify-center lg:justify-start text-sm text-gray-600">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="w-2 h-2 bg-secondary-500 rounded-full"></span>
                 <span>Registered organization</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="w-2 h-2 bg-secondary-500 rounded-full"></span>
                 <span>500+ girls supported since 2018</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="w-2 h-2 bg-secondary-500 rounded-full"></span>
                 <span>4 counties: Homa Bay, Siaya, Kisumu, Migori</span>
               </div>
             </div>

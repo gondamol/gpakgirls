@@ -40,9 +40,9 @@ export default function Newsletter() {
           </p>
 
           {status === 'success' ? (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6 flex items-center justify-center gap-3">
-              <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0" />
-              <p className="text-green-800 font-medium">{message}</p>
+            <div className="bg-secondary-50 border border-secondary-200 rounded-lg p-6 flex items-center justify-center gap-3">
+              <CheckCircle className="h-6 w-6 text-secondary-600 flex-shrink-0" />
+              <p className="text-secondary-800 font-medium">{message}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="max-w-md mx-auto">
