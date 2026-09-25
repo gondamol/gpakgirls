@@ -9,42 +9,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // GPAK Brand Colors - warm, empowering palette
+        // GPAK brand colours, taken from the logo (headwrap magenta, G green, headwrap gold, skin brown)
         primary: {
-          50: '#fef2f3',
-          100: '#fde6e7',
-          200: '#fbd0d5',
-          300: '#f7aab2',
-          400: '#f27a8a',
-          500: '#e63950', // Main brand color - vibrant pink/red
-          600: '#d1253d',
-          700: '#b01a30',
-          800: '#93182d',
-          900: '#7c172a',
+          50: '#fdf2f7',
+          100: '#fce4ee',
+          200: '#f9c9dc',
+          300: '#f39dbf',
+          400: '#e8609a',
+          500: '#dc2a78',
+          600: '#d50056', // Logo magenta ("Girls", headwrap)
+          700: '#b20048',
+          800: '#8f003b',
+          900: '#730532',
         },
         secondary: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e', // Hope green
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
+          50: '#edf7f3',
+          100: '#d3ece2',
+          200: '#a8d9c5',
+          300: '#71bf9f',
+          400: '#3b9c77',
+          500: '#177a57',
+          600: '#045138', // Logo forest green ("GPAK", the G)
+          700: '#03432e',
+          800: '#023424',
+          900: '#02281c',
         },
         accent: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b', // Warm gold
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
+          50: '#fff8eb',
+          100: '#feedc9',
+          200: '#fedb93',
+          300: '#fdc75c',
+          400: '#fcb534',
+          500: '#fba315', // Logo gold (headwrap)
+          600: '#dc8506',
+          700: '#b46407',
+          800: '#924d0c',
+          900: '#78400d',
+        },
+        earth: {
+          600: '#4e220a', // Logo brown (motto)
         },
       },
       fontFamily: {
