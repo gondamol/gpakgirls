@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Facebook, Mail, Phone, MapPin } from 'lucide-react'
 
@@ -43,7 +44,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="text-white text-2xl font-bold mb-4">GPAK Girls</h3>
+            <h3 className="mb-5">
+              <Image
+                src="/brand/footer-logo-white.svg"
+                alt="GPAK Girls, Girl Pride Africa Kenya. Walk with her."
+                width={1040}
+                height={300}
+                unoptimized
+                className="h-16 w-auto"
+              />
+            </h3>
             <p className="text-sm mb-6">
               Girl Pride Africa Kenya walks alongside adolescent mothers and pregnant girls in
               western Kenya, with psychosocial and mental health support, health referrals,
