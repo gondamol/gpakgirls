@@ -17,11 +17,23 @@ import {
   Facebook,
 } from 'lucide-react'
 import ShareKit from '@/components/ShareKit'
+import OccasionRotator from '@/components/OccasionRotator'
 
 export const metadata: Metadata = {
-  title: 'Get Involved - Volunteer, Partner, Advocate',
-  description: 'Join us in empowering teen mothers in Kenya. Volunteer your time, become a partner, or help spread awareness about our mission.',
+  title: 'Ways to Support - Fundraise, Give, Volunteer, Partner',
+  description:
+    'Ways to support adolescent mothers in western Kenya with GPAK Girls: start a fundraiser, host a gathering, dedicate a gift, join a giving circle, volunteer, or partner with us as a business or group.',
 }
+
+const heroOccasions = [
+  'birthday',
+  'wedding',
+  'marathon',
+  'graduation',
+  'chama',
+  'harvest Sunday',
+  'office party',
+]
 
 const opportunities = [
   {
@@ -98,14 +110,27 @@ export default function GetInvolvedPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-50 via-white to-secondary-50 py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Join the Movement
+      <section className="relative text-white overflow-hidden">
+        <Image
+          src="/images/annie-spratt-msrFBd0OaIo-unsplash.jpg"
+          alt="Young women gathered together"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-800/80 to-primary-700/60" />
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary-100 mb-4">
+              Ways to Support
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Your <OccasionRotator words={heroOccasions} /> could change a young mother’s life.
             </h1>
-            <p className="text-xl text-gray-600">
-              There are many ways you can help empower teen mothers in Kenya. Every contribution, big or small, creates real change.
+            <p className="text-xl text-primary-50 leading-relaxed">
+              Whether you give on your own or with your church, school, chama or company, there is
+              a way to walk with her that fits you.
             </p>
           </div>
         </div>
