@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import { ScrollText, Shield, Landmark, Flower2 } from 'lucide-react'
+import CopyButton from '@/components/CopyButton'
 
 export const metadata: Metadata = {
   title: 'Planned Giving - A Gift in Your Will',
@@ -29,6 +30,28 @@ const ways = [
     title: 'A gift in memory',
     text: 'Families sometimes ask for gifts to GPAK Girls in place of flowers, or set aside part of a funeral harambee. We send the family a note of thanks and tell them what the gifts made possible.',
   },
+]
+
+const LEGAL_NAME =
+  'Girl Pride Africa Kenya, registered with the NGOs Co-ordination Board of Kenya under Registration No. OP.218/051/19-189/11666, of Homa Bay Town, Kenya'
+
+const bequestWording = [
+  {
+    label: 'A share of what remains',
+    text: `I give ___ percent of the residue of my estate to ${LEGAL_NAME}, for its general purposes, and I declare that a receipt from its authorised officer shall be a full discharge to my executors.`,
+  },
+  {
+    label: 'A fixed sum',
+    text: `I give the sum of ___ (in words: ___) to ${LEGAL_NAME}, for its general purposes, and I declare that a receipt from its authorised officer shall be a full discharge to my executors.`,
+  },
+]
+
+const orgDetails = [
+  { term: 'Legal name', value: 'Girl Pride Africa Kenya (GPAK Girls)' },
+  { term: 'Registered with', value: 'NGOs Co-ordination Board, Kenya, April 2020' },
+  { term: 'Registration number', value: 'OP.218/051/19-189/11666' },
+  { term: 'Address', value: 'Homa Bay Town, Homa Bay County, Kenya' },
+  { term: 'Contact', value: 'info@gpakgirls.org · +254 725 737 867' },
 ]
 
 export default function PlannedGivingPage() {
@@ -79,6 +102,50 @@ export default function PlannedGivingPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Wording for your will */}
+      <section id="wording" className="section bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-10">
+            <div className="lg:col-span-3">
+              <h2 className="section-heading">Wording for Your Will</h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Your advocate or solicitor can use this wording, adapted to the law where you
+                live. A gift for our general purposes lets us put it where girls need it most when
+                the time comes.
+              </p>
+              <div className="space-y-4">
+                {bequestWording.map((item) => (
+                  <div key={item.label} className="bg-white rounded-xl border border-gray-200 p-5">
+                    <div className="flex items-center justify-between gap-4 mb-3">
+                      <h3 className="text-base font-semibold text-gray-900">{item.label}</h3>
+                      <CopyButton text={item.text} />
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed font-mono bg-gray-50 rounded-lg p-4">
+                      {item.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <aside className="lg:col-span-2">
+              <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-7 lg:sticky lg:top-28">
+                <h2 className="text-xl font-bold text-gray-900 mb-5">Our details for your adviser</h2>
+                <dl className="space-y-4 text-sm">
+                  {orgDetails.map((d) => (
+                    <div key={d.term}>
+                      <dt className="font-semibold text-gray-500 uppercase tracking-wide text-xs mb-1">
+                        {d.term}
+                      </dt>
+                      <dd className="text-gray-900">{d.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
