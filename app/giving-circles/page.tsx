@@ -11,6 +11,7 @@ import {
   ArrowRight,
   MessageCircle,
   Mail,
+  ChevronDown,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -89,7 +90,34 @@ const circles = [
   },
 ]
 
-const JOIN_WHATSAPP = `https://wa.me/254725737867?text=${encodeURIComponent(
+const faqs = [
+  {
+    q: 'Will I sponsor a particular girl?',
+    a: 'No. Circles are pooled: members walk with all the girls in the programme, never one named child, because a girl’s privacy and dignity are not for sale. You meet the girls through their own consented words, with names changed unless a woman chooses otherwise.',
+  },
+  {
+    q: 'Can I give in instalments?',
+    a: 'Yes. Your circle is set by what you give over twelve months, whether that arrives as one gift, quarterly transfers, or a monthly Walk With Her standing order.',
+  },
+  {
+    q: 'How do I pay from outside Kenya?',
+    a: 'By bank transfer to the organization’s account, or through WorldRemit, Sendwave or Taptap Send straight to our M-Pesa line. Message us and we send the details and confirm every gift with a receipt.',
+  },
+  {
+    q: 'Is my gift tax-deductible?',
+    a: 'Girl Pride Africa Kenya is registered with the NGOs Co-ordination Board of Kenya. We cannot promise tax relief in other countries. If it matters to you, ask us and we will share our registration documents so you can check with your adviser.',
+  },
+  {
+    q: 'Can I stay anonymous?',
+    a: 'Of course. We only thank members by name in the yearly summary when they tell us they would like that.',
+  },
+  {
+    q: 'Can I stop or change my circle?',
+    a: 'Any time, with one message. No questions, no pressure.',
+  },
+]
+
+const JOIN_WHATSAPP =`https://wa.me/254725737867?text=${encodeURIComponent(
   'Hello GPAK Girls, I would like to join a giving circle. The circle I have in mind is: '
 )}`
 
@@ -234,6 +262,26 @@ export default function GivingCirclesPage() {
                 About planned giving
                 <ArrowRight className="h-5 w-5" />
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section id="questions" className="section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="section-heading text-center mb-10">Questions Members Ask</h2>
+            <div className="divide-y divide-gray-200 border-y border-gray-200">
+              {faqs.map((faq) => (
+                <details key={faq.q} className="group py-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-gray-900">
+                    {faq.q}
+                    <ChevronDown className="h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </div>
