@@ -164,6 +164,13 @@ export default function WalkWithHerPage() {
             <p className="text-center text-sm text-gray-500 mt-8">
               Any amount, monthly, makes you a member. Give what walks comfortably with you.
             </p>
+            <p className="text-center text-sm text-gray-500 mt-2">
+              Monthly gifts also count toward our yearly{' '}
+              <Link href="/giving-circles" className="font-semibold text-primary-600 hover:text-primary-700">
+                giving circles
+              </Link>
+              : USD 30 a month brings you into the Hera Circle.
+            </p>
           </div>
         </div>
       </section>
