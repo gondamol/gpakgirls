@@ -6,7 +6,6 @@ import {
   User,
   Building2,
   Heart,
-  Calendar,
   Gift,
   Cake,
   Footprints,
@@ -17,6 +16,11 @@ import {
   Mail,
   Facebook,
   ArrowRight,
+  Smartphone,
+  Globe,
+  Landmark,
+  Repeat,
+  ScrollText,
 } from 'lucide-react'
 import ShareKit from '@/components/ShareKit'
 import OccasionRotator from '@/components/OccasionRotator'
@@ -98,6 +102,45 @@ const MATCHING_EMAIL = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
 )}&body=${encodeURIComponent(
   'Hello GPAK Girls,\n\nMy employer may match my gift. Please send the documents for their matching programme.\n\nMy name: \nMy employer: \nWhat they need (if known): '
 )}`
+
+const waysToGive = [
+  {
+    icon: Smartphone,
+    title: 'M-Pesa',
+    text: 'Send Money to 0725 737 867, Girl Pride Africa Kenya. The quickest way to give from Kenya.',
+    href: '/donate',
+  },
+  {
+    icon: Globe,
+    title: 'From abroad',
+    text: 'WorldRemit, Sendwave and Taptap Send deliver straight to our M-Pesa line from most countries.',
+    href: '/donate',
+  },
+  {
+    icon: Landmark,
+    title: 'Bank transfer',
+    text: 'Best for larger gifts. Message us and we send the organization’s account details.',
+    href: '/donate',
+  },
+  {
+    icon: Repeat,
+    title: 'Monthly',
+    text: 'Walk With Her, our monthly circle, from KES 1,000 / EUR 10 a month.',
+    href: '/walk-with-her',
+  },
+  {
+    icon: ScrollText,
+    title: 'A gift in your will',
+    text: 'Leave a legacy for girls not yet born. Sample wording and our details for your adviser.',
+    href: '/planned-giving',
+  },
+  {
+    icon: Gift,
+    title: 'In-kind gifts',
+    text: 'Sewing machines, hairdressing equipment, school supplies and baby essentials.',
+    href: '/contact',
+  },
+]
 
 const volunteerRoles = [
   'Mentors for teen mothers',
@@ -324,6 +367,35 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
+      {/* Ways to give */}
+      <section id="ways-to-give" className="section pt-0">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h3 className="section-heading">Ways to Give</h3>
+              <p className="section-subheading mx-auto">
+                Every gift goes to the organization’s account and is confirmed with a receipt.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {waysToGive.map((way) => (
+                <Link
+                  key={way.title}
+                  href={way.href}
+                  className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-primary-600 transition-colors"
+                >
+                  <way.icon className="h-8 w-8 text-primary-600 mb-4" />
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    {way.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">{way.text}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Spread the Word */}
       <section id="awareness" className="section bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -414,48 +486,6 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
-      {/* Other Ways to Help */}
-      <section className="section bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Other Ways to Support
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200">
-              <Heart className="h-12 w-12 text-primary-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Donate</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Financial support helps us expand our programs and reach more girls.
-              </p>
-              <Link href="/donate" className="text-primary-600 font-medium hover:underline">
-                Make a Donation →
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200">
-              <Calendar className="h-12 w-12 text-secondary-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Attend Events</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Join our fundraising events, awareness campaigns, and community gatherings.
-              </p>
-              <Link href="/contact" className="text-secondary-600 font-medium hover:underline">
-                See Upcoming Events →
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200">
-              <Gift className="h-12 w-12 text-accent-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">In-Kind Donations</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Donate materials, sewing machines, hairdressing equipment, or other resources.
-              </p>
-              <Link href="/contact" className="text-accent-600 font-medium hover:underline">
-                Contact Us →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   )
 }
