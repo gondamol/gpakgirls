@@ -171,6 +171,18 @@ const volunteerRoles = [
   'Administrative support',
 ]
 
+function AudienceDivider({ title }: { title: string }) {
+  return (
+    <div className="flex items-center gap-4 max-w-5xl mx-auto">
+      <span className="h-px flex-1 bg-primary-200" aria-hidden="true" />
+      <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-primary-600 text-center">
+        {title}
+      </h2>
+      <span className="h-px flex-1 bg-primary-200" aria-hidden="true" />
+    </div>
+  )
+}
+
 export default function GetInvolvedPage() {
   return (
     <main>
@@ -227,9 +239,7 @@ export default function GetInvolvedPage() {
       {/* For individuals */}
       <section id="individuals" className="scroll-mt-24 pt-12 md:pt-16 text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-primary-600">
-            For Individuals
-          </h2>
+          <AudienceDivider title="For Individuals" />
         </div>
       </section>
 
@@ -482,9 +492,9 @@ export default function GetInvolvedPage() {
       {/* For businesses and groups */}
       <section id="groups" className="scroll-mt-24 section">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-primary-600 text-center mb-12">
-            For Businesses and Groups
-          </h2>
+          <div className="mb-12">
+            <AudienceDivider title="For Businesses and Groups" />
+          </div>
           <div className="space-y-16 md:space-y-20">
             <SupportFeature
               id="partner"
