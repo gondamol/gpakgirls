@@ -207,6 +207,41 @@ export default function DonatePage() {
               </Link>
             </div>
 
+            {/* More ways to give */}
+            <div className="grid md:grid-cols-2 gap-6 mb-16">
+              <Link
+                href="/giving-circles"
+                className="group bg-white rounded-2xl border border-gray-200 p-7 hover:border-primary-600 transition-colors"
+              >
+                <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                  Giving every year?
+                </h2>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Our giving circles, from USD 250 a year, bring field letters, a yearly summary and
+                  time with our team.
+                </p>
+                <span className="inline-flex items-center gap-2 text-primary-600 font-semibold">
+                  See the giving circles
+                  <ArrowRight className="h-5 w-5" />
+                </span>
+              </Link>
+              <Link
+                href="/planned-giving"
+                className="group bg-white rounded-2xl border border-gray-200 p-7 hover:border-secondary-600 transition-colors"
+              >
+                <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary-600 transition-colors">
+                  Remembering us in your will?
+                </h2>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Sample wording and our registration details for your advocate or solicitor.
+                </p>
+                <span className="inline-flex items-center gap-2 text-secondary-600 font-semibold">
+                  About planned giving
+                  <ArrowRight className="h-5 w-5" />
+                </span>
+              </Link>
+            </div>
+
             {/* Accountability strip */}
             <div className="flex flex-col md:flex-row items-center gap-6 bg-white rounded-2xl border border-gray-200 p-8">
               <Shield className="h-14 w-14 text-primary-600 flex-shrink-0" />
