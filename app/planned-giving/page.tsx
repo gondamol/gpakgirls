@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { ScrollText, Shield, Landmark, Flower2 } from 'lucide-react'
+import Link from 'next/link'
+import { ScrollText, Shield, Landmark, Flower2, Feather, Mail } from 'lucide-react'
 import CopyButton from '@/components/CopyButton'
 
 export const metadata: Metadata = {
@@ -53,6 +54,12 @@ const orgDetails = [
   { term: 'Address', value: 'Homa Bay Town, Homa Bay County, Kenya' },
   { term: 'Contact', value: 'info@gpakgirls.org · +254 725 737 867' },
 ]
+
+const LEGACY_EMAIL = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
+  'A gift in my will'
+)}&body=${encodeURIComponent(
+  'Hello GPAK Girls,\n\nI would like to let you know about a planned gift / talk about a planned gift (please choose).\n\nMy name: \nMy country: \nMay we thank you by name in the Geno Legacy Circle? (yes / no): '
+)}`
 
 export default function PlannedGivingPage() {
   return (
@@ -147,6 +154,42 @@ export default function PlannedGivingPage() {
               </div>
             </aside>
           </div>
+        </div>
+      </section>
+
+      {/* Tell us */}
+      <section id="tell-us" className="section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl border-t-4 border-secondary-600 shadow-lg p-8 md:p-12 text-center">
+            <Feather className="h-12 w-12 text-secondary-600 mx-auto mb-4" />
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Already Remembered Us?
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Telling us is optional and never binding, but it lets us thank you in your
+              lifetime and welcome you into the Geno Legacy Circle. Geno means “hope” and “trust”
+              in Dholuo. We keep what you share confidential.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              If you would like a conversation first about how a gift would be used, our Director
+              will gladly speak with you or your adviser.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href={LEGACY_EMAIL} className="btn-secondary inline-flex items-center justify-center gap-2">
+                <Mail className="h-5 w-5" />
+                Email us in confidence
+              </a>
+              <Link href="/giving-circles" className="btn-outline inline-flex items-center justify-center gap-2">
+                See all giving circles
+              </Link>
+            </div>
+          </div>
+          <p className="max-w-3xl mx-auto text-center text-sm text-gray-500 mt-8 leading-relaxed">
+            This page is general information, not legal or tax advice. Please speak to an advocate,
+            solicitor or tax adviser before changing your will or beneficiary nominations. We
+            cannot promise tax relief in any country; we will gladly provide our registration
+            documents for your adviser.
+          </p>
         </div>
       </section>
     </main>
