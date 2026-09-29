@@ -3,8 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {
   Users,
+  User,
+  Building2,
   Heart,
-  Handshake,
   Calendar,
   Gift,
   Cake,
@@ -18,6 +19,7 @@ import {
 } from 'lucide-react'
 import ShareKit from '@/components/ShareKit'
 import OccasionRotator from '@/components/OccasionRotator'
+import SupportFeature from '@/components/SupportFeature'
 
 export const metadata: Metadata = {
   title: 'Ways to Support - Fundraise, Give, Volunteer, Partner',
@@ -35,37 +37,26 @@ const heroOccasions = [
   'office party',
 ]
 
-const opportunities = [
+const audiences = [
   {
-    icon: Users,
-    title: 'Volunteer With Us',
-    description: 'Share your time, skills, and passion to directly impact the lives of teen mothers.',
-    actions: [
-      'Become a mentor for young mothers',
-      'Teach vocational skills (tailoring, hairdressing, business)',
-      'Provide tutoring and academic support',
-      'Help with administrative tasks',
-      'Organize fundraising events',
-    ],
-    cta: 'Apply to Volunteer',
-    href: '#volunteer',
-    color: 'from-primary-500 to-primary-600',
+    icon: User,
+    title: 'For individuals',
+    text: 'Fundraise, dedicate a gift, give monthly or volunteer',
+    href: '#individuals',
   },
   {
-    icon: Handshake,
-    title: 'Partner With Us',
-    description: 'Funders, NGOs, businesses, and institutions can create lasting impact through strategic partnerships. Programme documentation, results data, and our due diligence pack are available on request.',
-    actions: [
-      'Project partnerships and programme funding',
-      'Technical collaboration with NGOs and health partners',
-      'Corporate social responsibility programs',
-      'Skills training and employment pathways for graduates',
-      'Research and learning collaborations',
-    ],
-    cta: 'Explore Partnerships',
-    href: '#partner',
-    color: 'from-secondary-500 to-secondary-600',
+    icon: Building2,
+    title: 'For businesses and groups',
+    text: 'Partner, host an event, or give through your company',
+    href: '#groups',
   },
+]
+
+const partnerWays = [
+  'Project partnerships and programme funding',
+  'Technical collaboration with NGOs and health partners',
+  'Skills training and employment pathways for graduates',
+  'Research and learning collaborations',
 ]
 
 const occasions = [
@@ -136,67 +127,44 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
-      {/* Main Opportunities */}
-      <section className="section">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
-            {opportunities.map((opp, index) => (
-              <div
-                key={index}
-                id={opp.href.substring(1)}
-                className="max-w-5xl mx-auto"
+      {/* Audience chooser */}
+      <section className="bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-4">
+            {audiences.map((a) => (
+              <a
+                key={a.href}
+                href={a.href}
+                className="group flex items-center gap-4 rounded-2xl border border-gray-200 p-6 hover:border-primary-600 hover:bg-primary-50 transition-colors"
               >
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className={`bg-gradient-to-br ${opp.color} w-16 h-16 rounded-2xl flex items-center justify-center mb-6`}>
-                      <opp.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                      {opp.title}
-                    </h2>
-                    <p className="text-lg text-gray-600 mb-6">
-                      {opp.description}
-                    </p>
-                    <ul className="space-y-3 mb-8">
-                      {opp.actions.map((action, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                          <span className="text-gray-700">{action}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href="/contact"
-                      className={`inline-block bg-gradient-to-r ${opp.color} text-white font-semibold px-8 py-3 rounded-lg hover:shadow-lg transition-all`}
-                    >
-                      {opp.cta}
-                    </Link>
-                  </div>
-
-                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-lg">
-                      <Image
-                        src={index === 0 ? '/images/annie-spratt-msrFBd0OaIo-unsplash.jpg' : index === 1 ? '/images/annie-spratt-yrzBgqapG1I-unsplash.jpg' : '/images/black-linear-studios-MqsfK5ZjZ2s-unsplash.jpg'}
-                        alt={`${opp.title} - Get involved`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
-                    </div>
-                  </div>
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-50 group-hover:bg-white rounded-xl flex-shrink-0">
+                  <a.icon className="h-6 w-6 text-primary-600" />
                 </div>
-              </div>
+                <div>
+                  <div className="text-lg font-semibold text-gray-900">{a.title}</div>
+                  <div className="text-sm text-gray-600">{a.text}</div>
+                </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
+      {/* For individuals */}
+      <section id="individuals" className="scroll-mt-24 pt-12 md:pt-16 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-primary-600">
+            For Individuals
+          </h2>
+        </div>
+      </section>
+
       {/* Start a Fundraiser */}
-      <section id="fundraise" className="section bg-gray-50">
+      <section id="fundraise" className="section">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-10">
-              <h2 className="section-heading">Start a Fundraiser</h2>
+              <h3 className="section-heading">Start a Fundraiser</h3>
               <p className="section-subheading mx-auto">
                 Turn a birthday, a run or a Sunday collection into school fees, clinic visits and
                 a fresh start for a young mother. You bring the people; we help with the rest.
@@ -250,11 +218,11 @@ export default function GetInvolvedPage() {
       </section>
 
       {/* Spread the Word */}
-      <section id="awareness" className="section">
+      <section id="awareness" className="section bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <h2 className="section-heading">Spread the Word</h2>
+              <h3 className="section-heading">Spread the Word</h3>
               <p className="section-subheading mx-auto">
                 Sharing costs nothing and reaches people we never could. Pick a ready-made
                 message, change it if you like, and post it in a tap.
@@ -277,16 +245,15 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
-      {/* Volunteer Application CTA */}
-      <section className="section bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      {/* Volunteer */}
+      <section id="volunteer" className="scroll-mt-24 section bg-gradient-to-br from-primary-600 to-primary-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Users className="h-16 w-16 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Make a Difference?
-            </h2>
+            <h3 className="text-3xl md:text-4xl font-bold mb-6">Volunteer With Us</h3>
             <p className="text-xl text-primary-100 mb-8">
-              We&apos;re looking for passionate volunteers in the following roles:
+              Share your time and skills with young mothers in Homa Bay, in person or remotely.
+              We are looking for volunteers in these roles:
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-12 text-left">
@@ -311,6 +278,31 @@ export default function GetInvolvedPage() {
                 Learn More About Us
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* For businesses and groups */}
+      <section id="groups" className="scroll-mt-24 section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-primary-600 text-center mb-12">
+            For Businesses and Groups
+          </h2>
+          <div className="space-y-16 md:space-y-20">
+            <SupportFeature
+              id="partner"
+              title="Partner With Us"
+              image="/images/annie-spratt-yrzBgqapG1I-unsplash.jpg"
+              imageAlt="Young mothers walking together"
+              bullets={partnerWays}
+              cta={{ label: 'Start a partnership conversation', href: '/contact' }}
+            >
+              <p>
+                Funders, NGOs, businesses and institutions can create lasting change through
+                strategic partnerships. Programme documentation, results data and our due
+                diligence pack are available on request.
+              </p>
+            </SupportFeature>
           </div>
         </div>
       </section>
