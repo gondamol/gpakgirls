@@ -196,7 +196,7 @@ export default function GivingCirclesPage() {
               <p className="text-primary-50 leading-relaxed mb-6">
                 Rather give a little every month? Walk With Her members fund one girl-month of the
                 journey at a time. Every monthly gift counts toward your annual circle, so
-                KES 2,500 a month brings you into the Hera Circle.
+                USD 30 a month brings you into the Hera Circle.
               </p>
               <Link
                 href="/walk-with-her"
