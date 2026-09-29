@@ -5,6 +5,7 @@ import ImpactStats from '@/components/ImpactStats'
 import FeaturedPrograms from '@/components/FeaturedPrograms'
 import FeaturedStories from '@/components/FeaturedStories'
 import Newsletter from '@/components/Newsletter'
+import PartnerLogos from '@/components/PartnerLogos'
 
 function WhyHere() {
   return (
@@ -84,6 +85,7 @@ export default function Home() {
       <FeaturedPrograms />
       <WhyHere />
       <FeaturedStories />
+      <PartnerLogos />
       <Newsletter />
     </main>
   )
