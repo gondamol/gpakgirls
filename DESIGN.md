@@ -143,7 +143,11 @@ Flat by default with tonal layering, not shadow-driven depth. Most surfaces are 
 - **Internal Padding:** 24px small cards, 32–48px feature cards.
 
 ### Navigation
-- Sticky top header, white background, `shadow-sm` on scroll-adjacent boundary. Label-weight links (600, gray-700), Signal Rose on hover, no underline. Primary CTA ("Donate Now") stays a filled rose button distinct from the text links even in the mobile drawer.
+- **Top bar** (large screens only): `primary-900` strip with Stories, Accountability, Contact, then Facebook and email icons. It scrolls away; the main bar stays.
+- **Main bar**: sticky, `primary-700` magenta with the white logo. Three dropdowns (About Us, Our Work, Get Involved), labels 17px semibold white; hover, open and current-section labels turn gold (`accent-400`) with a white underline when open. Menu structure lives in `lib/navigation.ts`.
+- **Dropdowns**: square `primary-600` panels, white 16px items divided by `white/25` hairlines, gold-tinted text on hover. Our Programs and The Challenges open a side menu to the right.
+- **Donate**: the one pill-shaped button on the site, gold `accent-400` fill with `earth-600` brown text. On this bar gold carries the primary action, since a magenta button would vanish into the magenta bar.
+- **Phones**: logo without motto, Donate pill and a menu button. The menu opens the same three groups as tap-to-expand sections, with the top-bar links at the bottom.
 
 ## 6. Do's and Don'ts
 
