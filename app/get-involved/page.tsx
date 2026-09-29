@@ -103,8 +103,8 @@ export default function GetInvolvedPage() {
       {/* Hero */}
       <section className="relative text-white overflow-hidden">
         <Image
-          src="/images/annie-spratt-msrFBd0OaIo-unsplash.jpg"
-          alt="Young women gathered together"
+          src="/images/annie-spratt-0cgpyigyIkM-unsplash.jpg"
+          alt="Girls and women smiling and clapping at a community gathering"
           fill
           priority
           className="object-cover"
@@ -217,6 +217,29 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
+      {/* More ways for individuals */}
+      <section id="more-ways" className="section bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-16 md:space-y-20">
+            <SupportFeature
+              id="gathering"
+              title="Host a Gathering"
+              image="/images/mentorship.jpg"
+              imageAlt="A group of young women smiling together"
+              highlight="KES 1,000, about the price of a meal out, funds one girl-month: fortnightly mentor visits, transport to the clinic, and her place in a peer support group. Ten guests at a dinner can fund ten."
+              cta={{ label: 'Tell us about your gathering', href: FUNDRAISER_WHATSAPP, external: true }}
+            >
+              <p>
+                A dinner, a movie night, a nyama choma or a women’s group meeting can become a
+                fundraiser. Invite your friends, share a few words about the girls, and ask each
+                guest to give what they would spend on a night out.
+              </p>
+              <p>We send you photos, a short story and a message to read or share on the day.</p>
+            </SupportFeature>
+          </div>
+        </div>
+      </section>
+
       {/* Spread the Word */}
       <section id="awareness" className="section bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -292,8 +315,8 @@ export default function GetInvolvedPage() {
             <SupportFeature
               id="partner"
               title="Partner With Us"
-              image="/images/annie-spratt-yrzBgqapG1I-unsplash.jpg"
-              imageAlt="Young mothers walking together"
+              image="/images/annie-spratt-W3WO3QQwAxM-unsplash.jpg"
+              imageAlt="A young mother walking with her baby on her back"
               bullets={partnerWays}
               cta={{ label: 'Start a partnership conversation', href: '/contact' }}
             >
