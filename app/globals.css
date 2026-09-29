@@ -208,12 +208,12 @@
 
 .partner-marquee::before {
   left: 0;
-  background: linear-gradient(to right, #fff, transparent);
+  background: linear-gradient(to right, theme('colors.primary.50'), transparent);
 }
 
 .partner-marquee::after {
   right: 0;
-  background: linear-gradient(to left, #fff, transparent);
+  background: linear-gradient(to left, theme('colors.primary.50'), transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -13,11 +13,11 @@ const COPIES = 4
 
 export default function PartnerLogos() {
   return (
-    <section className="py-12 md:py-16 bg-white border-t border-gray-100" aria-labelledby="partners-heading">
+    <section className="py-12 md:py-16 bg-primary-50 border-y border-primary-100" aria-labelledby="partners-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           id="partners-heading"
-          className="text-center text-sm font-semibold uppercase tracking-widest text-gray-500 mb-8"
+          className="text-center text-sm font-semibold uppercase tracking-widest text-primary-700 mb-8"
         >
           Partners who have walked with us
         </h2>
@@ -29,17 +29,19 @@ export default function PartnerLogos() {
               <li
                 key={`${copy}-${p.name}`}
                 aria-hidden={copy > 0 ? true : undefined}
-                className="flex-shrink-0 px-8 md:px-12"
+                className="flex-shrink-0 px-3 md:px-4"
               >
-                <Image
-                  src={p.logo}
-                  alt={copy === 0 ? p.name : ''}
-                  title={p.name}
-                  width={160}
-                  height={160}
-                  loading="eager"
-                  className="h-20 md:h-24 w-auto object-contain mix-blend-multiply"
-                />
+                <div className="flex h-28 w-44 md:h-32 md:w-52 items-center justify-center rounded-2xl bg-white border border-primary-100 shadow-sm p-4">
+                  <Image
+                    src={p.logo}
+                    alt={copy === 0 ? p.name : ''}
+                    title={p.name}
+                    width={160}
+                    height={160}
+                    loading="eager"
+                    className="max-h-full w-auto object-contain mix-blend-multiply"
+                  />
+                </div>
               </li>
             ))
           )}
