@@ -5,7 +5,6 @@ import {
   Users,
   User,
   Building2,
-  Heart,
   Gift,
   Cake,
   Footprints,
@@ -140,6 +139,25 @@ const waysToGive = [
     text: 'Sewing machines, hairdressing equipment, school supplies and baby essentials.',
     href: '/contact',
   },
+]
+
+const eventIdeas = [
+  'A harvest Sunday or special offering at church',
+  'A school walk, sports day or talent show',
+  'A chama or women’s group contribution',
+  'An office end-of-year party or casual Friday',
+]
+
+const EVENT_WHATSAPP = `https://wa.me/254725737867?text=${encodeURIComponent(
+  'Hi GPAK Girls, our group would like to host an event for you. We are: '
+)}`
+
+const companyWays = [
+  'Matching your staff’s gifts, or payroll giving',
+  'In-kind gifts: sewing machines, salon equipment, farm inputs, school supplies',
+  'Apprenticeships, internships and jobs for programme graduates',
+  'Staff volunteering: mentoring, business skills, accounting, IT',
+  'Corporate social responsibility programmes built with us',
 ]
 
 const volunteerRoles = [
@@ -480,6 +498,37 @@ export default function GetInvolvedPage() {
                 Funders, NGOs, businesses and institutions can create lasting change through
                 strategic partnerships. Programme documentation, results data and our due
                 diligence pack are available on request.
+              </p>
+            </SupportFeature>
+
+            <SupportFeature
+              id="event"
+              title="Host an Event"
+              image="/images/topsphere-media-fA29oQ0cpcY-unsplash.jpg"
+              imageAlt="Women and children seated together at a community gathering"
+              reverse
+              bullets={eventIdeas}
+              cta={{ label: 'Plan an event with us', href: EVENT_WHATSAPP, external: true }}
+            >
+              <p>
+                Churches, schools, chamas, clubs and workplaces can raise funds together. Your
+                group collects and sends one transfer by M-Pesa or bank, and we confirm what was
+                received and report back on what it paid for.
+              </p>
+            </SupportFeature>
+
+            <SupportFeature
+              id="company"
+              title="Give Through Your Company"
+              image="/images/vocationl.jpg"
+              imageAlt="A tailoring workshop with rows of sewing machines"
+              bullets={companyWays}
+              cta={{ label: 'Talk to us about company giving', href: '/contact' }}
+            >
+              <p>
+                Businesses can put their giving, their skills and their jobs to work for young
+                mothers. We shape each partnership around what your company does best, and report
+                on it with figures from our programme records.
               </p>
             </SupportFeature>
           </div>
