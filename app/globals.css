@@ -28,6 +28,8 @@
   html {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+    /* Keeps menu anchor links (e.g. /programs#health) clear of the sticky header */
+    scroll-padding-top: 5.5rem;
   }
 
   h1, h2, h3, h4, h5, h6 {
