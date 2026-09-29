@@ -92,6 +92,12 @@ const DEDICATE_EMAIL = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
   'Hello GPAK Girls,\n\nI would like to dedicate a gift.\n\nIn honour of / in memory of (please choose): \nTheir name: \nTheir email or phone, for your note: \nMy name: \nHow I will give (M-Pesa / bank transfer / diaspora app): '
 )}`
 
+const MATCHING_EMAIL = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
+  'Employer matching gift'
+)}&body=${encodeURIComponent(
+  'Hello GPAK Girls,\n\nMy employer may match my gift. Please send the documents for their matching programme.\n\nMy name: \nMy employer: \nWhat they need (if known): '
+)}`
+
 const volunteerRoles = [
   'Mentors for teen mothers',
   'Vocational skills trainers',
@@ -260,6 +266,25 @@ export default function GetInvolvedPage() {
                 When you give, tell us the person’s name and email or phone number. We send them a
                 note to say a gift has been made in their name, and what it will do. The amount
                 stays private unless you ask us to share it.
+              </p>
+            </SupportFeature>
+
+            <SupportFeature
+              id="matching"
+              title="Double It With Your Employer"
+              image="/images/soweto-graphics-1nQJf4oN5Xk-unsplash.jpg"
+              imageAlt="A young woman, a mother and a baby standing together on a street"
+              cta={{ label: 'Ask us for matching documents', href: MATCHING_EMAIL, external: true }}
+            >
+              <p>
+                Many employers match the gifts their staff make to registered organizations,
+                sometimes doubling or tripling them. Ask your HR or giving team whether your
+                company has a matching programme and what it needs from us.
+              </p>
+              <p>
+                Each programme sets its own rules, and some only match gifts to organizations
+                registered in their own country. We gladly send our registration certificate,
+                receipts and any forms your employer asks us to complete.
               </p>
             </SupportFeature>
           </div>
