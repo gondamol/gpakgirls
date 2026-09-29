@@ -1,6 +1,15 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { HandHeart, CalendarRange, Users, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+import {
+  HandHeart,
+  CalendarRange,
+  Users,
+  CheckCircle,
+  Footprints,
+  Feather,
+  ArrowRight,
+} from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Giving Circles - Give Together, Plan Together',
@@ -172,6 +181,48 @@ export default function GivingCirclesPage() {
               Amounts are shown in US dollars. Give in Kenya shillings or euros if you prefer; we
               use the equivalent on the day of your gift.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Monthly and legacy routes */}
+      <section className="section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl bg-primary-600 text-white p-8 flex flex-col">
+              <Footprints className="h-10 w-10 mb-4" />
+              <h2 className="text-2xl font-bold mb-1">Walk With Her</h2>
+              <p className="text-sm text-primary-100 mb-4">Monthly giving, from KES 1,000 / EUR 10</p>
+              <p className="text-primary-50 leading-relaxed mb-6">
+                Rather give a little every month? Walk With Her members fund one girl-month of the
+                journey at a time. Every monthly gift counts toward your annual circle, so
+                KES 2,500 a month brings you into the Hera Circle.
+              </p>
+              <Link
+                href="/walk-with-her"
+                className="mt-auto inline-flex items-center gap-2 self-start bg-white text-primary-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Give monthly
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+            <div id="geno" className="rounded-2xl bg-white border border-gray-200 shadow-sm p-8 flex flex-col">
+              <Feather className="h-10 w-10 text-secondary-600 mb-4" />
+              <h2 className="text-2xl font-bold text-gray-900 mb-1">Geno Legacy Circle</h2>
+              <p className="text-sm italic text-gray-500 mb-4">Geno means “hope” and “trust” in Dholuo</p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                For people who include GPAK Girls in their will. A legacy gift is trust placed in
+                girls not yet born, and we honour it by name in our yearly summary, or quietly if
+                you prefer.
+              </p>
+              <Link
+                href="/planned-giving"
+                className="mt-auto inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors"
+              >
+                About planned giving
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
