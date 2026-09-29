@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/get-involved', priority: 0.7 },
     { path: '/donate', priority: 0.8 },
     { path: '/walk-with-her', priority: 0.8 },
+    { path: '/giving-circles', priority: 0.7 },
     { path: '/contact', priority: 0.7 },
     { path: '/privacy', priority: 0.3 },
   ]
