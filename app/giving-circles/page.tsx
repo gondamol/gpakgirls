@@ -9,6 +9,8 @@ import {
   Footprints,
   Feather,
   ArrowRight,
+  MessageCircle,
+  Mail,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -86,6 +88,16 @@ const circles = [
     ],
   },
 ]
+
+const JOIN_WHATSAPP = `https://wa.me/254725737867?text=${encodeURIComponent(
+  'Hello GPAK Girls, I would like to join a giving circle. The circle I have in mind is: '
+)}`
+
+const JOIN_EMAIL = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
+  'Joining a giving circle'
+)}&body=${encodeURIComponent(
+  'Hello GPAK Girls,\n\nI would like to join the following giving circle: \n\nMy name: \nMy country: \nHow I would like to give (M-Pesa / bank transfer / diaspora app): \nMay we thank you by name in the yearly summary? (yes / no): '
+)}`
 
 export default function GivingCirclesPage() {
   return (
@@ -223,6 +235,39 @@ export default function GivingCirclesPage() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join */}
+      <section id="join" className="section bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl border-t-4 border-primary-600 shadow-lg p-8 md:p-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Join a Circle</h2>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Tell us the circle you would like to join and how you prefer to give: M-Pesa, bank
+              transfer, or a diaspora app such as WorldRemit, Sendwave or Taptap Send. We reply
+              within a day with the details and welcome you with your first field letter.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <a
+                href={JOIN_WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Join by WhatsApp
+              </a>
+              <a href={JOIN_EMAIL} className="btn-outline inline-flex items-center justify-center gap-2">
+                <Mail className="h-5 w-5" />
+                Email to join
+              </a>
+            </div>
+            <p className="text-sm text-gray-500">
+              +254 725 737 867 · info@gpakgirls.org · Gifts go to the organization’s account,
+              never personal accounts.
+            </p>
           </div>
         </div>
       </section>
