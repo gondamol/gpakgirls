@@ -7,6 +7,7 @@ const navigation = {
     { name: 'About Us', href: '/about' },
     { name: 'Theory of Change', href: '/theory-of-change' },
     { name: 'Our Team', href: '/team' },
+    { name: 'Stories', href: '/stories' },
     { name: 'Impact & Learning', href: '/impact' },
     { name: 'Accountability', href: '/accountability' },
     { name: 'Contact Us', href: '/contact' },
@@ -21,10 +22,12 @@ const navigation = {
   ],
   getInvolved: [
     { name: 'Donate', href: '/donate' },
+    { name: 'Ways to Support', href: '/get-involved' },
+    { name: 'Giving Circles', href: '/giving-circles' },
     { name: 'Walk With Her (Monthly)', href: '/walk-with-her' },
+    { name: 'Planned Giving', href: '/planned-giving' },
     { name: 'Volunteer', href: '/get-involved#volunteer' },
     { name: 'Partner With Us', href: '/get-involved#partner' },
-    { name: 'Stories', href: '/stories' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
