@@ -86,6 +86,12 @@ const FUNDRAISER_WHATSAPP = `https://wa.me/254725737867?text=${encodeURIComponen
   'Hi GPAK Girls, I would like to start a fundraiser for you. My occasion is: '
 )}`
 
+const DEDICATE_EMAIL = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
+  'A gift in someone’s name'
+)}&body=${encodeURIComponent(
+  'Hello GPAK Girls,\n\nI would like to dedicate a gift.\n\nIn honour of / in memory of (please choose): \nTheir name: \nTheir email or phone, for your note: \nMy name: \nHow I will give (M-Pesa / bank transfer / diaspora app): '
+)}`
+
 const volunteerRoles = [
   'Mentors for teen mothers',
   'Vocational skills trainers',
@@ -235,6 +241,26 @@ export default function GetInvolvedPage() {
                 guest to give what they would spend on a night out.
               </p>
               <p>We send you photos, a short story and a message to read or share on the day.</p>
+            </SupportFeature>
+
+            <SupportFeature
+              id="dedicate"
+              title="Dedicate a Gift"
+              image="/images/educational.jpg"
+              imageAlt="A graduate holding flowers, celebrating with a friend"
+              reverse
+              cta={{ label: 'Dedicate a gift by email', href: DEDICATE_EMAIL, external: true }}
+            >
+              <p>
+                Honour a mother, a teacher, a friend or someone you have lost with a gift that
+                helps a young mother finish school or learn a trade. It makes a thoughtful present
+                for birthdays, Mother’s Day, weddings and graduations.
+              </p>
+              <p>
+                When you give, tell us the person’s name and email or phone number. We send them a
+                note to say a gift has been made in their name, and what it will do. The amount
+                stays private unless you ask us to share it.
+              </p>
             </SupportFeature>
           </div>
         </div>
