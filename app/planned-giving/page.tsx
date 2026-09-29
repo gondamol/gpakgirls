@@ -67,8 +67,8 @@ export default function PlannedGivingPage() {
       {/* Hero */}
       <section className="relative text-white overflow-hidden">
         <Image
-          src="/images/eibner-saliba-zhWUl24kf5A-unsplash.jpg"
-          alt="A young mother holding her child"
+          src="/images/annie-spratt-1YnBzhJISg4-unsplash.jpg"
+          alt="A mother carrying her baby into a green field"
           fill
           priority
           className="object-cover"

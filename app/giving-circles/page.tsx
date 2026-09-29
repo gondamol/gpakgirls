@@ -134,7 +134,7 @@ export default function GivingCirclesPage() {
       <section className="relative text-white overflow-hidden">
         <Image
           src="/images/annie-spratt-yrzBgqapG1I-unsplash.jpg"
-          alt="Young mothers walking together"
+          alt="A mother in a headwrap carrying her baby"
           fill
           priority
           className="object-cover"
