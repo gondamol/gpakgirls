@@ -201,7 +201,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center mt-10">
               <Link
-                href="/theory-of-change"
+                href="/our-model#theory-of-change"
                 className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
               >
                 See the full theory of change

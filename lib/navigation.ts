@@ -17,7 +17,7 @@ export const mainNav: NavGroup[] = [
   {
     name: 'Our Work',
     items: [
-      { name: 'Our Approach', href: '/theory-of-change' },
+      { name: 'Our Model', href: '/our-model' },
       {
         name: 'Our Programs',
         href: '/programs',
