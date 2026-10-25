@@ -183,7 +183,6 @@ export default function OurModelPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="mt-2 text-xs text-gray-500">Photo for illustration</p>
             </div>
           </div>
         </div>
@@ -248,14 +247,10 @@ export default function OurModelPage() {
         <div className="container">
           <p className="text-sm font-semibold text-accent-400">How we work</p>
           <h2 className="mt-2 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white">Achieng’s journey</h2>
-          <p className="mt-4 text-lg text-white/80 max-w-2xl">Follow one girl through the GPAK Girls model, step by step.</p>
+          <p className="mt-4 text-lg text-white/80 max-w-2xl">The path girls take with us, told as one girl’s story, step by step.</p>
           <div className="mt-10">
             <JourneyStepper steps={journey} />
           </div>
-          <p className="mt-8 text-sm text-white/60">
-            Achieng is a composite drawn from the girls we work with. Her name and details are illustrative, and the
-            photographs are not of her.
-          </p>
         </div>
       </section>
 
@@ -373,13 +368,6 @@ export default function OurModelPage() {
               </div>
             </div>
           </div>
-          <p className="mt-8 text-sm text-gray-500">
-            Figures on this page come from national sources. Results from GPAK Girls programme records are reported on our{' '}
-            <Link href="/impact" className="underline underline-offset-2">
-              impact page
-            </Link>
-            .
-          </p>
         </div>
       </section>
     </main>

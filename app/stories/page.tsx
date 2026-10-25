@@ -7,7 +7,6 @@ import {
   Briefcase,
   Heart,
   Home,
-  ShieldCheck,
   Sparkles,
 } from 'lucide-react'
 
@@ -160,22 +159,6 @@ export default function StoriesPage() {
         </div>
       </section>
 
-      {/* Consent note - before the stories, not buried after */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="max-w-3xl mx-auto flex items-start gap-3 text-sm text-gray-600">
-            <ShieldCheck className="h-5 w-5 text-primary-600 flex-shrink-0 mt-0.5" />
-            <p>
-              <strong>How we tell stories:</strong> every story is shared with the informed consent
-              of the young woman involved. Unless a woman chooses to be identified (as Maryline,
-              now on our staff, has), names are changed, identifying details are removed, and
-              photographs are representative images. Quotes from our early years are reproduced as
-              the girls shared them with us at the time. A girl’s privacy matters more than our
-              storytelling, and consent can be withdrawn at any time.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Where it began */}
       <section className="section bg-gray-50">

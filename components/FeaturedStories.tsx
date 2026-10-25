@@ -39,8 +39,7 @@ export default function FeaturedStories() {
         <div className="text-center mb-12">
           <h2 className="section-heading">In Their Own Words</h2>
           <p className="section-subheading mx-auto">
-            Stories shared with consent and told with dignity. Names are changed and photos are
-            representative to protect each girl’s privacy.
+            Stories shared with consent and told with dignity.
           </p>
         </div>
 

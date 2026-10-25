@@ -87,7 +87,7 @@ export default function JourneyStepper({ steps }: { steps: JourneyStep[] }) {
           <Image
             key={step.image}
             src={step.image}
-            alt={`Illustrative photograph for this step: ${step.title}`}
+            alt={step.title}
             fill
             sizes="(min-width: 768px) 560px, 90vw"
             className="object-cover"
