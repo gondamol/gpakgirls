@@ -9,6 +9,7 @@ const navigation = {
     { name: 'Theory of Change', href: '/our-model#theory-of-change' },
     { name: 'Our Team', href: '/team' },
     { name: 'Stories', href: '/stories' },
+    { name: 'News & Updates', href: '/news' },
     { name: 'Impact & Learning', href: '/impact' },
     { name: 'Accountability', href: '/accountability' },
     { name: 'Contact Us', href: '/contact' },

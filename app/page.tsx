@@ -6,6 +6,7 @@ import FeaturedPrograms from '@/components/FeaturedPrograms'
 import FeaturedStories from '@/components/FeaturedStories'
 import Newsletter from '@/components/Newsletter'
 import PartnerLogos from '@/components/PartnerLogos'
+import LatestNews from '@/components/LatestNews'
 
 function WhyHere() {
   return (
@@ -85,6 +86,7 @@ export default function Home() {
       <FeaturedPrograms />
       <WhyHere />
       <FeaturedStories />
+      <LatestNews />
       <PartnerLogos />
       <Newsletter />
     </main>
