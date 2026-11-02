@@ -1,21 +1,25 @@
 import { challenges } from '@/lib/challenges'
 
 export type NavLink = { name: string; href: string; children?: NavLink[] }
-export type NavGroup = { name: string; items: NavLink[] }
+export type NavGroup = { name: string; href: string; items: NavLink[] }
 
-// Main menu, grouped into three dropdowns. Programs and Challenges open a side menu.
+// Main menu, grouped into three dropdowns. Each group label links to its landing page.
+// Programs and Challenges open a side menu.
 export const mainNav: NavGroup[] = [
   {
     name: 'About Us',
+    href: '/about',
     items: [
       { name: 'Who We Are', href: '/about' },
       { name: 'Our Team', href: '/team' },
       { name: 'Our Girls', href: '/stories' },
+      { name: 'News & Updates', href: '/news' },
       { name: 'Accountability', href: '/accountability' },
     ],
   },
   {
     name: 'Our Work',
+    href: '/programs',
     items: [
       { name: 'Our Model', href: '/our-model' },
       {
@@ -39,6 +43,7 @@ export const mainNav: NavGroup[] = [
   },
   {
     name: 'Get Involved',
+    href: '/get-involved',
     items: [
       { name: 'Ways to Support', href: '/get-involved' },
       { name: 'Giving Circles', href: '/giving-circles' },
@@ -51,6 +56,7 @@ export const mainNav: NavGroup[] = [
 // Slim bar above the main menu
 export const topNav: NavLink[] = [
   { name: 'Stories', href: '/stories' },
+  { name: 'News', href: '/news' },
   { name: 'Accountability', href: '/accountability' },
   { name: 'Contact', href: '/contact' },
 ]

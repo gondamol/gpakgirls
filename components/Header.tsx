@@ -127,25 +127,35 @@ export default function Header() {
                     if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpenMenu(null)
                   }}
                 >
-                  <button
-                    type="button"
-                    className={`inline-flex items-center gap-2.5 px-4 xl:px-5 py-3 text-[17px] font-semibold border-b-2 transition-colors touch-target ${
-                      active ? 'text-accent-400' : 'text-white hover:text-accent-400'
+                  <div
+                    className={`inline-flex items-center border-b-2 transition-colors ${
+                      active ? 'text-accent-400' : 'text-white'
                     } ${open ? 'border-white' : 'border-transparent'}`}
-                    aria-expanded={open}
-                    aria-haspopup="true"
-                    onClick={() => setOpenMenu(open ? null : group.name)}
                   >
-                    {group.name}
-                    <Caret open={open} />
-                  </button>
-                  {open && (
-                    <ul className="absolute left-0 top-full min-w-[250px] bg-primary-600 shadow-xl">
-                      {group.items.map((item, i) => (
-                        <DropdownItem key={item.href} item={item} first={i === 0} onNavigate={closeMenus} />
-                      ))}
-                    </ul>
-                  )}
+                    <Link
+                      href={group.href}
+                      className="inline-flex items-center pl-4 xl:pl-5 py-3 text-[17px] font-semibold hover:text-accent-400 touch-target"
+                      onClick={closeMenus}
+                    >
+                      {group.name}
+                    </Link>
+                    <button
+                      type="button"
+                      className="inline-flex items-center pl-2 pr-4 xl:pr-5 py-3 hover:text-accent-400 touch-target"
+                      aria-expanded={open}
+                      aria-haspopup="true"
+                      aria-label={`${open ? 'Close' : 'Open'} ${group.name} menu`}
+                      onClick={() => setOpenMenu(open ? null : group.name)}
+                    >
+                      <Caret open={open} />
+                    </button>
+                  </div>
+                  {/* Always in the HTML so every page link is crawlable; CSS shows it when open */}
+                  <ul className={`absolute left-0 top-full min-w-[250px] bg-primary-600 shadow-xl ${open ? 'block' : 'hidden'}`}>
+                    {group.items.map((item, i) => (
+                      <DropdownItem key={item.href} item={item} first={i === 0} onNavigate={closeMenus} />
+                    ))}
+                  </ul>
                 </li>
               )
             })}
@@ -176,8 +186,11 @@ export default function Header() {
         </div>
 
         {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-white/20 pb-4 max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div
+          className={`lg:hidden border-t border-white/20 pb-4 max-h-[calc(100vh-72px)] overflow-y-auto ${
+            mobileMenuOpen ? 'block' : 'hidden'
+          }`}
+        >
             {mainNav.map((group) => {
               const open = mobileGroup === group.name
               return (
@@ -191,8 +204,7 @@ export default function Header() {
                     <span className={groupIsActive(group, pathname) ? 'text-accent-400' : ''}>{group.name}</span>
                     <ChevronDown className={`h-5 w-5 transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
                   </button>
-                  {open && (
-                    <ul className="pb-3 pl-4">
+                  <ul className={`pb-3 pl-4 ${open ? 'block' : 'hidden'}`}>
                       {group.items.map((item) => (
                         <li key={item.href}>
                           <Link
@@ -220,7 +232,6 @@ export default function Header() {
                         </li>
                       ))}
                     </ul>
-                  )}
                 </div>
               )
             })}
@@ -238,7 +249,6 @@ export default function Header() {
               </a>
             </div>
           </div>
-        )}
       </nav>
     </header>
   )
