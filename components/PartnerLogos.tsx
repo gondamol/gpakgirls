@@ -38,8 +38,7 @@ export default function PartnerLogos() {
                     title={p.name}
                     width={160}
                     height={160}
-                    loading="eager"
-                    className="max-h-full w-auto object-contain mix-blend-multiply"
+                    className="max-h-full w-auto object-contain"
                   />
                 </div>
               </li>

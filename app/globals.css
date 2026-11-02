@@ -188,6 +188,13 @@
 
 .partner-track {
   animation: partner-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-track {
+    animation: none;
+  }
 }
 
 .partner-marquee:hover .partner-track,
