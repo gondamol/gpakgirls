@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import StoryVideoGrid from '@/components/StoryVideoGrid'
 import {
   Quote,
   GraduationCap,
@@ -159,6 +160,26 @@ export default function StoriesPage() {
         </div>
       </section>
 
+
+      {/* Story films, 2026 */}
+      <section className="section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-6">
+                <Sparkles className="h-4 w-4" />
+                <span>New, November 2026</span>
+              </div>
+              <h2 className="section-heading">Watch Their Stories</h2>
+              <p className="section-subheading mx-auto">
+                Seven short films about girls and women we walk with. Their names are changed,
+                the characters are illustrated, and every quote is their own words.
+              </p>
+            </div>
+            <StoryVideoGrid />
+          </div>
+        </div>
+      </section>
 
       {/* Where it began */}
       <section className="section bg-gray-50">
