@@ -17,48 +17,6 @@ export const metadata: Metadata = {
     'Stories of adolescent mothers in western Kenya rebuilding their lives with GPAK Girls, shared with consent, told with dignity.',
 }
 
-const earlyStories = [
-  {
-    name: 'Anyango, 16',
-    year: '2019',
-    quote:
-      '“Erokamano, ukonya, awinjo kategno, Nyasaye ogwedhu: thank you very much, you have helped me, I feel strong again, God bless you.”',
-    story:
-      'Two weeks after giving birth, Anyango was living alone in her late grandmother’s house, sent away by her family, washing her own clothes, sometimes going a full day without food. Our team visited with food and baby items, kept coming back, and sat down with her parents until they agreed to take her home. School was no longer realistic for her, but she told us she could do tailoring.',
-    now: 'Today she works as a tailor, supporting herself and her child with her own hands.',
-    legacy:
-      'Anyango is why family strengthening is a core pillar today. No girl should have to choose between her baby and her family.',
-    pillar: 'Family Strengthening',
-    href: '/programs#family',
-  },
-  {
-    name: 'Auma, 22',
-    year: '2019',
-    quote:
-      '“I feel I have hope and a future for my kids. I can now laugh and feel happiness. The first thing I will buy is a mattress.”',
-    story:
-      'Auma was raising two children alone in an unsafe home, surviving on casual farm work that barely fed them. What she needed first was not a course: it was a safe place to sleep. We helped her rent a room of her own; from that stability she began building the skills to earn.',
-    now: 'Today she runs her own salon, and trains young mothers from our programmes in it.',
-    legacy:
-      'Auma is why safe housing sits at the heart of Project FAHARI, the shelter programme we are now planning. Safety before skills.',
-    pillar: 'Livelihoods',
-    href: '/programs#livelihoods',
-  },
-  {
-    name: 'Apiyo, 14',
-    year: '2019',
-    quote:
-      '“Rejected by peers, despised by parents, she lost hope in life; then she heard of GPAK and contacted us. She dreams of becoming a nurse.”',
-    story:
-      'Apiyo could not continue with school after giving birth to her daughter. When she reached out to us, our team negotiated her return to the classroom and walked with her through it, one of the first girls we ever supported back into education.',
-    now: 'Today she has completed her schooling and mentors girls arriving where she once stood.',
-    legacy:
-      'Apiyo is why school re-entry is a pillar today, and why we never treat a girl’s ambition as over.',
-    pillar: 'Education & School Re-entry',
-    href: '/programs#education',
-  },
-]
-
 const stories = [
   {
     name: 'Achieng',
@@ -162,7 +120,7 @@ export default function StoriesPage() {
 
 
       {/* Story films, 2026 */}
-      <section className="section">
+      <section className="section bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -177,54 +135,6 @@ export default function StoriesPage() {
               </p>
             </div>
             <StoryVideoGrid />
-          </div>
-        </div>
-      </section>
-
-      {/* Where it began */}
-      <section className="section bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-100 text-accent-700 rounded-full text-sm font-medium mb-6">
-                <Sparkles className="h-4 w-4" />
-                <span>From Our Field Notes, 2019</span>
-              </div>
-              <h2 className="section-heading">Where It Began</h2>
-              <p className="section-subheading mx-auto">
-                The first girls we walked with shaped everything we do today. These are their
-                words as we recorded them at the time (names changed to protect them) and what
-                each of them changed in us.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {earlyStories.map((item) => (
-                <article
-                  key={item.name}
-                  className="bg-white rounded-2xl border border-gray-200 p-7 flex flex-col"
-                >
-                  <div className="flex items-baseline justify-between mb-4">
-                    <h3 className="text-xl font-bold text-gray-900">{item.name}</h3>
-                    <span className="text-xs font-semibold text-gray-400 tracking-wide">
-                      {item.year}
-                    </span>
-                  </div>
-                  <p className="text-gray-800 italic leading-relaxed mb-4">{item.quote}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.story}</p>
-                  <p className="text-sm font-semibold text-secondary-700 mb-5">{item.now}</p>
-                  <div className="mt-auto pt-4 border-t border-gray-100">
-                    <p className="text-sm text-gray-700 mb-3">{item.legacy}</p>
-                    <Link
-                      href={item.href}
-                      className="inline-flex items-center gap-1.5 text-sm text-primary-600 font-semibold hover:text-primary-700 transition-colors"
-                    >
-                      {item.pillar} today →
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
           </div>
         </div>
       </section>
