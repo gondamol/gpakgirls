@@ -99,56 +99,6 @@ export const news: NewsPost[] = [
     ],
   },
   {
-    slug: 'school-holiday-health-sessions-2026',
-    date: '2026-11-02',
-    category: 'Events',
-    title: 'School holiday health sessions for girls and young mothers',
-    summary:
-      'From the week of 9 November, we are running weekly health sessions through the long school holiday, ending with a reflection fun day in December.',
-    image: '/images/annie-spratt-W3WO3QQwAxM-unsplash.jpg',
-    imageAlt: 'Girls sitting together in a group discussion',
-    body: [
-      {
-        type: 'p',
-        text: 'The long school holiday can be a risky time for adolescent girls. Without the routine of school, many have less support and less access to good health information. This November and December, GPAK Girls is running weekly sessions that are safe, age-appropriate and open to adolescent girls on holiday and to young mothers in western Kenya.',
-      },
-      { type: 'h2', text: 'What is planned' },
-      {
-        type: 'list',
-        items: [
-          'Four weekly sessions in November: two led by the GPAK Girls team and two led by partners, such as a local health facility.',
-          'A reflection fun day in December to close the programme.',
-        ],
-      },
-      { type: 'h2', text: 'Topics' },
-      {
-        type: 'list',
-        items: [
-          'Wellness circles: self-esteem, stress, peer pressure and where to get help',
-          'Menstrual health and hygiene',
-          'Puberty, reproductive health and preventing unintended pregnancy',
-          'HIV prevention, testing and treatment literacy',
-          'Consent, healthy relationships and how to get help after abuse',
-          'Postnatal care, breastfeeding, nutrition and infant health for young mothers',
-          'Youth-friendly health services, with confidential and voluntary referrals',
-        ],
-      },
-      { type: 'h2', text: 'How we keep girls safe' },
-      {
-        type: 'p',
-        text: 'Every session starts with ground rules and consent. Referrals are voluntary and confidential, and no one is pressured into any health choice. We do not photograph girls’ faces without consent, and any disclosure is handled under our safeguarding policy.',
-      },
-      {
-        type: 'p',
-        text: 'We will also listen. We will ask girls and young mothers what makes health services hard to reach, and what support they want from us in 2027.',
-      },
-    ],
-    links: [
-      { label: 'How we keep girls safe', href: '/accountability#safeguarding' },
-      { label: 'Support the sessions', href: '/donate' },
-    ],
-  },
-  {
     slug: 'our-model-a-girls-journey',
     date: '2026-10-25',
     category: 'Programmes',

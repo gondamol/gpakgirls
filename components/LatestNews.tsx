@@ -12,7 +12,7 @@ export default function LatestNews() {
             <h2 id="latest-news-heading" className="section-heading mb-2">
               Latest News
             </h2>
-            <p className="text-lg text-gray-600">New stories, programmes and events from our work.</p>
+            <p className="text-lg text-gray-600">New stories and programme updates from our work.</p>
           </div>
           <Link
             href="/news"

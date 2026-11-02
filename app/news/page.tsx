@@ -8,7 +8,7 @@ import { news, formatDate, type NewsPost } from '@/lib/news'
 export const metadata: Metadata = {
   title: 'News & Updates',
   description:
-    'The latest from GPAK Girls: new stories, programme updates, events and partners in our work with teen mothers and adolescent girls in western Kenya.',
+    'The latest from GPAK Girls: new stories, programme updates and partners in our work with teen mothers and adolescent girls in western Kenya.',
   alternates: { canonical: '/news' },
 }
 
@@ -25,7 +25,7 @@ export default function NewsPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What’s New at GPAK Girls</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              New stories, programme updates, events and the partners who walk with us.
+              New stories, programme updates and the partners who walk with us.
             </p>
           </div>
         </div>
