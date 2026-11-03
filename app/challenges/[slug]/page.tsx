@@ -16,6 +16,7 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title: `${challenge.name} in Western Kenya`,
     description: challenge.summary,
+    alternates: { canonical: `/challenges/${challenge.slug}` },
   }
 }
 

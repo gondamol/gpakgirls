@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/giving-circles' },
   title: 'Giving Circles - Give Together, Plan Together',
   description:
     'Join a GPAK Girls giving circle. Steady annual and monthly gifts let us plan the whole journey for adolescent mothers in western Kenya, with field letters and results from our programme records.',

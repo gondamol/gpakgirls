@@ -26,9 +26,6 @@ export const metadata: Metadata = {
   creator: 'Girl Pride Africa Kenya',
   publisher: 'Girl Pride Africa Kenya',
   metadataBase: new URL('https://www.gpakgirls.org'),
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     type: 'website',
     locale: 'en_KE',

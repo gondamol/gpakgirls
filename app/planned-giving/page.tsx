@@ -5,6 +5,7 @@ import { ScrollText, Shield, Landmark, Flower2, Feather, Mail } from 'lucide-rea
 import CopyButton from '@/components/CopyButton'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/planned-giving' },
   title: 'Planned Giving - A Gift in Your Will',
   description:
     'Leave a gift to GPAK Girls in your will, name us as a beneficiary, or give through a donor-advised fund, and help adolescent mothers in western Kenya for years to come.',

@@ -14,6 +14,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/impact' },
   title: 'Impact & Learning - Evidence, Monitoring & Results',
   description:
     'How GPAK Girls measures results: monitoring and evaluation approach, results to date for adolescent mothers in western Kenya, learning agenda, and data ethics.',

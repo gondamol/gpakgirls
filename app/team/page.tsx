@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Users, ShieldCheck, LineChart, Megaphone, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/team' },
   title: 'Our Team - Leadership & Staff',
   description:
     'Meet the team behind Girl Pride Africa Kenya: our founder and a staff team with experience in programme management, public health, psychosocial support, finance, and community engagement in western Kenya.',

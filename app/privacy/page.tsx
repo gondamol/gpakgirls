@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy' },
   title: 'Privacy Policy',
   description:
     'How Girl Pride Africa Kenya collects, uses, and protects personal information on this website and in our programmes.',

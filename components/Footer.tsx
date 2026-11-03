@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Facebook, Mail, Phone, MapPin } from 'lucide-react'
+import { Facebook, Mail, Phone, MapPin, ShieldCheck } from 'lucide-react'
 
 const navigation = {
   about: [
@@ -70,13 +70,20 @@ export default function Footer() {
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-400" />
                 <span>Homa Bay Town, Homa Bay County, Kenya</span>
               </div>
+              <div className="flex items-start gap-2">
+                <ShieldCheck className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-400" />
+                <span>
+                  Registered NGO, NGOs Co-ordination Board of Kenya, Reg. No.
+                  OP.218/051/19-189/11666
+                </span>
+              </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-5 w-5 flex-shrink-0 text-gray-400" />
-                <span>+254 725 737 867</span>
+                <a href="tel:+254725737867" className="hover:text-white transition-colors">+254 725 737 867</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 flex-shrink-0 text-gray-400" />
-                <span>info@gpakgirls.org</span>
+                <a href="mailto:info@gpakgirls.org" className="hover:text-white transition-colors">info@gpakgirls.org</a>
               </div>
             </div>
 
@@ -147,7 +154,7 @@ export default function Footer() {
               Bay, Siaya, Kisumu, and Migori counties, with early community engagement in South
               Sudan.
             </p>
-            <div className="flex gap-6 text-sm">
+            <div className="flex gap-6 text-sm whitespace-nowrap">
               {navigation.legal.map((item) => (
                 <Link
                   key={item.name}

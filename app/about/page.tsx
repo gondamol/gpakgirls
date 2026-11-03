@@ -14,6 +14,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about' },
   title: 'About Us - Who We Are & Why We Exist',
   description:
     'Girl Pride Africa Kenya (GPAK Girls) is a community-rooted organization in western Kenya supporting adolescent mothers and pregnant girls aged 13–23 with psychosocial care, health referrals, education, and livelihoods.',

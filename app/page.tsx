@@ -1,12 +1,18 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MapPin, ShieldCheck, ArrowRight, Smartphone } from 'lucide-react'
 import Hero from '@/components/Hero'
+import MissionStrip from '@/components/MissionStrip'
 import ImpactStats from '@/components/ImpactStats'
 import FeaturedPrograms from '@/components/FeaturedPrograms'
 import FeaturedStories from '@/components/FeaturedStories'
 import Newsletter from '@/components/Newsletter'
 import PartnerLogos from '@/components/PartnerLogos'
 import LatestNews from '@/components/LatestNews'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 function WhyHere() {
   return (
@@ -82,6 +88,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <MissionStrip />
       <ImpactStats />
       <FeaturedPrograms />
       <WhyHere />

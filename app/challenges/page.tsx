@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import { challenges } from '@/lib/challenges'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/challenges' },
   title: 'Challenges - What Adolescent Mothers Face in Western Kenya',
   description:
     'Teenage pregnancy, HIV, gender-based violence, early marriage, period poverty and poverty: the overlapping challenges facing adolescent mothers around Lake Victoria, and how GPAK Girls responds.',

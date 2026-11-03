@@ -12,6 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/stories' },
   title: 'Stories - Young Mothers, In Their Own Words',
   description:
     'Stories of adolescent mothers in western Kenya rebuilding their lives with GPAK Girls, shared with consent, told with dignity.',

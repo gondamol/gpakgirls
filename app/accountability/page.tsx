@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/accountability' },
   title: 'Accountability - Safeguarding, Policies & Financial Transparency',
   description:
     'How GPAK Girls stays accountable: child safeguarding and PSEA, data protection, complaints and feedback, financial management, and governance in western Kenya.',

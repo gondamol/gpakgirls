@@ -26,6 +26,7 @@ import OccasionRotator from '@/components/OccasionRotator'
 import SupportFeature from '@/components/SupportFeature'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/get-involved' },
   title: 'Ways to Support - Fundraise, Give, Volunteer, Partner',
   description:
     'Ways to support adolescent mothers in western Kenya with GPAK Girls: start a fundraiser, host a gathering, dedicate a gift, join a giving circle, volunteer, or partner with us as a business or group.',

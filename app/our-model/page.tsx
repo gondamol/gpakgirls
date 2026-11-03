@@ -17,6 +17,7 @@ import {
 import JourneyStepper, { type JourneyStep } from '@/components/JourneyStepper'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/our-model' },
   title: 'Our Model and Theory of Change',
   description:
     'How GPAK Girls works: the threats adolescent girls face in western Kenya, one girl’s journey through our support, and our theory of change from reaching a girl in crisis to a young mother and her child thriving.',

@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/walk-with-her' },
   title: 'Walk With Her - Monthly Giving Circle',
   description:
     'Join the Walk With Her circle: your monthly gift funds one girl-month of mentorship, clinic transport, and peer support for adolescent mothers in western Kenya.',

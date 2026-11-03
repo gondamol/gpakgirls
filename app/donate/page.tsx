@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/donate' },
   title: 'Donate - Support a Young Mother’s Future',
   description:
     'Donate to GPAK Girls by M-Pesa or bank transfer. Your gift funds counselling, school re-entry, health referrals, and livelihood training for adolescent mothers in western Kenya.',

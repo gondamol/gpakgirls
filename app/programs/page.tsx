@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/programs' },
   title: 'Our Programs - Integrated Support for Adolescent Mothers',
   description:
     'GPAK Girls delivers integrated support for adolescent mothers in western Kenya: psychosocial care and mental health, HIV and maternal health referrals, education and school re-entry, agriculture and livelihoods, and family strengthening.',
