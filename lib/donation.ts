@@ -8,6 +8,8 @@
 export const PAYPAL_MERCHANT_ID = 'WCV3ZVHRPNX6Q'
 export const PAYPAL_ACCOUNT_NAME = 'Girl Pride Africa Kenya'
 
+const SITE = 'https://www.gpakgirls.org'
+
 // Builds a PayPal Donate checkout link. Donors pay by PayPal or by card
 // (no PayPal account needed), and can tick "make this monthly".
 export function paypalDonateUrl(amount?: number) {
@@ -16,6 +18,12 @@ export function paypalDonateUrl(amount?: number) {
     currency_code: 'USD',
     item_name: 'Donation to GPAK Girls',
     no_recurring: '0',
+    // After paying, PayPal sends the donor back through /api/paypal-return
+    // (which accepts PayPal's POST or GET) to the thank-you page.
+    // Needs Auto Return switched on in PayPal: see the comment at the end of this file.
+    return: `${SITE}/api/paypal-return`,
+    rm: '1',
+    cancel_return: `${SITE}/donate`,
   })
   if (amount) params.set('amount', String(amount))
   return `https://www.paypal.com/donate/?${params.toString()}`
@@ -33,3 +41,13 @@ export const BANK_DETAILS = {
   branch: '',
   swiftCode: '',
 }
+
+// Google Ads conversion tag for the thank-you page (Ad Grants requires one).
+// In Google Ads: Goals > Conversions > New conversion action > Website >
+// "Donation". Copy the send_to value it gives, e.g. 'AW-123456789/AbCdEfGh',
+// and paste it here. Leave '' until then; nothing loads while it is empty.
+export const GOOGLE_ADS_SEND_TO = ''
+
+// PayPal Auto Return (one-time setting in PayPal):
+// Account Settings > Website payments > Website preferences > Update >
+// Auto return: On, Return URL: https://www.gpakgirls.org/donate/thank-you
