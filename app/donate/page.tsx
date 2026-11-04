@@ -220,25 +220,21 @@ export default function DonatePage() {
                         </div>
                       ))}
                   </dl>
-                ) : (
-                  <div className="bg-accent-50 rounded-xl p-4 mb-4 text-sm text-gray-700">
-                    Account details coming soon. Message us and we send them right back.
-                  </div>
-                )}
+                ) : null}
                 <a
                   href="https://wa.me/254725737867?text=Hello%20GPAK%20Girls%2C%20please%20send%20me%20the%20bank%20transfer%20details%20for%20a%20donation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline w-full text-center mb-2 mt-auto"
                 >
-                  WhatsApp Us
+                  WhatsApp for Details
                 </a>
                 <a
                   href="mailto:info@gpakgirls.org?subject=Bank%20transfer%20donation&body=Hello%20GPAK%20Girls%2C%0A%0APlease%20send%20me%20the%20bank%20transfer%20details%20for%20a%20donation.%0A%0AName%3A%20%0ACountry%3A%20"
                   className="btn-outline w-full text-center inline-flex items-center justify-center gap-2"
                 >
                   <Mail className="h-4 w-4" />
-                  Email Us
+                  Email for Details
                 </a>
                 <p className="text-xs text-gray-500 pt-3">
                   In-kind gifts (sewing machines, supplies, baby essentials) are welcome through
