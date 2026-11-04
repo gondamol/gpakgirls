@@ -40,7 +40,7 @@ const messages = [
     id: 'birthday',
     label: 'Birthday fundraiser',
     url: `${SITE}/donate`,
-    text: `For my birthday this year, instead of gifts, I'm raising money for GPAK Girls, who support teenage mothers in Homa Bay. Any amount helps: M-Pesa 0725 737 867 (Girl Pride Africa Kenya), then let me know so I can thank you! ${SITE}/donate #GPAKGirls`,
+    text: `For my birthday this year, instead of gifts, I'm raising money for GPAK Girls, who support teenage mothers in Homa Bay. Any amount helps. In Kenya, M-Pesa 0725 737 867 (Girl Pride Africa Kenya); anywhere else, PayPal or card at ${SITE}/donate. Let me know so I can thank you! #GPAKGirls`,
   },
 ]
 

@@ -80,7 +80,7 @@ const fundraiserSteps = [
   },
   {
     title: 'Ask your people',
-    text: 'Friends give straight to GPAK by M-Pesa on 0725 737 867, or your group collects and sends one transfer. Use the share tool below to get the word out.',
+    text: 'Friends give straight to GPAK by M-Pesa on 0725 737 867, or by PayPal or card from anywhere at gpakgirls.org/donate. Or your group collects and sends one transfer. Use the share tool below to get the word out.',
   },
   {
     title: 'See what it did',
@@ -95,7 +95,7 @@ const FUNDRAISER_WHATSAPP = `https://wa.me/254725737867?text=${encodeURIComponen
 const DEDICATE_EMAIL = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
   'A gift in someone’s name'
 )}&body=${encodeURIComponent(
-  'Hello GPAK Girls,\n\nI would like to dedicate a gift.\n\nIn honour of / in memory of (please choose): \nTheir name: \nTheir email or phone, for your note: \nMy name: \nHow I will give (M-Pesa / bank transfer / diaspora app): '
+  'Hello GPAK Girls,\n\nI would like to dedicate a gift.\n\nIn honour of / in memory of (please choose): \nTheir name: \nTheir email or phone, for your note: \nMy name: \nHow I will give (PayPal / M-Pesa / bank transfer / diaspora app): '
 )}`
 
 const MATCHING_EMAIL = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
@@ -113,8 +113,8 @@ const waysToGive = [
   },
   {
     icon: Globe,
-    title: 'From abroad',
-    text: 'WorldRemit, Sendwave and Taptap Send deliver straight to our M-Pesa line from most countries.',
+    title: 'PayPal or card',
+    text: 'From anywhere in the world, once or monthly, with a receipt by email. No PayPal account needed.',
     href: '/donate',
   },
   {
