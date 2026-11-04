@@ -11,7 +11,7 @@ import {
   CalendarHeart,
   Users,
 } from 'lucide-react'
-import { kes } from '@/lib/donation'
+import { kes, paypalDonateUrl } from '@/lib/donation'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/walk-with-her' },
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 const tiers = [
   {
     name: 'Companion',
+    usd: 10,
     amount: `USD 10 · about ${kes(10)}`,
     period: 'per month',
     what: 'Funds one girl-month of the journey: fortnightly mentor visits, clinic transport, and her place in a peer support group.',
@@ -30,6 +31,7 @@ const tiers = [
   },
   {
     name: 'Guide',
+    usd: 25,
     amount: `USD 25 · about ${kes(25)}`,
     period: 'per month',
     what: 'Adds counselling sessions and childcare hours that keep a young mother in class or in training.',
@@ -37,6 +39,7 @@ const tiers = [
   },
   {
     name: 'Champion',
+    usd: 60,
     amount: `USD 60 · about ${kes(60)}`,
     period: 'per month',
     what: 'Carries five girl-months every month, from first knock on our door to planned graduation.',
@@ -48,7 +51,7 @@ const steps = [
   {
     icon: Heart,
     title: '1. Join the circle',
-    text: 'Email or WhatsApp us and we set you up with an M-Pesa standing order or a simple monthly transfer. Or give monthly online: choose PayPal on the Donate page and tick “make this a monthly donation”.',
+    text: 'Email or WhatsApp us and we set you up with an M-Pesa standing order or a simple monthly transfer. From abroad, give monthly by PayPal or card: pick your level and tick “Make this a monthly donation” on PayPal.',
   },
   {
     icon: Mail,
@@ -160,6 +163,17 @@ export default function WalkWithHerPage() {
                   >
                     {tier.what}
                   </p>
+                  <a
+                    href={paypalDonateUrl(tier.usd)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-auto pt-5 inline-flex items-center gap-1.5 text-sm font-semibold hover:underline ${
+                      tier.highlight ? 'text-white' : 'text-primary-600'
+                    }`}
+                  >
+                    Give USD {tier.usd} monthly with PayPal
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
                 </div>
               ))}
             </div>
@@ -204,20 +218,31 @@ export default function WalkWithHerPage() {
             <Users className="h-12 w-12 text-primary-600 mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Join the Circle</h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Tell us the level you have chosen and we will set up your M-Pesa standing order or
-              monthly transfer within a day, and welcome you with your first field letter.
+              In Kenya, tell us the level you have chosen and we will set up your M-Pesa standing
+              order or monthly transfer within a day. Anywhere else, give monthly by PayPal or card
+              and tick “Make this a monthly donation”. Either way, we welcome you with your first
+              field letter.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mb-6">
               <a
-                href="https://wa.me/254725737867?text=Hello%20GPAK%20Girls%2C%20I%20would%20like%20to%20join%20the%20Walk%20With%20Her%20monthly%20circle."
+                href={paypalDonateUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center justify-center gap-2"
               >
+                <Heart className="h-5 w-5" />
+                Give Monthly with PayPal
+              </a>
+              <a
+                href="https://wa.me/254725737867?text=Hello%20GPAK%20Girls%2C%20I%20would%20like%20to%20join%20the%20Walk%20With%20Her%20monthly%20circle."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline inline-flex items-center justify-center gap-2"
+              >
                 Join by WhatsApp
               </a>
               <a
-                href="mailto:info@gpakgirls.org?subject=Join%20Walk%20With%20Her&body=Hello%20GPAK%20Girls%2C%0A%0AI%20would%20like%20to%20join%20the%20Walk%20With%20Her%20circle%20at%20the%20following%20monthly%20level%3A%20%0A%0AMy%20name%3A%20%0AMy%20country%3A%20%0APreferred%20payment%20method%20(M-Pesa%20%2F%20bank%20transfer)%3A%20"
+                href="mailto:info@gpakgirls.org?subject=Join%20Walk%20With%20Her&body=Hello%20GPAK%20Girls%2C%0A%0AI%20would%20like%20to%20join%20the%20Walk%20With%20Her%20circle%20at%20the%20following%20monthly%20level%3A%20%0A%0AMy%20name%3A%20%0AMy%20country%3A%20%0APreferred%20payment%20method%20(M-Pesa%20%2F%20bank%20transfer%20%2F%20PayPal)%3A%20"
                 className="btn-outline inline-flex items-center justify-center gap-2"
               >
                 <Mail className="h-5 w-5" />
