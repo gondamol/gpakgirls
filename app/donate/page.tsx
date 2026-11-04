@@ -189,8 +189,8 @@ export default function DonatePage() {
                     <div className="text-xs font-semibold uppercase tracking-wide text-secondary-700 mb-1">
                       Lipa na M-Pesa: Buy Goods
                     </div>
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="text-2xl font-bold text-secondary-700 tracking-wide">
+                    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+                      <div className="text-2xl font-bold text-secondary-700 tracking-wide whitespace-nowrap">
                         Till {MPESA_TILL_NUMBER}
                       </div>
                       <CopyButton text={MPESA_TILL_NUMBER.replace(/\s+/g, '')} />
@@ -201,8 +201,8 @@ export default function DonatePage() {
                   <div className="text-xs font-semibold uppercase tracking-wide text-secondary-700 mb-1">
                     Send Money
                   </div>
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="text-2xl font-bold text-secondary-700 tracking-wide">
+                  <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+                    <div className="text-2xl font-bold text-secondary-700 tracking-wide whitespace-nowrap">
                       {MPESA_SEND_MONEY_NUMBER}
                     </div>
                     <CopyButton text={MPESA_SEND_MONEY_NUMBER.replace(/\s+/g, '')} />

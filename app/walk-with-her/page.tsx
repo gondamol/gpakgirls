@@ -223,16 +223,16 @@ export default function WalkWithHerPage() {
               and tick “Make this a monthly donation”. Either way, we welcome you with your first
               field letter.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mb-6">
-              <a
-                href={paypalDonateUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center justify-center gap-2"
-              >
-                <Heart className="h-5 w-5" />
-                Give Monthly with PayPal
-              </a>
+            <a
+              href={paypalDonateUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex w-full sm:w-auto items-center justify-center gap-2 mb-4"
+            >
+              <Heart className="h-5 w-5" />
+              Give Monthly with PayPal
+            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <a
                 href="https://wa.me/254725737867?text=Hello%20GPAK%20Girls%2C%20I%20would%20like%20to%20join%20the%20Walk%20With%20Her%20monthly%20circle."
                 target="_blank"
