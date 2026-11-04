@@ -21,6 +21,7 @@ import {
   Repeat,
   ScrollText,
 } from 'lucide-react'
+import { monthlyFrom } from '@/lib/donation'
 import ShareKit from '@/components/ShareKit'
 import OccasionRotator from '@/components/OccasionRotator'
 import SupportFeature from '@/components/SupportFeature'
@@ -125,7 +126,7 @@ const waysToGive = [
   {
     icon: Repeat,
     title: 'Monthly',
-    text: 'Walk With Her, our monthly circle, from KES 1,000 / EUR 10 a month.',
+    text: `Walk With Her, our monthly circle, from ${monthlyFrom()} a month.`,
     href: '/walk-with-her',
   },
   {
@@ -311,7 +312,7 @@ export default function GetInvolvedPage() {
               title="Host a Gathering"
               image="/images/mentorship.jpg"
               imageAlt="A group of young women smiling together"
-              highlight="KES 1,000, about the price of a meal out, funds one girl-month: fortnightly mentor visits, transport to the clinic, and her place in a peer support group. Ten guests at a dinner can fund ten."
+              highlight={`${monthlyFrom()}, about the price of a meal out, funds one girl-month: fortnightly mentor visits, transport to the clinic, and her place in a peer support group. Ten guests at a dinner can fund ten.`}
               cta={{ label: 'Tell us about your gathering', href: FUNDRAISER_WHATSAPP, external: true }}
             >
               <p>

@@ -13,6 +13,7 @@ import {
   Mail,
   ChevronDown,
 } from 'lucide-react'
+import { monthlyFrom } from '@/lib/donation'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/giving-circles' },
@@ -233,7 +234,7 @@ export default function GivingCirclesPage() {
             <div className="rounded-2xl bg-primary-600 text-white p-8 flex flex-col">
               <Footprints className="h-10 w-10 mb-4" />
               <h2 className="text-2xl font-bold mb-1">Walk With Her</h2>
-              <p className="text-sm text-primary-100 mb-4">Monthly giving, from KES 1,000 / EUR 10</p>
+              <p className="text-sm text-primary-100 mb-4">Monthly giving, from {monthlyFrom()}</p>
               <p className="text-primary-50 leading-relaxed mb-6">
                 Rather give a little every month? Walk With Her members fund one girl-month of the
                 journey at a time. Every monthly gift counts toward your annual circle, so

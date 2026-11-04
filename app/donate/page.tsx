@@ -17,6 +17,8 @@ import {
   MPESA_SEND_MONEY_NUMBER,
   MPESA_TILL_NUMBER,
   PAYPAL_ACCOUNT_NAME,
+  kes,
+  monthlyFrom,
   paypalDonateUrl,
 } from '@/lib/donation'
 
@@ -273,7 +275,8 @@ export default function DonatePage() {
                   rel="noopener noreferrer"
                   className="group bg-white rounded-xl p-6 border border-gray-200 shadow-sm text-center flex flex-col hover:border-primary-600 transition-colors"
                 >
-                  <div className="text-3xl font-bold text-primary-600 mb-1">{level.amount}</div>
+                  <div className="text-3xl font-bold text-primary-600">{level.amount}</div>
+                  <div className="text-xs text-gray-500 mb-2">about {kes(level.value)}</div>
                   <div className="font-semibold text-gray-900 mb-3">{level.title}</div>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{level.impact}</p>
                   <span className="mt-auto inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-primary-600 group-hover:underline">
@@ -291,7 +294,7 @@ export default function DonatePage() {
                   Rather walk the whole journey with her?
                 </h2>
                 <p className="text-primary-100 leading-relaxed">
-                  Join Walk With Her, our monthly giving circle. From KES 1,000 / EUR 10 a month,
+                  Join Walk With Her, our monthly giving circle. From {monthlyFrom()} a month,
                   you fund the steady support that carries a young mother from her first day with
                   us to graduation, with a quarterly letter from the field.
                 </p>

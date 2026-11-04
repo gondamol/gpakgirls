@@ -14,6 +14,7 @@ import {
   HandHeart,
   Megaphone,
 } from 'lucide-react'
+import { monthlyFrom } from '@/lib/donation'
 import JourneyStepper, { type JourneyStep } from '@/components/JourneyStepper'
 
 export const metadata: Metadata = {
@@ -350,7 +351,7 @@ export default function OurModelPage() {
             <div className="rounded-3xl bg-primary-600 p-8 text-white">
               <h3 className="font-display text-2xl md:text-3xl font-bold">Walk With Her, every month</h3>
               <p className="mt-3 text-white/90 leading-relaxed">
-                From KES 1,000 or EUR 10 a month, carry a young mother from her first day with us to graduation, with a
+                From {monthlyFrom()} a month, carry a young mother from her first day with us to graduation, with a
                 quarterly letter from the field.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
