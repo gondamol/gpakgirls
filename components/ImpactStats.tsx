@@ -1,6 +1,3 @@
-// PLACEHOLDERS: the mentor mothers, pads and people-reached figures are estimates
-// awaiting confirmation from programme records. Replace with verified counts
-// before these are presented to partners.
 const stats = [
   { value: '500+', label: 'Adolescent mothers and pregnant girls supported' },
   { value: '85%', label: 'Of girls supported for school re-entry back in class' },
