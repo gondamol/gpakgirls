@@ -78,6 +78,23 @@ export default function DonatePage() {
               goes toward counselling, health referrals, school re-entry, livelihoods, and family
               support for adolescent mothers in western Kenya.
             </p>
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+              <a
+                href={paypalDonateUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-white px-8 font-semibold text-primary-700 hover:bg-primary-50 transition-colors"
+              >
+                <Heart className="h-5 w-5" />
+                Donate with PayPal or Card
+              </a>
+              <a
+                href="#give-now"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-lg border-2 border-white/70 px-8 font-semibold text-white hover:bg-white/10 transition-colors"
+              >
+                M-Pesa or bank transfer
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -106,7 +123,9 @@ export default function DonatePage() {
             </div>
 
             {/* Ways to give */}
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-3">Give Now</h2>
+            <h2 id="give-now" className="text-3xl font-bold text-gray-900 text-center mb-3 scroll-mt-28">
+              Give Now
+            </h2>
             <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
               Direct and simple, from Kenya or abroad. Whichever you choose, you will receive
               confirmation and a receipt.
