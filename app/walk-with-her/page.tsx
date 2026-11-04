@@ -47,7 +47,7 @@ const steps = [
   {
     icon: Heart,
     title: '1. Join the circle',
-    text: 'Email or WhatsApp us and we set you up with an M-Pesa standing order or a simple monthly transfer. Online card payments are being finalized.',
+    text: 'Email or WhatsApp us and we set you up with an M-Pesa standing order or a simple monthly transfer. Or give monthly online: choose PayPal on the Donate page and tick “make this a monthly donation”.',
   },
   {
     icon: Mail,
