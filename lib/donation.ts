@@ -45,7 +45,7 @@ export function paypalDonateUrl(amount?: number) {
 
 // M-Pesa
 export const MPESA_SEND_MONEY_NUMBER = '0725 737 867'
-export const MPESA_TILL_NUMBER = '' // Buy Goods till, e.g. '123456'
+export const MPESA_TILL_NUMBER: string = '' // Buy Goods till, e.g. '123456'
 
 // Bank transfer
 export const BANK_DETAILS = {
@@ -60,7 +60,7 @@ export const BANK_DETAILS = {
 // In Google Ads: Goals > Conversions > New conversion action > Website >
 // "Donation". Copy the send_to value it gives, e.g. 'AW-123456789/AbCdEfGh',
 // and paste it here. Leave '' until then; nothing loads while it is empty.
-export const GOOGLE_ADS_SEND_TO = ''
+export const GOOGLE_ADS_SEND_TO: string = ''
 
 // PayPal Auto Return (one-time setting in PayPal):
 // Account Settings > Website payments > Website preferences > Update >

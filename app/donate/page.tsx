@@ -12,6 +12,7 @@ import {
   Globe,
   CreditCard,
 } from 'lucide-react'
+import CopyButton from '@/components/CopyButton'
 import {
   BANK_DETAILS,
   MPESA_SEND_MONEY_NUMBER,
@@ -188,8 +189,11 @@ export default function DonatePage() {
                     <div className="text-xs font-semibold uppercase tracking-wide text-secondary-700 mb-1">
                       Lipa na M-Pesa: Buy Goods
                     </div>
-                    <div className="text-2xl font-bold text-secondary-700 tracking-wide">
-                      Till {MPESA_TILL_NUMBER}
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="text-2xl font-bold text-secondary-700 tracking-wide">
+                        Till {MPESA_TILL_NUMBER}
+                      </div>
+                      <CopyButton text={MPESA_TILL_NUMBER.replace(/\s+/g, '')} />
                     </div>
                   </div>
                 )}
@@ -197,8 +201,11 @@ export default function DonatePage() {
                   <div className="text-xs font-semibold uppercase tracking-wide text-secondary-700 mb-1">
                     Send Money
                   </div>
-                  <div className="text-2xl font-bold text-secondary-700 tracking-wide">
-                    {MPESA_SEND_MONEY_NUMBER}
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="text-2xl font-bold text-secondary-700 tracking-wide">
+                      {MPESA_SEND_MONEY_NUMBER}
+                    </div>
+                    <CopyButton text={MPESA_SEND_MONEY_NUMBER.replace(/\s+/g, '')} />
                   </div>
                   <div className="text-xs text-gray-500 mt-1">
                     Girl Pride Africa Kenya donations line
