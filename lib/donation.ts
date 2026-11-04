@@ -1,6 +1,6 @@
 // All donation payment details live here. Update this one file and the
-// donate page picks up the change. Leave a value as '' to show
-// "coming soon" on the site instead of a blank.
+// donate page picks up the change. Leave a value as '' and that item
+// stays hidden on the site.
 
 // PayPal Business account that receives donations (Girl Pride Africa Kenya,
 // login info@gpakgirls.org). The Merchant ID is used in links because it

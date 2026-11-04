@@ -162,18 +162,16 @@ export default function DonatePage() {
                   <h3 className="text-xl font-bold text-gray-900">M-Pesa</h3>
                 </div>
                 <p className="text-sm text-gray-500 mb-5">For donors in Kenya. Takes a minute.</p>
-                <div className="bg-secondary-50 rounded-xl p-4 mb-3">
-                  <div className="text-xs font-semibold uppercase tracking-wide text-secondary-700 mb-1">
-                    Lipa na M-Pesa: Buy Goods
-                  </div>
-                  {MPESA_TILL_NUMBER ? (
+                {MPESA_TILL_NUMBER && (
+                  <div className="bg-secondary-50 rounded-xl p-4 mb-3">
+                    <div className="text-xs font-semibold uppercase tracking-wide text-secondary-700 mb-1">
+                      Lipa na M-Pesa: Buy Goods
+                    </div>
                     <div className="text-2xl font-bold text-secondary-700 tracking-wide">
                       Till {MPESA_TILL_NUMBER}
                     </div>
-                  ) : (
-                    <div className="text-sm font-medium text-gray-600">Till number coming soon</div>
-                  )}
-                </div>
+                  </div>
+                )}
                 <div className="bg-secondary-50 rounded-xl p-4 mb-4">
                   <div className="text-xs font-semibold uppercase tracking-wide text-secondary-700 mb-1">
                     Send Money
