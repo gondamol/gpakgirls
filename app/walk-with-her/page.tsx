@@ -11,7 +11,7 @@ import {
   CalendarHeart,
   Users,
 } from 'lucide-react'
-import { kes, paypalDonateUrl } from '@/lib/donation'
+import { paypalDonateUrl } from '@/lib/donation'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/walk-with-her' },
@@ -24,7 +24,7 @@ const tiers = [
   {
     name: 'Companion',
     usd: 10,
-    amount: `USD 10 · about ${kes(10)}`,
+    amount: 'USD 10',
     period: 'per month',
     what: 'Funds one girl-month of the journey: fortnightly mentor visits, clinic transport, and her place in a peer support group.',
     highlight: false,
@@ -32,7 +32,7 @@ const tiers = [
   {
     name: 'Guide',
     usd: 25,
-    amount: `USD 25 · about ${kes(25)}`,
+    amount: 'USD 25',
     period: 'per month',
     what: 'Adds counselling sessions and childcare hours that keep a young mother in class or in training.',
     highlight: true,
@@ -40,7 +40,7 @@ const tiers = [
   {
     name: 'Champion',
     usd: 60,
-    amount: `USD 60 · about ${kes(60)}`,
+    amount: 'USD 60',
     period: 'per month',
     what: 'Carries five girl-months every month, from first knock on our door to planned graduation.',
     highlight: false,

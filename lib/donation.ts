@@ -10,19 +10,12 @@ export const PAYPAL_ACCOUNT_NAME = 'Girl Pride Africa Kenya'
 
 const SITE = 'https://www.gpakgirls.org'
 
-// Amounts on the site are in USD with a rounded KES guide beside them.
-// Update this rate now and then (mid-2026 it was about 129 KES per USD).
-export const KES_PER_USD = 129
-
-// e.g. kes(25) -> 'KES 3,200' (rounded to the nearest 100)
-export function kes(usd: number) {
-  const value = Math.round((usd * KES_PER_USD) / 100) * 100
-  return `KES ${value.toLocaleString('en-US')}`
-}
+// All amounts on the site are in USD. M-Pesa donors give any amount in KES,
+// and PayPal converts for donors paying in other currencies.
 
 // Walk With Her monthly minimum, used in copy across the site.
 export const MONTHLY_FROM_USD = 10
-export const monthlyFrom = () => `USD ${MONTHLY_FROM_USD} (about ${kes(MONTHLY_FROM_USD)})`
+export const monthlyFrom = () => `USD ${MONTHLY_FROM_USD}`
 
 // Builds a PayPal Donate checkout link. Donors pay by PayPal or by card
 // (no PayPal account needed), and can tick "make this monthly".
