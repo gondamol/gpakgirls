@@ -68,7 +68,11 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-400" />
-                <span>Homa Bay Town, Homa Bay County, Kenya</span>
+                <span>
+                  Homa Bay Town, Homa Bay County, Kenya
+                  <br />
+                  P.O. Box 189-40300, Homa Bay
+                </span>
               </div>
               <div className="flex items-start gap-2">
                 <ShieldCheck className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-400" />

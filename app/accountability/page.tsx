@@ -88,6 +88,7 @@ export default function AccountabilityPage() {
                   ['Registered since', '30 April 2020'],
                   ['Community work since', '2018'],
                   ['Headquarters', 'Homa Bay Town, Homa Bay County'],
+                  ['Postal address', 'P.O. Box 189-40300, Homa Bay'],
                 ].map(([label, value]) => (
                   <div
                     key={label}

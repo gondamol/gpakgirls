@@ -74,6 +74,8 @@ const organizationSchema = {
   foundingDate: '2018',
   address: {
     '@type': 'PostalAddress',
+    postOfficeBoxNumber: 'P.O. Box 189',
+    postalCode: '40300',
     addressLocality: 'Homa Bay Town',
     addressRegion: 'Homa Bay County',
     addressCountry: 'KE',
