@@ -52,9 +52,20 @@ export default function PrivacyPage() {
                   about our work. You can unsubscribe at any time.
                 </li>
                 <li>
-                  We do not run advertising trackers, and we do not sell or rent personal
-                  information to anyone.
+                  <strong>Google Ads measurement:</strong> this website uses the Google tag to
+                  count when a visitor who arrived from one of our Google ads goes on to donate,
+                  contact us or send us a message. Google may set cookies for this. We do not see
+                  who you are from this data. You can manage Google ad settings at{' '}
+                  <a
+                    href="https://adssettings.google.com"
+                    className="text-primary-600 hover:underline"
+                    rel="noopener noreferrer"
+                  >
+                    adssettings.google.com
+                  </a>
+                  .
                 </li>
+                <li>We do not sell or rent personal information to anyone.</li>
               </ul>
             </div>
 
@@ -102,7 +113,7 @@ export default function PrivacyPage() {
                 We may update this policy as our work or the law changes. The latest version will
                 always be on this page.
               </p>
-              <p className="text-sm text-gray-500 mt-4">Last updated: July 2026</p>
+              <p className="text-sm text-gray-500 mt-4">Last updated: November 2026</p>
             </div>
           </div>
         </div>

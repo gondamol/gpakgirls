@@ -49,11 +49,7 @@ export const BANK_DETAILS = {
   swiftCode: '',
 }
 
-// Google Ads conversion tag for the thank-you page (Ad Grants requires one).
-// In Google Ads: Goals > Conversions > New conversion action > Website >
-// "Donation". Copy the send_to value it gives, e.g. 'AW-123456789/AbCdEfGh',
-// and paste it here. Leave '' until then; nothing loads while it is empty.
-export const GOOGLE_ADS_SEND_TO: string = ''
+// Google Ads tag and conversions live in lib/ads.ts.
 
 // PayPal Auto Return (one-time setting in PayPal):
 // Account Settings > Website payments > Website preferences > Update >

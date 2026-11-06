@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Send } from 'lucide-react'
+import { ADS_CONVERSIONS, trackConversion } from '@/lib/ads'
 
 const inquiryTypes = [
   'General Inquiry',
@@ -38,6 +39,7 @@ export default function ContactForm() {
     ]
       .filter(Boolean)
       .join('\n')
+    trackConversion(ADS_CONVERSIONS.contactForm)
     window.location.href = `mailto:info@gpakgirls.org?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`

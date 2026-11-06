@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Heart, Mail, ArrowRight, Share2 } from 'lucide-react'
 import AdsConversion from '@/components/AdsConversion'
-import { GOOGLE_ADS_SEND_TO } from '@/lib/donation'
+import { ADS_CONVERSIONS } from '@/lib/ads'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/donate/thank-you' },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <main>
-      <AdsConversion sendTo={GOOGLE_ADS_SEND_TO} />
+      <AdsConversion sendTo={ADS_CONVERSIONS.donationThankYou} />
       <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">

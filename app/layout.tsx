@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import TopBar from '@/components/TopBar'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ConversionTracker from '@/components/ConversionTracker'
+import { GOOGLE_ADS_ID } from '@/lib/ads'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -102,7 +104,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {/* Google tag (gtag.js) for the Google Ads (Ad Grants) account */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ADS_ID}');`,
+          }}
+        />
+      </head>
       <body className="antialiased">
+        <ConversionTracker />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
