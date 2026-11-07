@@ -12,6 +12,8 @@ import {
   Phone,
   BadgeCheck,
   PieChart,
+  FileText,
+  Download,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -40,9 +42,21 @@ const financePoints = [
   'Finance is led by a Certified Public Accountant, CPA(K)',
   'Organizational bank account with dual controls: funds are received and managed by the organization, never by individuals',
   'Documented finance and procurement procedures with approval thresholds',
-  'Budgets, financial statements, and records are shared with partners and funders as part of due diligence and reporting',
-  'We welcome independent review and audit as our funding grows',
+  'Every funding partner receives budget and financial reports for the work they support',
 ]
+
+const policies = [
+  ['safeguarding-and-psea-policy', 'Safeguarding and PSEA Policy', 'How we keep girls and young women safe, and how concerns are reported and handled', 8],
+  ['code-of-conduct', 'Code of Conduct', 'The standards everyone working with us signs before first contact with participants', 3],
+  ['complaints-and-feedback-policy', 'Complaints and Feedback Policy', 'How anyone can raise a complaint, and the timelines for a response', 2],
+  ['whistleblowing-policy', 'Whistleblowing Policy', 'Protected, confidential routes for reporting wrongdoing', 2],
+  ['data-protection-and-confidentiality-policy', 'Data Protection and Confidentiality Policy', 'How personal and health information is collected, stored, shared and destroyed', 7],
+  ['ethical-storytelling-and-media-consent-policy', 'Ethical Storytelling and Media Consent Policy', 'Consent rules for photographs, stories and media about participants', 2],
+  ['anti-fraud-bribery-and-corruption-policy', 'Anti-Fraud, Bribery and Corruption Policy', 'Zero tolerance, the controls we use, and what happens when fraud is suspected', 4],
+  ['conflict-of-interest-policy', 'Conflict of Interest Policy', 'How interests are declared, recorded and managed', 2],
+  ['anti-human-trafficking-and-child-labour-policy', 'Anti-Human Trafficking and Child Labour Policy', 'Safe livelihood, housing and transport support, and fair labour for our own people', 6],
+  ['anti-discrimination-harassment-and-abuse-of-power-policy', 'Anti-Discrimination, Harassment and Abuse of Power Policy', 'Respect and dignity standards, and a survivor-centred response to concerns', 5],
+] as const
 
 export default function AccountabilityPage() {
   return (
@@ -100,8 +114,7 @@ export default function AccountabilityPage() {
                 ))}
               </dl>
               <p className="text-xs text-gray-500 mt-4">
-                The registration certificate is shared with partners and funders as part of due
-                diligence.
+                Copies of the registration certificate are available on request.
               </p>
             </div>
 
@@ -228,7 +241,7 @@ export default function AccountabilityPage() {
               </h2>
             </div>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              We are a small organization, and we manage money as if we were a large one:
+              How we manage the money entrusted to us:
             </p>
             <ul className="space-y-3">
               {financePoints.map((point) => (
@@ -259,19 +272,63 @@ export default function AccountabilityPage() {
               leadership and staff alike.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Registration certificates, governing documents, committee records, policies, and
-              financial statements are organized in a due diligence pack and shared with partners
-              and funders on request; tell us what you need and we will provide it.
+              Our key policies are published below. The registration certificate, governing
+              documents, and financial statements are available on request.
             </p>
             <div className="mt-6">
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
               >
-                Request due diligence documents
+                Request our documents
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Policies */}
+      <section id="policies" className="section bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="bg-primary-600 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <FileText className="h-7 w-7 text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Policies</h2>
+            </div>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl">
+              These policies are adopted by our advisory committee and apply to staff, committee
+              members, volunteers, mentor mothers, consultants and partners.
+            </p>
+            <ul className="grid md:grid-cols-2 gap-4">
+              {policies.map(([slug, title, summary, pages]) => (
+                <li key={slug}>
+                  <a
+                    href={`/documents/policies/gpak-${slug}.pdf`}
+                    target="_blank"
+                    rel="noopener"
+                    className="group flex h-full items-start gap-4 bg-white rounded-xl border border-gray-200 p-5 hover:border-primary-300 hover:shadow-md transition"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <div className="font-semibold text-gray-900 group-hover:text-primary-700">
+                        {title}
+                      </div>
+                      <p className="text-sm text-gray-600 mt-1 leading-relaxed">{summary}</p>
+                      <div className="text-xs text-gray-500 mt-2">PDF, {pages} pages</div>
+                    </div>
+                    <Download
+                      className="h-5 w-5 text-primary-600 flex-shrink-0 mt-0.5"
+                      aria-hidden="true"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-gray-500 mt-6">
+              Financial statements and other governing documents are available on request.
+            </p>
           </div>
         </div>
       </section>
