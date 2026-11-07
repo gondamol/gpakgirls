@@ -25,7 +25,7 @@ const ways = [
   {
     icon: Landmark,
     title: 'Through a donor-advised fund or foundation',
-    text: 'If you give through a donor-advised fund or a family foundation, you can recommend a grant to GPAK Girls, now or in your planning. Many sponsors can grant to organizations outside their country after their own checks; our due diligence pack is ready for them.',
+    text: 'If you give through a donor-advised fund or a family foundation, you can recommend a grant to GPAK Girls, now or in your planning. Many sponsors can grant to organizations outside their country after their own checks, and we can provide the documents they ask for.',
   },
   {
     icon: Flower2,

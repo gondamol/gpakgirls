@@ -271,8 +271,7 @@ export default function TeamPage() {
               Our staff team is supported by an advisory committee that provides oversight on
               strategy, finances, and safeguarding, and by trained community volunteers and mentors
               who extend our reach into the villages where the girls we serve live. Governance
-              documents, policies, and leadership references are available to partners as part of
-              due diligence.
+              documents, policies, and leadership references are available on request.
             </p>
             <Link
               href="/accountability"

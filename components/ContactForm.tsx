@@ -7,7 +7,7 @@ import { ADS_CONVERSIONS, trackConversion } from '@/lib/ads'
 const inquiryTypes = [
   'General Inquiry',
   'Partnership / Funding',
-  'Due Diligence Request',
+  'Document Request',
   'Program Information',
   'Volunteer Opportunity',
   'Donation Question',

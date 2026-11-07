@@ -45,7 +45,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-600">
-              Questions about our work, partnership enquiries, due diligence requests, or a girl
+              Questions about our work, partnership enquiries, document requests, or a girl
               who needs support; we&apos;d love to hear from you.
             </p>
           </div>

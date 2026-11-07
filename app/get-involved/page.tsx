@@ -508,8 +508,8 @@ export default function GetInvolvedPage() {
             >
               <p>
                 Funders, NGOs, businesses and institutions can create lasting change through
-                strategic partnerships. Programme documentation, results data and our due
-                diligence pack are available on request.
+                strategic partnerships. Programme documentation, results data, policies and
+                financial statements are available on request.
               </p>
             </SupportFeature>
 

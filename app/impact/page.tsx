@@ -111,8 +111,8 @@ export default function ImpactPage() {
               ))}
             </div>
             <p className="text-center text-sm text-gray-500 mt-8 max-w-2xl mx-auto">
-              Figures come from our programme registers and case records. Verified, disaggregated
-              beneficiary data is shared with partners as part of due diligence and reporting.
+              Figures come from our programme registers and case records. Funding partners receive
+              disaggregated results in their regular reports.
             </p>
           </div>
         </div>

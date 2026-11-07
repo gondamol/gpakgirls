@@ -381,7 +381,7 @@ export default function DonatePage() {
             </h2>
             <p className="text-lg text-gray-600 mb-6">
               If you represent a foundation, NGO, or institutional funder, we would be glad to
-              share our programme documentation, results data, budgets, and due diligence pack.
+              share our programme documentation, results data, budgets, and policies.
             </p>
             <Link
               href="/contact"

@@ -345,7 +345,7 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Registration documents, governance records, policies, and financial information are
-              available to partners and donors as part of due diligence.
+              available on request.
             </p>
             <Link
               href="/accountability"

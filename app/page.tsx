@@ -51,7 +51,7 @@ function WhyHere() {
               <p className="text-gray-300 text-sm leading-relaxed mb-5">
                 NGO Board-registered since 2020 · advisory committee oversight · CPA-led finances
                 · child safeguarding and PSEA commitments · case-managed programmes with tracked
-                results. Due diligence documents are available to partners on request.
+                results. Policies and financial statements are available on request.
               </p>
               <Link
                 href="/accountability"
