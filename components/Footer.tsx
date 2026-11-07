@@ -34,6 +34,7 @@ const navigation = {
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Safeguarding', href: '/accountability#safeguarding' },
+    { name: 'Our Policies', href: '/accountability#policies' },
     { name: 'Registration', href: '/accountability#registration' },
   ],
 }
@@ -158,12 +159,12 @@ export default function Footer() {
               Bay, Siaya, Kisumu, and Migori counties, with early community engagement in South
               Sudan.
             </p>
-            <div className="flex gap-6 text-sm whitespace-nowrap">
+            <div className="flex flex-wrap justify-center md:justify-end md:flex-shrink-0 gap-x-6 gap-y-2 text-sm">
               {navigation.legal.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors whitespace-nowrap"
                 >
                   {item.name}
                 </Link>
